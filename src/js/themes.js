@@ -18,6 +18,7 @@ const themes = {
     secondaryRGB: '162,161,166'
   }
 };
+
 let isLight = true;
 
 themeToggler.addEventListener('click', toggleThemes);
