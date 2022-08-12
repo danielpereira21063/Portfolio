@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4ByPqRA27BdoETNndw/nbYYHn4bKmoSVhhFRTUpMldMPk8CIauYe5wpcJTA9kHc4vRBtdjPBwJ2R80dq83025Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\portfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\6.0.8\\microsoft.netcore.app.host.linux-x64.6.0.8.nupkg.sha512"
+  ],
+  "logs": []
+}

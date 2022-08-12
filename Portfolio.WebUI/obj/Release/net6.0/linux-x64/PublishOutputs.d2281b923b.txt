@@ -1,0 +1,7 @@
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.dll
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.deps.json
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.runtimeconfig.json
+C:\Users\Daniel\Desktop\portfolio\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.pdb
