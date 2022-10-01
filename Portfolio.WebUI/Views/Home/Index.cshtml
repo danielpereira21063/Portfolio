@@ -1,533 +1,148 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout = "_Layout";
 }
 
+<!--===== HOME =====-->
+<section class="home bd-grid" id="home">
+    <div class="home__data">
+        <h1 class="home__title">
+            Olá,<br>me chamo <span class="home__title-color">Daniel.</span><br>Sou Desenvolvedor<br>FullStack.
+        </h1>
 
-<!-- ==== Hero ==== -->
-<div id="hero">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-lg-6 mt-lg-0 d-grid align-content-center">
-                <section class="text-center text-lg-start" data-aos="zoom-in" data-aos-delay="1000" data-aos-duration="1000">
-                    <p>Olá! 👋 Meu nome é</p>
-                    <h1>Daniel</h1>
-                    <p><span id="headline"></span></p>
-                    <div class="social-links mx-auto mx-lg-0">
-                        <div class="row">
-                            <div class="col-3">
-                                <a href="mailto:zougarii.danielsanches6301@gmail.com" target="_blank">
-                                    <i class="bi bi-envelope-fill"></i>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="https://github.com/danielpereira21063" target="_blank">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/" target="_blank">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="https://twitter.com/daniel21063" target="_blank">
-                                    <i class="bi bi-twitter"></i>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="https://instagram.com/danielpereira21063" target="_blank">
-                                    <i class="bi bi-instagram"></i>
-                                </a>
-                            </div>
-                            <div class="col-3">
-                                <a href="https://www.youtube.com/channel/UCY28Uf5BI7k6aJ07iSP39tA" target="_blank">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </div>
-            <div class="col-12 col-lg-6 d-grid align-content-center">
-                <div class="img-container" id="img-wrapper" data-aos="fade-left" data-aos-duration="1500"
-                     data-aos-delay="2000">
-                    <div id="canvas"></div>
+        <a href="./assets/docs/curriculo.pdf" target="_blank" class="button">Baixar CV</a>
+    </div>
 
-                    <div class="curtain">
-                        <img src="./img/daniel-sanches.png" crossorigin="" data-sampler="simplePlaneTexture" width="400"
-                             height="400" />
-                    </div>
+    <div class="home__social">
+        <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/" target="_blank" class="home__social-icon">
+            <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/danielpereira21063" target="_blank" class="home__social-icon">
+            <i class='bx bxl-github'></i>
+        </a>
+        <a href="mailto:danielsanches6301@gmail.com?subject=Olá, Daniel" target="_blank" class="home__social-icon">
+            <i class='bx bx-envelope'></i>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=5522999668032&text=Ol%C3%A1%2C%20tudo%20bem%3F" target="_blank"
+           class="home__social-icon"> <i class='bx bx-phone'></i></a>
+    </div>
+
+    <div class="home__img">
+        <img class="programming_gif home__blob" src="/gif/programming.gif">
+    </div>
+</section>
+
+<!--===== ABOUT =====-->
+<section class="about section " id="about">
+    <h2 class="section-title">Sobre mim</h2>
+
+    <div class="about__container bd-grid">
+        <div class="about__img">
+            <img src="/img/about.jpg" alt="">
+        </div>
+
+        <div>
+            @*<h2 class="about__subtitle">Me chamo Daniel.</h2>*@
+            <p>
+                Sou um desenvolvedor Full-Stack. Gosto muito de tecnologia.
+            </p>
+            <p>
+                Sou uma pessoa apaixonada que persegue seus sonhos, que trabalha
+                duro e que é orientado para resultados. Aliás, eu
+                trabalho constantemente para me aprimorar buscando alcançar o
+                melhor versão de mim mesmo.
+            </p>
+
+            <h5 class="text-center">Pontos importantes!</h5>
+            <p>&#x2022; Crio sites usando HTML, CSS, JavaScript e outros frameworks e bibliotecas.</p>
+
+            <p>
+                &#x2022; Domino bem o framework de desenvolvimento .NET (.NET Core) e os principais conceitos de DDD e
+                Clean Arch usando o padrão MVC.
+            </p>
+
+            <p>
+                &#x2022; Passo a maioria dos dias aprendendo e construindo. Sou autoditada, aprendi programação por
+                conta própria.
+            </p>
+
+            <p>
+                &#x2022; Após atuar no mercado como desenvolvedor,
+                decidi começar a fazer o curso de graduação técnologia Análise e desenvolvimento de sistemas
+                fornecido pela Universidade Estácio de Sá. Atualmente, no dia de hoje (06/08/2022), estou cursando o 3°
+                semestre.
+            </p>
+
+            <p>
+                &#x2022; Não sou fluente em inglês, mas domino bem o idioma, sabendo ler e interpretar textos e a
+                entender conversações sem muita dificuldade.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!--===== SKILLS =====-->
+<section class="skills section" id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills__container bd-grid">
+        <div>
+            <h2 class="skills__subtitle">Competências</h2>
+            <p class="skills__text">
+                Busco sempre me aperfeiçoar em minhas hard skills, desta forma sempre estou aprendendo
+                uma nova tecnológia e implementando em meus projetos para fixar os conceitos.
+            </p>
+
+            <div class="skills__data">
+                <div class="skill__content">
+                    <img src="/img/stack-icons/html.svg">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/css.svg" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/bootstrap.svg" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/javascript.svg" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/c-sharp.png" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/dotnet.png" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/php.png" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/angular.png" alt="">
+                </div>
+                <div class="skill__content">
+                    <img src="/img/stack-icons/jQuery.svg" alt="">
                 </div>
             </div>
         </div>
-    </div>
-</div>
-<!-- ==== End Hero ==== -->
 
-<main>
-    <!-- ==== About ==== -->
-    <div id="about">
-        <div class="container">
-            <div class="row" style="height:min(auto,95vh)">
-                <div class="col-12 col-lg-6 d-grid align-content-center">
-                    <section id="about_section" class="my-5 my-lg-0" data-aos="fade-right" data-aos-mirror="true"
-                             data-aos-duration="1500">
-                        <h1>SOBRE MIM</h1>
-                        <p>
-                            Sou um desenvolvedor Full-Stack. Gosto muito de tecnologia.
-                        </p>
-                        <p>
-                            Sou uma pessoa apaixonada que persegue seus sonhos, que trabalha
-                            duro e que é orientado para resultados. Aliás, eu
-                            trabalho constantemente para me aprimorar buscando alcançar o
-                            melhor versão de mim mesmo.
-                        </p>
-
-                        <h5 class="text-center">Pontos importantes!</h5>
-                        <p>&#x2022; Crio sites usando HTML, CSS, JavaScript e outros frameworks e bibliotecas.</p>
-
-                        <p>
-                            &#x2022; Domino bem o framework de desenvolvimento .NET (.NET Core) e os principais conceitos de DDD e
-                            Clean Arch usando o padrão MVC.
-                        </p>
-
-                        <p>
-                            &#x2022; Passo a maioria dos dias aprendendo e construindo. Sou autoditada, aprendi programação por
-                            conta própria.
-                        </p>
-
-                        <p>
-                            &#x2022; Após atuar no mercado como desenvolvedor,
-                            decidi começar a fazer o curso de graduação técnologia Análise e desenvolvimento de sistemas
-                            fornecido pela Universidade Estácio de Sá. Atualmente, no dia de hoje (06/08/2022), estou cursando o 3°
-                            semestre.
-                        </p>
-
-                        <p>
-                            &#x2022; Não sou fluente em inglês, mas domino bem o idioma, sabendo ler e interpretar textos e a
-                            entender conversações sem muita dificuldade.
-                        </p>
-                    </section>
-                </div>
-                <div class="col-12 col-lg-6 d-grid align-content-center">
-                    <section id="skills_section" class="mb-5 mb-lg-0" data-aos="fade-left" data-aos-duration="1000">
-                        <h1>HABILIDADES</h1>
-                        <div class="row">
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/html.svg" alt="html" />
-                                <span>HTML</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/css.svg" alt="css" />
-                                <span>CSS</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/bootstrap.svg" alt="bootstrap" />
-                                <span>Bootstrap</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/javascript.svg" alt="javascript" />
-                                <span>JavaScript</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/c-sharp.png" alt="C sharp" />
-                                <span>C#</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/dotnet.png" alt=".NET Core" />
-                                <span>.NET Core</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/angular.png" alt="Angular" />
-                                <span>Angular</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/vue-js.png" alt="Angular" />
-                                <span>Vue.js</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/php.png" alt="PHP" />
-                                <span>PhP</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/jQuery.svg" alt="jquery" />
-                                <span>jQuery</span>
-                            </div>
-                            <div class="col-6 col-md-4">
-                                <img src="./img/stack-icons/npm.svg" alt="node package manager" />
-                                <span>NPM</span>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+        <div>
+            <img src="/img/skills.jpg" alt="" class="skills__img">
         </div>
     </div>
-    <!-- ==== end About ==== -->
-    <!-- ==== Portfolio === -->
-    <section id="portfolio" class="mt-5">
-        <h1 class="mb-md-5">PROJETOS</h1>
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-2 row-cols-xxl-3 g-3">
-                <div>
-                    <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                        <img src="./img/portfolio/my-social-network.png" alt="Minha rede social" />
-                        <div class="details">
-                            <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                                <p class="text-center">Minha rede social</p>
-                                <div class="links_project">
-                                    <a href="https://github.com/danielpereira21063/MySocialNetworkWeb" target="_blank"
-                                       rel="noopener noreferrer" title="source code">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                    <a href="https://social-network.danielsanchesdev.com.br" target="_blank" rel="noopener noreferrer" title="live demo">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="technology">
-                                <div class="row">
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/html.svg" alt="html" title="html" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/css.svg" alt="css" title="css" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/bootstrap.svg" alt="bootstrap" title="bootstrap" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/javascript.svg" alt="javascript" title="javascript" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/dotnet.png" alt="javascript" title="javascript" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                        <img src="./img/stack-icons/c-sharp.png" alt="javascript" title="javascript" />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+</section>
 
-                <div>
-                    <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                        <img style="height: 305px"
-                             src="https://lh3.googleusercontent.com/6R4kfapDVJdVClWUZV7dr9ds0dDDXfH8-hs8VAy4Vy63HzG8kvev8anGOgxJ1TpLRw4=w1200-h630-p"
-                             alt="EM BREVE" />
-                        <div class="details">
-                            <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                                <p class="text-center">
-                                    EM BREVE...
-                                </p>
-                                <div class="links_project">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="source code">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="live demo">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="technology">
-                                <div class="row">
-                                    <!-- <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/tailwind.svg" alt="tailwind CSS" title="tailwind CSS" />
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<!--===== WORK =====-->
+<section class="work section" id="work">
+    <h2 class="section-title">Projetos</h2>
 
-                <div>
-                    <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                        <img style="height: 305px"
-                             src="https://lh3.googleusercontent.com/6R4kfapDVJdVClWUZV7dr9ds0dDDXfH8-hs8VAy4Vy63HzG8kvev8anGOgxJ1TpLRw4=w1200-h630-p"
-                             alt="EM BREVE" />
-                        <div class="details">
-                            <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                                <p class="text-center">
-                                    EM BREVE...
-                                </p>
-                                <div class="links_project">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="source code">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="live demo">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="technology">
-                                <div class="row">
-                                    <!-- <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/tailwind.svg" alt="tailwind CSS" title="tailwind CSS" />
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="work__container bd-grid">
 
-
-
-                <div>
-                    <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                        <img style="height: 305px"
-                             src="https://lh3.googleusercontent.com/6R4kfapDVJdVClWUZV7dr9ds0dDDXfH8-hs8VAy4Vy63HzG8kvev8anGOgxJ1TpLRw4=w1200-h630-p"
-                             alt="EM BREVE" />
-                        <div class="details">
-                            <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                                <p class="text-center">
-                                    EM BREVE...
-                                </p>
-                                <div class="links_project">
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="source code">
-                                        <i class="bi bi-github"></i>
-                                    </a>
-                                    <a href="#" target="_blank" rel="noopener noreferrer" title="live demo">
-                                        <i class="bi bi-eye-fill"></i>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="technology">
-                                <div class="row">
-                                    <!-- <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                                    </div>
-                                    <div class="col d-flex justify-content-center">
-                                      <img src="./img/stack-icons/tailwind.svg" alt="tailwind CSS" title="tailwind CSS" />
-                                    </div> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <!-- <div>
-                  <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                    <img src="./img/portfolio/loopstudio.jpg" alt="loopstudio landing page" />
-                    <div class="details">
-                      <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                        <p class="text-center">loopsstudio landing page</p>
-                        <div class="links_project">
-                          <a href="https://github.com/danielpereira21063/loopstudio-v2" target="_blank"
-                            rel="noopener noreferrer" title="source code">
-                            <i class="bi bi-github"></i>
-                          </a>
-                          <a href="https://loop-studio-page.netlify.app" target="_blank" rel="noopener noreferrer"
-                            title="live demo">
-                            <i class="bi bi-eye-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="technology">
-                        <div class="row">
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/styled-components.svg" alt="styled components"
-                              title="Styled Component" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/green-sock.svg" alt="GreenSocks js" title="GreenSocks js" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                <!-- <div>
-                  <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                    <img src="./img/portfolio/time-tracking-dashbord.jpg" alt="advice generator" />
-                    <div class="details">
-                      <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                        <p class="text-center">time tracking dashboard UI</p>
-                        <div class="links_project">
-                          <a href="https://github.com/danielpereira21063/time-tracking-dashbord" target="_blank"
-                            rel="noopener noreferrer" title="source code">
-                            <i class="bi bi-github"></i>
-                          </a>
-                          <a href="https://time-tracking-dashbord.netlify.app" target="_blank" rel="noopener noreferrer"
-                            title="live demo">
-                            <i class="bi bi-eye-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="technology">
-                        <div class="row">
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/sass.svg" alt="SASS" title="SASS" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                <!-- <div>
-                  <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                    <img src="./img/portfolio/illustration-chat-app.jpg" alt="illustration chat app" />
-                    <div class="details">
-                      <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                        <p class="text-center">
-                          draw phone using tailwind with animation
-                        </p>
-                        <div class="links_project">
-                          <a href="https://github.com/danielpereira21063/illustration-chat-app" target="_blank"
-                            rel="noopener noreferrer" title="source code">
-                            <i class="bi bi-github"></i>
-                          </a>
-                          <a href="https://danielpereira21063.github.io/illustration-chat-app" target="_blank"
-                            rel="noopener noreferrer" title="live demo">
-                            <i class="bi bi-eye-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="technology">
-                        <div class="row">
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/html.svg" alt="HTML" title="HTML" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/tailwind.svg" alt="tailwind CSS" title="Taialwind CSS" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/green-sock.svg" alt="GreenSocks js" title="GreenSocks js" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-                <!-- <div>
-                  <div class="project" data-aos="flip-up" data-aos-duration="1000">
-                    <img src="./img/portfolio/quiz-app.jpg" alt="quiz app" />
-                    <div class="details">
-                      <div class="position-absolute top-50 start-50 translate-middle bg-accen w-100">
-                        <p class="text-center">
-                          quiz app with random question using an API
-                        </p>
-                        <div class="links_project">
-                          <a href="https://github.com/danielpereira21063/quiz-app" target="_blank" rel="noopener noreferrer"
-                            title="source code">
-                            <i class="bi bi-github"></i>
-                          </a>
-                          <a href="https://quiz-app5.netlify.app" target="_blank" rel="noopener noreferrer" title="live demo">
-                            <i class="bi bi-eye-fill"></i>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="technology">
-                        <div class="row">
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/react.svg" alt="React" title="React" />
-                          </div>
-                          <div class="col d-flex justify-content-center">
-                            <img src="./img/stack-icons/sass.svg" alt="SASS" title="SASS" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
+        <div class="work__img" style="cursor: pointer">
+            <h3 style="text-align: center">Minha rede social</h3>
+            <img src="https://danielsanchesdev.com.br/img/portfolio/my-social-network.png" alt="" onclick="redirectTo('social-network.danielsanchesdev.com.br')">
+            <div class="work__description">
+                <a target="_blank" href="https://github.com/danielpereira21063/MySocialNetworkWeb"><i class="bx bxl-github"></i></a>
+                <small style="display: block;">Descrição projeto</small>
             </div>
         </div>
-    </section>
-    <!-- ==== End Portfolio === -->
-    <!-- === Contact ====  -->
-    <div id="contact">
-        <section>
-            <div class="container">
-                <h1>CONTATO</h1>
-                <div class="row">
-                    <div class="hello mb-4 mb-lg-0 col-12 col-lg-4 d-grid align-content-center" data-aos="fade-right"
-                         data-aos-duration="1000">
-                        <span>E aí?</span>
-                        <p>
-                            Gostou do meu perfil e gostaria de entrar em contato comigo?
-                        </p>
 
-                        <div class="mt-5 more_info">
-                            <p>
-                                <i class="bi bi-geo-alt text-accent me-2 fs-5"></i>
-                                Itaocara, RJ
-                            </p>
-
-                            <p>
-                                <i class="bi bi-envelope-fill text-accent me-2 fs-5"></i>
-                                danielsanches6301@gmail.com
-                            </p>
-
-                            <p style="font-family: sans-serif">
-                                <i class="bi bi-telephone-fill text-accent me-2 fs-5"></i>
-                                +55 22 999668032
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="contact_form col-12 col-lg-8 d-grid align-content-center">
-                        <form action="" id="contact_form" name="portfolio_form" data-aos="fade-left" data-aos-duration="1000">
-                            <div class="row">
-                                <div class="col-12 col-lg-6">
-                                    <input type="text" name="name" id="name" placeholder="Seu nome" class="form-control" required />
-                                    <div class="invalid-feedback small_label">
-                                        Please enter at least 2 character
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-6 mt-3 mt-lg-0">
-                                    <input type="email" name="email" id="email" placeholder="Seu email" class="form-control"
-                                           required />
-                                    <div class="invalid-feedback small_label">
-                                        Please enter a valid email
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-12 mt-3">
-                                    <input type="text" name="subject" id="subject" placeholder="Assunto" class="form-control"
-                                           required />
-                                    <div class="invalid-feedback small_label">
-                                        Please enter a subject
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-12 mt-3">
-                                    <textarea name="message" id="message" placeholder="Mensagem" class="form-control" rows="5"
-                                              maxlength="400" style="max-height: 300px" required></textarea>
-                                    <div class="invalid-feedback small_label">
-                                        Please enter more than 5 word
-                                    </div>
-                                    <div class="valid-feedback text-end" style="font-family: sans-serif"></div>
-                                </div>
-                                <!-- <div class="mt-3"></div> -->
-                                <div class="col-12 mt-3">
-                                    <p class="thanks">Thank you. I will reply soon.</p>
-                                </div>
-                                <div class="mt-3 text-center text-lg-end">
-                                    <button class="btn rounded-pill bg-accent text-white mx-auto" type="submit" id="send" disabled>
-                                        Enviar mensagem
-                                    </button>
-                                </div>
-                                <div class="spinner-border text-accent mx-auto" role="status">
-                                    <span class="visually-hidden">Loading...</span>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
     </div>
-    <!-- ==== End Contact ====  -->
-</main>
+</section>

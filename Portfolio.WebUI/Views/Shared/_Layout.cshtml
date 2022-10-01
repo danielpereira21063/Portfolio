@@ -1,83 +1,77 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/site.css">
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css"
-          integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA=="
-          crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!------------------BOX ITENS-------------------->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <title>Daniel Sanches</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
 </head>
+
 
 <body data-bs-spy="scroll" data-bs-target="#toggleMobileMenu" data-bs-offset="0" tabindex="0">
     <!-- ==== Header ==== -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-lg navbar-light" id="header">
-            <div class="container">
-                <a class="navbar-brand" href="">
-                    &lt;h5&gt;Daniel&lt;/h5&gt;
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu"
-                        aria-controls="toggleMobileMenu" aria-expanded="false" aria-table="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+    <header class="l-header">
+        <nav class="nav bd-grid">
+            <div>
+                <a href="#" class="nav__logo"><img src="/img/logo.png" alt=""></a>
+            </div>
 
-                <div class="collapse navbar-collapse" id="toggleMobileMenu">
-                    <ul class="navbar-nav ms-lg-auto">
-                        <li class="nav-item">
-                            <a href="#hero" aria-current="page" class="nav-link active">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#about" class="nav-link">Sobre</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#portfolio" class="nav-link">Projetos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#contact" class="nav-link">Contato</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link active">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">Sobre</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">Projetos</a></li>
+                    <li class="nav__item">
+                        <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210" target="_blank"
+                           class="nav__link">Contato</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class='bx bx-menu'></i>
             </div>
         </nav>
     </header>
     <!-- ==== End Header ==== -->
-    @RenderBody()
 
-    <footer id="footer" style="padding: 1.5rem !important;">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-lg-2">
-                <div class="text-center text-lg-end">
-                    <a href="https://twitter.com/daniel21063" target="_blank">
-                        <i class="bi bi-twitter"></i>
-                    </a>
+    <main class="l-main">
 
-                    <a href="https://github.com/danielpereira21063" target="_blank">
-                        <i class="bi bi-github"></i>
-                    </a>
+        @RenderBody()
+    </main>
 
-                    <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/" target="_blank">
-                        <i class="bi bi-linkedin"></i>
-                    </a>
-                </div>
-            </div>
+
+
+    <!--===== FOOTER =====-->
+    <footer class="footer">
+        <p class="footer__title">Daniel Pereira Sanches</p>
+        <div class="footer__icon">
+            <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210" target="_blank" class="home__social-icon">
+                <i class='bx bxl-linkedin'></i>
+            </a>
+            <a href="https://github.com/danielpereira21063" target="_blank" class="home__social-icon"><i class='bx bxl-github'></i></a>
+            <a href="mailto:danielsanches631@gmail.com?subject=Olá, Daniel" target="_blank" class="home__social-icon">
+                <i class='bx bx-envelope'></i>
+            </a>
+            <a href="https://api.whatsapp.com/send?phone=5522999668032&text=Ol%C3%A1%2C%20tudo%20bem%3F" target="_blank"
+               class="home__social-icon"> <i class='bx bx-phone'></i></a>
         </div>
+        <p class="footer__copy">&#169; Daniel Sanches. All rigths reserved</p>
     </footer>
-    <!-- ==== End footer ====  -->
-    <!-- ==== Dark/Light mode button === -->
-    <button id="theme">
-        <i class="bi bi-moon-fill"></i>
-        <i class="bi bi-brightness-high-fill"></i>
-    </button>
 
-    <script type="module" src="./js/contact.js"></script>
-    <script type="module" src="./js/curtain.js"></script>
-    <script type="module" src="./js/themes.js"></script>
-    <script type="module" src="./js/typed.js"></script>
+
+    <!--===== SCROLL REVEAL =====-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--===== MAIN JS =====-->
+    <script src="/js/main.js"></script>
 </body>
 
 </html>
