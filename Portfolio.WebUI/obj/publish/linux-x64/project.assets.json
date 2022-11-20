@@ -16,11 +16,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\portfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Documents\\Estudos\\CSharp\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
       "projectName": "Portfolio.WebUI",
-      "projectPath": "C:\\Users\\Daniel\\Desktop\\portfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+      "projectPath": "C:\\Users\\Daniel\\Documents\\Estudos\\CSharp\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Daniel\\Desktop\\portfolio\\Portfolio\\Portfolio.WebUI\\obj\\publish\\linux-x64\\",
+      "outputPath": "C:\\Users\\Daniel\\Documents\\Estudos\\CSharp\\Portfolio\\Portfolio.WebUI\\obj\\publish\\linux-x64\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -69,7 +69,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[6.0.8, 6.0.8]"
+            "version": "[6.0.9, 6.0.9]"
           }
         ],
         "frameworkReferences": {
@@ -80,7 +80,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

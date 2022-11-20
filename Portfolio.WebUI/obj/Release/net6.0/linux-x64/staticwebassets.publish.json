@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "Hash": "EWeLRMS0rwLAnJlaucZcJJ7gASy7HlA2kKi/xLL+BL0=",
+  "Hash": "2uQ3HaN/my/5c4G70QAve+Y7jMfO9dL+D/FA0X2SmB4=",
   "Source": "Portfolio.WebUI",
   "BasePath": "_content/Portfolio.WebUI",
   "Mode": "Default",
-  "ManifestType": "Build",
+  "ManifestType": "Publish",
   "ReferencedProjectsConfiguration": [],
   "DiscoveryPatterns": [
     {
