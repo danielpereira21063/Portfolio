@@ -5,6 +5,10 @@ VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portfolio.WebUI", "Portfolio.WebUI\Portfolio.WebUI.csproj", "{13758876-F61F-4BBF-97F4-0B2BBA275155}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{E62B85E6-D500-4152-875B-D758DC138816}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portfolio.ADM", "Portfolio.ADM\Portfolio.ADM.csproj", "{3B9FE36F-0157-4C89-95B4-937095C263A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,9 +19,16 @@ Global
 		{13758876-F61F-4BBF-97F4-0B2BBA275155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13758876-F61F-4BBF-97F4-0B2BBA275155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13758876-F61F-4BBF-97F4-0B2BBA275155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B9FE36F-0157-4C89-95B4-937095C263A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B9FE36F-0157-4C89-95B4-937095C263A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B9FE36F-0157-4C89-95B4-937095C263A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B9FE36F-0157-4C89-95B4-937095C263A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3B9FE36F-0157-4C89-95B4-937095C263A5} = {E62B85E6-D500-4152-875B-D758DC138816}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {53CC4F47-F692-42BE-985F-33DBD8C1DDF4}
