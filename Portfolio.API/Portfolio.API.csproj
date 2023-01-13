@@ -11,10 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Portfolio.Infra.IoC\Portfolio.Infra.IoC.csproj" />
   </ItemGroup>
 

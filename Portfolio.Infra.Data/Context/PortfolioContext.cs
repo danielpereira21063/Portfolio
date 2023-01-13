@@ -12,6 +12,7 @@ namespace Portfolio.Infra.Data.Context
         public PortfolioContext(DbContextOptions<PortfolioContext> options) : base(options) { }
 
 
+        public DbSet<InformacoesPortfolio> InformacoesPortfolios { get; set; }
         public DbSet<Projeto> Projetos { get; set; }
         public DbSet<ImagemProjeto> ImagensProjeto { get; set; }
 
