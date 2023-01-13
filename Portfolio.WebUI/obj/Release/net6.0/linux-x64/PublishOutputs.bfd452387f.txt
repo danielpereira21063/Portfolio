@@ -1,7 +1,0 @@
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.dll
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.deps.json
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.runtimeconfig.json
-D:\Estudos\ProjetosPessoais\Portfolio\Portfolio.WebUI\obj\Release\net6.0\linux-x64\PubTmp\Out\Portfolio.WebUI.pdb
