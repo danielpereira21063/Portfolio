@@ -1,12 +1,8 @@
-﻿using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens;
-using Portfolio.Domain.Identity;
+using Portfolio.Application.Extensions;
 using Portfolio.Infra.Data.Context;
-using System.Text;
 
 namespace Portfolio.Infra.IoC
 {
@@ -24,39 +20,13 @@ namespace Portfolio.Infra.IoC
                 });
             });
 
-            services.ConfigureAuthentication(configuration);
-        }
 
-        private static void ConfigureAuthentication(this IServiceCollection services, IConfiguration configuration)
-        {
-            //services.AddIdentityCore<User>(options =>
-            //{
-            //    options.Password.RequireDigit = false;
-            //    options.Password.RequireLowercase = false;
-            //    options.Password.RequireUppercase = false;
-            //    options.Password.RequireNonAlphanumeric = false;
-            //    options.Password.RequiredLength = 8;
-            //})
-            //    .AddRoles<Role>()
-            //    .AddRoleManager<RoleManager<Role>>()
-            //    .AddSignInManager<SignInManager<User>>()
-            //    .AddRoleValidator<RoleValidator<Role>>()
-            //    .AddEntityFrameworkStores<PortfolioContext>()
-            //    .AddDefaultTokenProviders();
+            services.AddControllers();
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen();
 
 
-            //services
-            //    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-            //    .AddJwtBearer(options =>
-            //    {
-            //        options.TokenValidationParameters = new TokenValidationParameters
-            //        {
-            //            ValidateIssuerSigningKey = true,
-            //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["JWTKey"])),
-            //            ValidateIssuer = false,
-            //            ValidateAudience = false
-            //        };
-            //    });
+            services.ConfigureApplicationAuthentication(configuration);
         }
     }
 }

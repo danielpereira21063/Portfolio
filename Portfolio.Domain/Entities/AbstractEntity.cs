@@ -1,4 +1,6 @@
-﻿namespace Portfolio.Domain.Entities
+﻿using System;
+
+namespace Portfolio.Domain.Entities
 {
     public abstract class AbstractEntity
     {

@@ -1,15 +1,16 @@
-﻿namespace Portfolio.Domain.Validacoes.Exceptions
+﻿using System;
+using System.Collections.Generic;
+
+namespace Portfolio.Domain.Validacoes.Exceptions
 {
     public class DomainException : Exception
     {
-        public DomainException(string error) : base(error)
-        {
+        public ICollection<string> MsgErros { get; set; }
 
-        }
 
-        public static void When(bool hasError, string error)
+        public DomainException(ICollection<string> msgErros)
         {
-            if (hasError) throw new DomainException(error);
+            MsgErros = msgErros;
         }
     }
 }

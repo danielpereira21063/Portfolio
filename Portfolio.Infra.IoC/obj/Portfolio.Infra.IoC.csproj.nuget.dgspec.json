@@ -37,6 +37,9 @@
             "projectReferences": {
               "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\Portfolio.Domain\\Portfolio.Domain.csproj": {
                 "projectPath": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\Portfolio.Domain\\Portfolio.Domain.csproj"
+              },
+              "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
+                "projectPath": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj"
               }
             }
           }
@@ -51,6 +54,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.13, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -281,9 +288,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
