@@ -4,9 +4,10 @@ namespace Portfolio.Domain.Test.Builders
 {
     public class ImagemProjetoBuilder
     {
-        public byte[] _imagem = new byte[] { 0x00, 0x01, 0x02, 0x03, 0x04 };
+        public byte[] _imagem = new byte[] { 0x00, 0x01, 0x02, 0x03 };
         public bool _principal = false;
-        public int _projetoId;
+        public int _projetoId = 1;
+
 
         public static ImagemProjetoBuilder Novo()
         {

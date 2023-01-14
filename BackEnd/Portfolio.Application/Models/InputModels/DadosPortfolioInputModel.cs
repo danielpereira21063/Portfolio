@@ -2,7 +2,7 @@
 
 namespace Portfolio.Application.DTOs.InputModels
 {
-    public class DadosPortfolioInputModel
+    public class DadosPortfolioInputModel : AbstractInputModel
     {
         public string NomeCompleto { get; set; }
         public string Apresentacao { get; set; }

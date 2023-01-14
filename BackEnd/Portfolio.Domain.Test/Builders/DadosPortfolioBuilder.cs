@@ -13,7 +13,7 @@ namespace Portfolio.Domain.Test.Builders
         public string _youtubeURL = "https://www.youtube.com/@danielpereirasanches";
         public string _whatsApp = "+5522999668032";
         public string _email = "danielsanches6301@mail.com";
-        public int _userId;
+        public int _userId = 1;
 
 
         public static DadosPortfolioBuilder Novo()

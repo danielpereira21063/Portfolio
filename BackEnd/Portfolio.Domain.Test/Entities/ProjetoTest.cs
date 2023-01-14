@@ -27,7 +27,7 @@ namespace Portfolio.Domain.Test.Entities
             _titulo = _faker.Commerce.ProductName();
             _descricao = _faker.Commerce.ProductDescription();
             _url = _faker.Internet.Url();
-            _urlGitHub = _faker.Internet.Url();
+            _urlGitHub = _faker.Internet.UrlWithPath();
             _inativo = false;
             _dadosPortfolioId = _faker.Random.Int(1, int.MaxValue);
         }
@@ -51,12 +51,63 @@ namespace Portfolio.Domain.Test.Entities
             projetoEsperado.ToExpectedObject().ShouldMatch(projeto);
         }
 
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        public void NaoDeveCriarComTituloInvalido(string tituloInvalido)
+        {
+            Assert.Throws<DomainException>(()
+                => ProjetoBuilder.Novo().ComTitulo(tituloInvalido).Build()).ComMensagem(ProjetoMsgErros.TITULO_INVALIDO);
+        }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        public void NaoDeveCriarComDescricaoInvalida(string descricaoInvalida)
+        {
+            Assert.Throws<DomainException>(()
+                => ProjetoBuilder.Novo().ComDescricao(descricaoInvalida).Build()).ComMensagem(ProjetoMsgErros.DESCRICAO_INVALIDA);
+        }
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("urlInvalida")]
+        [InlineData(" ")]
+        public void NaoDeveCriarComUrlInvalida(string urlInvalida)
+        {
+            Assert.Throws<DomainException>(()
+                => ProjetoBuilder.Novo().ComUrl(urlInvalida).Build()).ComMensagem(ProjetoMsgErros.URL_INVALIDA);
+        }
+
+
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("urlGitHubInvalida")]
+        [InlineData(" ")]
+        public void NaoDeveCriarComUrlGitHubInvalida(string urlGitHubInvalida)
+        {
+            Assert.Throws<DomainException>(()
+                => ProjetoBuilder.Novo().ComUrlGitHub(urlGitHubInvalida).Build()).ComMensagem(ProjetoMsgErros.URL_GITHUB_INVALIDA);
+        }
+
+        [Theory]
+        [InlineData(0)]
+        [InlineData(-1)]
+        public void NaoDeveCriarComPortfolioIdInvalido(int portfolioIdInvalido)
+        {
+            Assert.Throws<DomainException>(() =>
+                ProjetoBuilder.Novo().ComPortfolioId(portfolioIdInvalido).Build()).ComMensagem(ProjetoMsgErros.PORTFOLIO_ID_INVALIDO);
+        }
+
+
         [Fact]
         public void DeveAlterarTitulo()
         {
             var tituloEsperado = _faker.Commerce.ProductName();
             var projeto = ProjetoBuilder.Novo().Build();
-            
+
             projeto.AlterarTitulo(tituloEsperado);
             Assert.Equal(tituloEsperado, projeto.Titulo);
         }
@@ -89,56 +140,6 @@ namespace Portfolio.Domain.Test.Entities
 
             projeto.AlterarUrlGitHub(urlGitHubEsperada);
             Assert.Equal(urlGitHubEsperada, projeto.UrlGitHub);
-        }
-
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        public void NaoDeveTerTituloInvalido(string tituloInvalido)
-        {
-            Assert.Throws<DomainException>(()
-                => ProjetoBuilder.Novo().ComTitulo(tituloInvalido).Build()).ComMensagem(ProjetoMsgErros.TITULO_INVALIDO);
-        }
-
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        public void NaoDeveTerDescricaoInvalida(string descricaoInvalida)
-        {
-            Assert.Throws<DomainException>(()
-                => ProjetoBuilder.Novo().ComDescricao(descricaoInvalida).Build()).ComMensagem(ProjetoMsgErros.DESCRICAO_INVALIDA);
-        }
-
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        [InlineData("urlInvalida")]
-        [InlineData(" ")]
-        public void NaoDeveTerUrlInvalida(string urlInvalida)
-        {
-            Assert.Throws<DomainException>(()
-                => ProjetoBuilder.Novo().ComUrl(urlInvalida).Build()).ComMensagem(ProjetoMsgErros.URL_INVALIDA);
-        }
-
-
-        [Theory]
-        [InlineData(null)]
-        [InlineData("")]
-        [InlineData("urlGitHubInvalida")]
-        [InlineData(" ")]
-        public void NaoDeveTerUrlGitHubInvalida(string urlGitHubInvalida)
-        {
-            Assert.Throws<DomainException>(()
-                => ProjetoBuilder.Novo().ComUrlGitHub(urlGitHubInvalida).Build()).ComMensagem(ProjetoMsgErros.URL_GITHUB_INVALIDA);
-        }
-
-        [Theory]
-        [InlineData(0)]
-        [InlineData(-1)]
-        public void NaoDeveTerPortfolioIdInvalido(int portfolioIdInvalido)
-        {
-            Assert.Throws<DomainException>(()
-                => ProjetoBuilder.Novo().ComPortfolioId(portfolioIdInvalido).Build()).ComMensagem(ProjetoMsgErros.PORTFOLIO_ID_INVALIDO);
         }
     }
 }

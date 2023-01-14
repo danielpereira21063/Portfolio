@@ -31,12 +31,14 @@ namespace Portfolio.Domain.Entities
             MensagemApresentacao = mensagemApresentacao;
             LinkedinURL = linkedinUrl;
             FacebookUrl = facebookUrl;
+            TwitterURL = twitterURL;
             InstagramURL = instagramUrl;
             YoutubeURL = youtubeUrl;
             WhatsApp = whatsApp;
             Email = email;
             UserId = userId;
-            TwitterURL = twitterURL;
+
+            Validar();
         }
 
         public void AlterarNomeComleto(string nomeCompleto) => NomeCompleto = nomeCompleto;
@@ -53,11 +55,13 @@ namespace Portfolio.Domain.Entities
         {
             ValidadorDeEntidade.Novo()
                 .Quando(string.IsNullOrEmpty(NomeCompleto), DadosPortfolioMsgErros.NOME_COMPLETO_INVALIDO)
-                .Quando(!ValidadorDeExpressao.ValidarUrl(LinkedinURL) || string.IsNullOrEmpty(LinkedinURL), DadosPortfolioMsgErros.URL_LINKEDIN_INVALIDA)
-                .Quando(!ValidadorDeExpressao.ValidarUrl(FacebookUrl) || string.IsNullOrEmpty(FacebookUrl), DadosPortfolioMsgErros.URL_FACEBOOK_INVALIDA)
-                .Quando(!ValidadorDeExpressao.ValidarUrl(TwitterURL) || string.IsNullOrEmpty(TwitterURL), DadosPortfolioMsgErros.URL_TWITTER_INVALIDA)
-                .Quando(!ValidadorDeExpressao.ValidarUrl(InstagramURL) || string.IsNullOrEmpty(InstagramURL), DadosPortfolioMsgErros.URL_INSTAGRAM_INVALIDA)
-                .Quando(!ValidadorDeExpressao.ValidarUrl(YoutubeURL) || string.IsNullOrEmpty(YoutubeURL), DadosPortfolioMsgErros.URL_YOUTUBE_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarUrl(LinkedinURL), DadosPortfolioMsgErros.URL_LINKEDIN_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarUrl(FacebookUrl), DadosPortfolioMsgErros.URL_FACEBOOK_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarUrl(TwitterURL), DadosPortfolioMsgErros.URL_TWITTER_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarUrl(InstagramURL), DadosPortfolioMsgErros.URL_INSTAGRAM_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarUrl(YoutubeURL), DadosPortfolioMsgErros.URL_YOUTUBE_INVALIDA)
+                .Quando(!ValidadorDeExpressao.ValidarCelular(WhatsApp), DadosPortfolioMsgErros.WHATSAPP_INVALIDO)
+                .Quando(!ValidadorDeExpressao.ValidarEmail(Email), DadosPortfolioMsgErros.EMAIL_INVALIDO)
                 .LancarExcecoesSeExistir();
         }
     }

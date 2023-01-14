@@ -1,4 +1,7 @@
-﻿namespace Portfolio.Domain.Entities
+﻿using Portfolio.Domain.Validacoes;
+using Portfolio.Domain.Validacoes.MensagemDeErros;
+
+namespace Portfolio.Domain.Entities
 {
     public class ImagemProjeto : AbstractEntity
     {
@@ -17,6 +20,8 @@
             Imagem = imagem;
             Principal = principal;
             ProjetoId = projetoId;
+
+            Validar();
         }
 
         public void AlterarImagem(byte[] imagem) => Imagem = imagem;
@@ -25,7 +30,10 @@
 
         protected override void Validar()
         {
-            throw new System.NotImplementedException();
+            ValidadorDeEntidade.Novo()
+                .Quando((Imagem?.Length ?? 0) == 0 || Imagem == null,ImagemProjetoMsgErros.IMAGEM_INVALIDA)
+                .Quando(ProjetoId <=0, ImagemProjetoMsgErros.PROJETO_ID_INALIDO)
+                .LancarExcecoesSeExistir();
         }
     }
 }

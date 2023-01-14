@@ -1,7 +1,7 @@
 ﻿using Bogus;
 using ExpectedObjects;
 using Portfolio.Domain.Entities;
-using Portfolio.Domain.Test.Builders;
+using System.Text;
 using Xunit;
 
 namespace Portfolio.Domain.Test.Entities
@@ -24,6 +24,17 @@ namespace Portfolio.Domain.Test.Entities
         public DadosPortfolioTest()
         {
             _faker = new Faker("pt_BR");
+
+            _nomeCompleto = _faker.Person.FullName;
+            _mensagemApresentacao = _faker.Lorem.Paragraph();
+            _linkedinURL = _faker.Internet.UrlWithPath();
+            _facebookURL = _faker.Internet.UrlWithPath();
+            _twitterURL = _faker.Internet.UrlWithPath();
+            _instagramURL = _faker.Internet.UrlWithPath();
+            _youtubeURL = _faker.Internet.UrlWithPath();
+            _whatsApp = _faker.Person.Phone.Replace("(", "").Replace(")", "").Replace(" ", "") + _faker.Random.Int(0,9);
+            _email = _faker.Person.Email;
+            _userId = _faker.Random.Int(1, int.MaxValue);
         }
 
         [Fact]
@@ -54,7 +65,7 @@ namespace Portfolio.Domain.Test.Entities
                                                     dadosPortfolioEsperado.Email,
                                                     dadosPortfolioEsperado.UserId);
 
-            dadosPortfolioEsperado.ToExpectedObject().ShouldMatch(dadosPortfolioEsperado);
+            dadosPortfolioEsperado.ToExpectedObject().ShouldMatch(dadosPortfolio);
         }
     }
 }

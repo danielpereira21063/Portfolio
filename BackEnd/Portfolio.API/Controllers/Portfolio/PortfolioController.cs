@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Application.DTOs.InputModels;
-using Portfolio.Application.Models.UpdateModels;
-
 namespace Portfolio.API.Controllers.Portfolio
 {
     //[Authorize]
@@ -28,7 +26,7 @@ namespace Portfolio.API.Controllers.Portfolio
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] DadosPortfolioUpdateModel model)
+        public IActionResult Put([FromBody] DadosPortfolioInputModel model)
         {
             return Ok(model);
         }
