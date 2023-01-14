@@ -1,14 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Portfolio.Application.DTOs.InputModels;
+using Portfolio.Application.Services.Interfaces;
+
 namespace Portfolio.API.Controllers.Portfolio
 {
     //[Authorize]
     [Route("api/[controller]")]
     public class PortfolioController : MainController
     {
-        public PortfolioController()
-        {
+        private readonly IDadosPortfolioService _dadosPortfolioService;
 
+        public PortfolioController(IDadosPortfolioService dadosPortfolioService)
+        {
+            _dadosPortfolioService = dadosPortfolioService;
         }
 
         [HttpGet]
@@ -22,7 +26,9 @@ namespace Portfolio.API.Controllers.Portfolio
         {
             //validar se já existe um portfólio para o usuário.
             //Caso exista, retornar uma mensagem de erro informando que não é possível criar pois já existe.
-            return Ok(model);
+
+            var response = _dadosPortfolioService.Salvar(1, model);
+            return Ok(response);
         }
 
         [HttpPut]

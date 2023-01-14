@@ -1,6 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using Portfolio.Domain.Validacoes.Exceptions;
+using System.Collections.Generic;
 using System.Linq;
-using Portfolio.Domain.Validacoes.Exceptions;
 
 namespace Portfolio.Domain.Validacoes
 {
@@ -20,7 +20,10 @@ namespace Portfolio.Domain.Validacoes
 
         public ValidadorDeEntidade Quando(bool temErro, string mensagemDeErro)
         {
-            if (temErro) _mensagensDeErro.Add(mensagemDeErro);
+            if (temErro)
+            {
+                _mensagensDeErro.Add(mensagemDeErro);
+            }
 
             return this;
         }

@@ -1,15 +1,14 @@
-﻿using Portfolio.Application.Models.AbstractModels;
-
-namespace Portfolio.Application.DTOs.InputModels
+﻿namespace Portfolio.Application.DTOs.InputModels
 {
-    public class DadosPortfolioInputModel : AbstractInputModel
+    public class DadosPortfolioInputModel
     {
         public string NomeCompleto { get; set; }
-        public string Apresentacao { get; set; }
-        public string Linkedin { get; set; }
-        public string Facebook { get; set; }
-        public string Instagram { get; set; }
-        public string Youtube { get; set; }
+        public string MensagemApresentacao { get; set; }
+        public string LinkedinURL { get; set; }
+        public string FacebookURL { get; set; }
+        public string TwitterURL { get; set; }
+        public string InstagramURL { get; set; }
+        public string YoutubeURL { get; set; }
         public string WhatsApp { get; set; }
         public string Email { get; set; }
     }

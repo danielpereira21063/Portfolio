@@ -31,8 +31,8 @@ namespace Portfolio.Domain.Entities
         protected override void Validar()
         {
             ValidadorDeEntidade.Novo()
-                .Quando((Imagem?.Length ?? 0) == 0 || Imagem == null,ImagemProjetoMsgErros.IMAGEM_INVALIDA)
-                .Quando(ProjetoId <=0, ImagemProjetoMsgErros.PROJETO_ID_INALIDO)
+                .Quando((Imagem?.Length ?? 0) == 0 || Imagem == null, ImagemProjetoMsgErros.IMAGEM_INVALIDA)
+                .Quando(ProjetoId <= 0, ImagemProjetoMsgErros.PROJETO_ID_INALIDO)
                 .LancarExcecoesSeExistir();
         }
     }

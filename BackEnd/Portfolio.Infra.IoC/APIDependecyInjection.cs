@@ -1,8 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Portfolio.Application.Extensions;
-using Portfolio.Infra.Data.Context;
+using Portfolio.Application.Mapping;
+using Portfolio.Infra.Data.Extensions;
+using Portfolio.Infra.IoC.Extensions;
 
 namespace Portfolio.Infra.IoC
 {
@@ -10,23 +11,16 @@ namespace Portfolio.Infra.IoC
     {
         public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("PortfolioHomol");
-
-            services.AddDbContext<PortfolioContext>(options =>
-            {
-                options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString), x =>
-                {
-                    x.MigrationsAssembly(typeof(PortfolioContext).Assembly.FullName);
-                });
-            });
-
-
             services.AddControllers();
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
+            services.AddAutoMapper(typeof(MappingProfile));
 
+            services.AddPersistence(configuration);
+            services.AddAplicationServices();
+            services.AddRepositories();
 
-            services.ConfigureApplicationAuthentication(configuration);
+            services.ConfigureAuthentication(configuration);
         }
     }
 }

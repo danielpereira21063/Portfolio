@@ -1,7 +1,6 @@
 ﻿using Bogus;
 using ExpectedObjects;
 using Portfolio.Domain.Entities;
-using System.Text;
 using Xunit;
 
 namespace Portfolio.Domain.Test.Entities
@@ -18,6 +17,7 @@ namespace Portfolio.Domain.Test.Entities
         private readonly string _whatsApp;
         private readonly string _email;
         private readonly int _userId;
+        private readonly ICollection<Projeto> _projetos = new List<Projeto>();
 
         private readonly Faker _faker;
 
@@ -32,9 +32,16 @@ namespace Portfolio.Domain.Test.Entities
             _twitterURL = _faker.Internet.UrlWithPath();
             _instagramURL = _faker.Internet.UrlWithPath();
             _youtubeURL = _faker.Internet.UrlWithPath();
-            _whatsApp = _faker.Person.Phone.Replace("(", "").Replace(")", "").Replace(" ", "") + _faker.Random.Int(0,9);
+            _whatsApp = _faker.Person.Phone.Replace("-", "").Replace("+55 ", "");
             _email = _faker.Person.Email;
             _userId = _faker.Random.Int(1, int.MaxValue);
+
+            //var qtdProjetos = _faker.Random.Int(1, 5);
+            //for (int i = 0; i < qtdProjetos; i++)
+            //{
+            //    var projeto = ProjetoBuilder.Novo().Build();
+            //    _projetos.Add(projeto);
+            //}
         }
 
         [Fact]

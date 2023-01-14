@@ -122,3 +122,5 @@ D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\ref
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.pdb
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.genruntimeconfig.cache
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\ref\Portfolio.API.dll
+D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\bin\Debug\net6.0\AutoMapper.dll
+D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

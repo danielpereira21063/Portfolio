@@ -8,6 +8,7 @@ namespace Portfolio.Application.Models.DTOs
         public string Apresentacao { get; set; }
         public string LinkedinURL { get; set; }
         public string FacebookURL { get; set; }
+        public string TwitterURL { get; set; }
         public string InstagramURL { get; set; }
         public string YoutubeURL { get; set; }
         public string WhatsApp { get; set; }
