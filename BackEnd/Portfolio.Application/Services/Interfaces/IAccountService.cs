@@ -7,8 +7,11 @@ namespace Portfolio.Application.Services.Interfaces
 {
     public interface IAccountService
     {
+        Task<UserDto> CriarUsuarioAdminAsync();
+        Task<bool> AlterarSenha(User usuario, UserInputModel userInputModel, string token);
+        Task<UserDto> ObterUsuarioAsync(string nomeUsuario);
         Task<SignInResult> VerificarSenhaAsync(string nomeUsuario, string senha);
-        Task<UserDto> AlterarDadosDaConta(UserInputModel user);
+        Task<UserDto> AlterarDadosDaContaAsync(UserInputModel user);
         bool UsuarioExite(string nomeUsuario);
     }
 }

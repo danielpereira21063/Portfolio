@@ -7,7 +7,6 @@ builder.Services
     .AddEndpointsApiExplorer()
     .AddControllers(config => config.Filters.Add(typeof(CustomExceptionFilter)));
 
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -18,6 +17,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

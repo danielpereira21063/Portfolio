@@ -8,6 +8,8 @@ namespace Portfolio.Application.Extensions
     {
         public static void AddAplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IDadosPortfolioService, DadosPortfolioService>();
         }
     }

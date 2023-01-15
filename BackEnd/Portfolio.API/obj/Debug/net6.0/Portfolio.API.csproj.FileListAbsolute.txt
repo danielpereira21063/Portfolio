@@ -124,3 +124,4 @@ D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Por
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\ref\Portfolio.API.dll
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\bin\Debug\net6.0\AutoMapper.dll
 D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Estudos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll

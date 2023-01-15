@@ -2,11 +2,12 @@
 using Portfolio.Application.DTOs.InputModels;
 using Portfolio.Application.Services.Interfaces;
 
-namespace Portfolio.API.Controllers.Portfolio
+namespace Portfolio.API.Controllers
 {
     //[Authorize]
+    [ApiController]
     [Route("api/[controller]")]
-    public class PortfolioController : MainController
+    public class PortfolioController : ControllerBase
     {
         private readonly IDadosPortfolioService _dadosPortfolioService;
 
@@ -22,7 +23,7 @@ namespace Portfolio.API.Controllers.Portfolio
         }
 
         [HttpPost]
-        public IActionResult Post([FromBody] DadosPortfolioInputModel model)
+        public IActionResult Post(DadosPortfolioInputModel model)
         {
             //validar se já existe um portfólio para o usuário.
             //Caso exista, retornar uma mensagem de erro informando que não é possível criar pois já existe.
@@ -33,7 +34,7 @@ namespace Portfolio.API.Controllers.Portfolio
         }
 
         [HttpPut]
-        public IActionResult Put([FromBody] DadosPortfolioInputModel model)
+        public IActionResult Put(DadosPortfolioInputModel model)
         {
             return Ok(model);
         }
