@@ -1,12 +1,17 @@
-﻿using Portfolio.Domain.Validacoes;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Portfolio.Domain.Validacoes;
 using Portfolio.Domain.Validacoes.MensagemDeErros;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Portfolio.Domain.Entities
 {
     public class ImagemProjeto : AbstractEntity
     {
+        [Column(TypeName = "MEDIUMBLOB")]
         public byte[] Imagem { get; private set; }
+
         public bool Principal { get; private set; }
+
         public Projeto Projeto { get; private set; }
         public int ProjetoId { get; private set; }
 

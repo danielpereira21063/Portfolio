@@ -43,7 +43,7 @@ namespace Portfolio.Application.Services
             }
 
             dadosPortfolio = new DadosPortfolio(
-                                 model.NomeCompleto, model.MensagemApresentacao, model.LinkedinURL, model.FacebookURL,
+                                 model.NomeCompleto, model.MensagemApresentacao, model.ImagemPerfil, model.LinkedinURL, model.FacebookURL,
                                  model.TwitterURL, model.InstagramURL, model.YoutubeURL, model.WhatsApp, model.Email, userId);
 
             _dadosPortfolioRepository.Salvar(dadosPortfolio);

@@ -4,6 +4,7 @@
     {
         public string NomeCompleto { get; set; }
         public string MensagemApresentacao { get; set; }
+        public byte[] ImagemPerfil { get; set; }
         public string LinkedinURL { get; set; }
         public string FacebookURL { get; set; }
         public string TwitterURL { get; set; }

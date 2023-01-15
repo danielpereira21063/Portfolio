@@ -1,16 +1,31 @@
-﻿using Portfolio.Domain.Validacoes;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Portfolio.Domain.Validacoes;
 using Portfolio.Domain.Validacoes.MensagemDeErros;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Portfolio.Domain.Entities
 {
     public class Projeto : AbstractEntity
     {
+
+        [Column(TypeName = "VARCHAR(100)")]
         public string Titulo { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string Descricao { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string Url { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string UrlGitHub { get; private set; }
+
         public bool Inativo { get; private set; }
+
         public int DadosPortfolioId { get; private set; }
         public DadosPortfolio DadosPortfolio { get; private set; }
         public ICollection<ImagemProjeto> ImagensProjeto { get; private set; }

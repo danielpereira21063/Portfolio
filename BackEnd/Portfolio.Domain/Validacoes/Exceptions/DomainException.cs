@@ -7,6 +7,10 @@ namespace Portfolio.Domain.Validacoes.Exceptions
     {
         public ICollection<string> MsgErros { get; set; }
 
+        public DomainException(string erro) : base(erro)
+        {
+
+        }
 
         public DomainException(ICollection<string> msgErros)
         {

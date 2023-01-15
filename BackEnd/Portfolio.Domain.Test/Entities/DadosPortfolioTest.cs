@@ -9,6 +9,7 @@ namespace Portfolio.Domain.Test.Entities
     {
         private readonly string _nomeCompleto;
         private readonly string _mensagemApresentacao;
+        private readonly byte[] _imagemPerfil;
         private readonly string _linkedinURL;
         private readonly string _facebookURL;
         private readonly string _twitterURL;
@@ -17,7 +18,6 @@ namespace Portfolio.Domain.Test.Entities
         private readonly string _whatsApp;
         private readonly string _email;
         private readonly int _userId;
-        private readonly ICollection<Projeto> _projetos = new List<Projeto>();
 
         private readonly Faker _faker;
 
@@ -28,6 +28,7 @@ namespace Portfolio.Domain.Test.Entities
             _nomeCompleto = _faker.Person.FullName;
             _mensagemApresentacao = _faker.Lorem.Paragraph();
             _linkedinURL = _faker.Internet.UrlWithPath();
+            _imagemPerfil = _faker.Image.Random.Bytes(16);
             _facebookURL = _faker.Internet.UrlWithPath();
             _twitterURL = _faker.Internet.UrlWithPath();
             _instagramURL = _faker.Internet.UrlWithPath();
@@ -51,6 +52,7 @@ namespace Portfolio.Domain.Test.Entities
             {
                 NomeCompleto = _nomeCompleto,
                 MensagenApresentacao = _mensagemApresentacao,
+                ImagemPerfil = _imagemPerfil,
                 LinkedinURL = _linkedinURL,
                 FacebookURL = _facebookURL,
                 TwitterURL = _twitterURL,
@@ -63,6 +65,7 @@ namespace Portfolio.Domain.Test.Entities
 
             var dadosPortfolio = new DadosPortfolio(dadosPortfolioEsperado.NomeCompleto,
                                                     dadosPortfolioEsperado.MensagenApresentacao,
+                                                    dadosPortfolioEsperado.ImagemPerfil,
                                                     dadosPortfolioEsperado.LinkedinURL,
                                                     dadosPortfolioEsperado.FacebookURL,
                                                     dadosPortfolioEsperado.TwitterURL,

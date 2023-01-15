@@ -1,7 +1,12 @@
+using Portfolio.API.Filters;
 using Portfolio.Infra.IoC;
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddInfrastructure(builder.Configuration);
+builder.Services
+    .AddInfrastructure(builder.Configuration)
+    .AddEndpointsApiExplorer()
+    .AddControllers(config => config.Filters.Add(typeof(CustomExceptionFilter)));
+
 
 var app = builder.Build();
 

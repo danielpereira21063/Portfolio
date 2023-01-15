@@ -9,10 +9,8 @@ namespace Portfolio.Infra.IoC
 {
     public static class APIDependecyInjection
     {
-        public static void AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddControllers();
-            services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
             services.AddAutoMapper(typeof(MappingProfile));
 
@@ -21,6 +19,8 @@ namespace Portfolio.Infra.IoC
             services.AddRepositories();
 
             services.ConfigureAuthentication(configuration);
+
+            return services;
         }
     }
 }

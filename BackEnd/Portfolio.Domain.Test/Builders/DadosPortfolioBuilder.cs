@@ -6,6 +6,7 @@ namespace Portfolio.Domain.Test.Builders
     {
         public string _nomeCompleto = "Daniel Pereira Sanches";
         public string _mensagemApresentacao = "Olá, me chamo Daniel e gosto muito do que faço. É muito legal!!!";
+        public byte[] _imagemPerfil = new byte[] { };
         public string _linkedinURL = "https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/";
         public string _facebookURL = "https://www.facebook.com/DanielPereira6301/";
         public string _twitterURL = "https://twitter.com/daniel21063";
@@ -84,7 +85,7 @@ namespace Portfolio.Domain.Test.Builders
 
         public DadosPortfolio Build()
         {
-            return new DadosPortfolio(_nomeCompleto, _mensagemApresentacao, _linkedinURL, _facebookURL, _twitterURL, _instagramURL, _youtubeURL, _whatsApp, _email, _userId);
+            return new DadosPortfolio(_nomeCompleto, _mensagemApresentacao, _imagemPerfil, _linkedinURL, _facebookURL, _twitterURL, _instagramURL, _youtubeURL, _whatsApp, _email, _userId);
         }
     }
 }

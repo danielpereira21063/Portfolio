@@ -2,20 +2,49 @@
 using Portfolio.Domain.Validacoes;
 using Portfolio.Domain.Validacoes.MensagemDeErros;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Portfolio.Domain.Entities
 {
     public class DadosPortfolio : AbstractEntity
     {
+        [Column(TypeName = "VARCHAR(250)")]
         public string NomeCompleto { get; private set; }
+
         public string MensagemApresentacao { get; private set; }
+
+
+        [Column(TypeName = "MEDIUMBLOB")]
+        public byte[] ImagemPerfil { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string LinkedinURL { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string FacebookUrl { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string TwitterURL { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string InstagramURL { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string YoutubeURL { get; private set; }
+
+
+        [Column(TypeName = "VARCHAR(250)")]
         public string WhatsApp { get; set; }
+
+
+        [Column(TypeName = "VARCHAR(100)")]
         public string Email { get; private set; }
+
         public User User { get; private set; }
         public int UserId { get; private set; }
         public ICollection<Projeto> Projetos { get; private set; }
@@ -25,10 +54,11 @@ namespace Portfolio.Domain.Entities
 
         }
 
-        public DadosPortfolio(string nomeCompleto, string mensagemApresentacao, string linkedinUrl, string facebookUrl, string twitterURL, string instagramUrl, string youtubeUrl, string whatsApp, string email, int userId)
+        public DadosPortfolio(string nomeCompleto, string mensagemApresentacao, byte[] imagemPerfil, string linkedinUrl, string facebookUrl, string twitterURL, string instagramUrl, string youtubeUrl, string whatsApp, string email, int userId)
         {
             NomeCompleto = nomeCompleto;
             MensagemApresentacao = mensagemApresentacao;
+            ImagemPerfil = imagemPerfil;
             LinkedinURL = linkedinUrl;
             FacebookUrl = facebookUrl;
             TwitterURL = twitterURL;
