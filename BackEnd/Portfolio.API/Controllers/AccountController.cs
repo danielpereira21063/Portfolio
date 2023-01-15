@@ -83,19 +83,18 @@ namespace Portfolio.API.Controllers
         [HttpPost]
         public async Task<IActionResult> CriarUsuarioAdmin()
         {
-            if (_accountService.UsuarioExite("admin"))
+            try
             {
-                return BadRequest("Já existe um usuário administrador cadastrado");
+                var usuario = await _accountService.CriarUsuarioAdminAsync();
+
+                if (usuario == null) throw new Exception("Ocorreu um erro desconhecido ao tentar criar o usuário administrador");
+
+                return Ok(usuario);
             }
-
-            var usuario = await _accountService.CriarUsuarioAdminAsync();
-
-            if (usuario == null)
+            catch (Exception ex)
             {
-                return BadRequest("Ocorreu um erro desconhecido ao tentar criar o usuário administrador");
+                return BadRequest(ex.Message);
             }
-
-            return Ok("Usuário criado com sucesso");
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Portfolio.Application.Services
                     }
                 }
 
-                usuario.Email  = model.Email;
+                usuario.Email = model.Email;
                 usuario.UserName = model.UserName;
 
                 var result = await _userManager.UpdateAsync(usuario);
@@ -71,24 +71,35 @@ namespace Portfolio.Application.Services
 
         public async Task<UserDto> CriarUsuarioAdminAsync()
         {
-            var role = new Role { Name = "admin" };
-            var roleResult = await _roleManager.CreateAsync(role);
-
-            if (!roleResult.Succeeded) return null;
-
-            var novoUsuario = new User
+            try
             {
-                UserName = "admin",
-                Email = "admin"
-            };
+                //se existir algum usuário, não poderá criar outros. Apenas o admin!!!
+                if (_userManager.Users.Any()) throw new Exception("Já existe um usuário administrador cadastrado");
 
-            await _userManager.CreateAsync(novoUsuario, "admin1234");
+                var role = new Role { Name = "admin" };
+                var roleResult = await _roleManager.CreateAsync(role);
 
-            var user = await _userManager.FindByNameAsync(novoUsuario.UserName);
+                if (!roleResult.Succeeded) throw new Exception("Ocorreu um erro desconhecido ao tentar criar o perfil de administrador");
 
-            await _userManager.AddToRoleAsync(user, role.Name);
+                var novoUsuario = new User
+                {
+                    UserName = "admin",
+                    Email = "admin"
+                };
 
-            return Mapper.Map<UserDto>(user);
+                await _userManager.CreateAsync(novoUsuario, "admin1234");
+
+                var user = await _userManager.FindByNameAsync(novoUsuario.UserName);
+
+                await _userManager.AddToRoleAsync(user, role.Name);
+
+                return Mapper.Map<UserDto>(user);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
         }
 
         public async Task<UserDto> ObterUsuarioAsync(string nomeUsuario)

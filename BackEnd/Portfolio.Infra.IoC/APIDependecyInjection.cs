@@ -1,6 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
 using Portfolio.Application.Extensions;
 using Portfolio.Application.Mapping;
 using Portfolio.Infra.Data.Extensions;
@@ -12,11 +11,7 @@ namespace Portfolio.Infra.IoC
     {
         public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSwaggerGen(config =>
-            {
-                config.SwaggerDoc("v1", new OpenApiInfo { Title = "Portfólio", Version = "v1.0" });
-            });
-
+            services.ConfigureSwaggerDocumentation();
             services.AddAutoMapper(typeof(MappingProfile));
 
             services.AddPersistence(configuration);
