@@ -4,8 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Portfolio.Application.Models.DTOs;
 using Portfolio.Application.Models.InputModels;
 using Portfolio.Application.Services.Interfaces;
+using Portfolio.Domain.Entities;
 using Portfolio.Domain.Identity;
-using System.Linq.Expressions;
+using Portfolio.Domain.Interfaces.Repositories;
 
 namespace Portfolio.Application.Services
 {
@@ -14,12 +15,14 @@ namespace Portfolio.Application.Services
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly RoleManager<Role> _roleManager;
+        private readonly IDadosPortfolioRepository _dadosPortfolioRepository;
 
-        public AccountService(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<Role> roleManager, IMapper mapper) : base(mapper)
+        public AccountService(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<Role> roleManager, IDadosPortfolioRepository dadosPortfolioRepository, IMapper mapper) : base(mapper)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _roleManager = roleManager;
+            _dadosPortfolioRepository = dadosPortfolioRepository;
         }
 
         public async Task<UserDto> AlterarDadosDaContaAsync(UserInputModel model)
@@ -32,10 +35,7 @@ namespace Portfolio.Application.Services
 
                 var verificacaoSenha = await VerificarSenhaAsync(usuario.UserName, model.Senha);
 
-                if (!verificacaoSenha.Succeeded)
-                {
-                    throw new Exception("Não foi possível alterar as informações do usuário. Senha incorreta!");
-                }
+                if (!verificacaoSenha.Succeeded) throw new Exception("Não foi possível alterar as informações do usuário. Senha incorreta!");
 
                 var token = await _userManager.GeneratePasswordResetTokenAsync(usuario);
 
@@ -43,10 +43,7 @@ namespace Portfolio.Application.Services
                 {
                     var senhaAlterada = await AlterarSenha(usuario, model, token);
 
-                    if (!senhaAlterada)
-                    {
-                        throw new Exception("Erro desconhecido ao alterar senha do usuário");
-                    }
+                    if (!senhaAlterada) throw new Exception("Erro desconhecido ao alterar senha do usuário");
                 }
 
                 usuario.Email = model.Email;
@@ -92,6 +89,10 @@ namespace Portfolio.Application.Services
                 var user = await _userManager.FindByNameAsync(novoUsuario.UserName);
 
                 await _userManager.AddToRoleAsync(user, role.Name);
+
+                var portfolioUsuario = new DadosPortfolio(user.UserName, "", new byte[] { }, "", "", "", "", "", "", "", user.Id);
+
+                _dadosPortfolioRepository.Adicionar(portfolioUsuario);
 
                 return Mapper.Map<UserDto>(user);
             }

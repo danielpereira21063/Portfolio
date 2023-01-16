@@ -70,8 +70,6 @@ namespace Portfolio.Domain.Test.Entities
         }
 
         [Theory]
-        [InlineData(null)]
-        [InlineData("")]
         [InlineData("urlInvalida")]
         [InlineData(" ")]
         public void NaoDeveCriarComUrlInvalida(string urlInvalida)

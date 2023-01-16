@@ -14,9 +14,9 @@ namespace Portfolio.Infra.Data.Repositories
             Context = context;
         }
 
-        public void Salvar(T entity)
+        public void Adicionar(T entity)
         {
-            Context.Add(entity);
+            Context.Set<T>().Add(entity);
         }
 
         public void Atualizar(T entity)

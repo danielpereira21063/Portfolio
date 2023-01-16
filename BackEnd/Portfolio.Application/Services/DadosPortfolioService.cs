@@ -46,7 +46,7 @@ namespace Portfolio.Application.Services
                                  model.NomeCompleto, model.MensagemApresentacao, model.ImagemPerfil, model.LinkedinURL, model.FacebookURL,
                                  model.TwitterURL, model.InstagramURL, model.YoutubeURL, model.WhatsApp, model.Email, userId);
 
-            _dadosPortfolioRepository.Salvar(dadosPortfolio);
+            _dadosPortfolioRepository.Adicionar(dadosPortfolio);
 
             return Mapper.Map<DadosPortfolioDto>(dadosPortfolio);
         }
