@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IGyc7tmxOjr3dwkbuvnG0NxXCNIdhVfCpyvVxW+fOiWx30dkY8QxJG3L5uAdyQdbuY8VTNYqC00d7wJtGxwe8g==",
+  "dgSpecHash": "uP7AqqhnHN+8pc0KSQd835OfogEzRNFyT/ZWUlET3iuqgBl/bawJX5KjIx2Ns6Z7HAAVYiD/cAteCXxXWFFP6A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
+  "projectFilePath": "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

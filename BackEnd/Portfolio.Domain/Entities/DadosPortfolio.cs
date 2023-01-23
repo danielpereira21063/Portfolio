@@ -15,7 +15,7 @@ namespace Portfolio.Domain.Entities
 
 
         [Column(TypeName = "MEDIUMBLOB")]
-        public byte[] ImagemPerfil { get; private set; }
+        public byte[]? ImagemPerfil { get; private set; }
 
 
         [Column(TypeName = "VARCHAR(250)")]
@@ -54,7 +54,7 @@ namespace Portfolio.Domain.Entities
 
         }
 
-        public DadosPortfolio(string nomeCompleto, string mensagemApresentacao, byte[] imagemPerfil, string linkedinUrl, string facebookUrl, string twitterURL, string instagramUrl, string youtubeUrl, string whatsApp, string email, int userId)
+        public DadosPortfolio(string nomeCompleto, string mensagemApresentacao, byte[]? imagemPerfil, string linkedinUrl, string facebookUrl, string twitterURL, string instagramUrl, string youtubeUrl, string whatsApp, string email, int userId)
         {
             NomeCompleto = nomeCompleto;
             MensagemApresentacao = mensagemApresentacao;

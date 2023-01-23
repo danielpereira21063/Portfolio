@@ -8,5 +8,6 @@
 
   "ConnectionStrings": {
     "PortfolioHomol": "server=localhost;port=3306;database=PortfolioHomol;user=root;password=123456"
-  }
+  },
+  "JWTKey": "%k^U!1LfjuxoM1kP"
 }

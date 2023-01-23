@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Portfolio.Domain.Interfaces.Repositories;
 using Portfolio.Infra.Data.Context;
 using Portfolio.Infra.Data.Repositories;
+using Portfolio.Infra.Data.Transaction;
 
 namespace Portfolio.Infra.Data.Extensions
 {
@@ -12,6 +13,7 @@ namespace Portfolio.Infra.Data.Extensions
         public static void AddRepositories(this IServiceCollection services)
         {
             //services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDadosPortfolioRepository, DadosPortfolioRepository>();
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
         }

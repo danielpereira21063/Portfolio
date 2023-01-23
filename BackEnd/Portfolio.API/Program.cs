@@ -1,4 +1,5 @@
 using Portfolio.API.Filters;
+using Portfolio.Infra.Data.Transaction;
 using Portfolio.Infra.IoC;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,13 @@ builder.Services
     .AddControllers(config => config.Filters.Add(typeof(CustomExceptionFilter)));
 
 var app = builder.Build();
+
+app.Use(async (context, next) =>
+{
+    await next.Invoke();
+    var unitOfWork = (IUnitOfWork)context.RequestServices.GetService(typeof(IUnitOfWork));
+    await unitOfWork.CommitAsync();
+});
 
 if (app.Environment.IsDevelopment())
 {

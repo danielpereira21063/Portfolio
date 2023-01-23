@@ -90,7 +90,7 @@ namespace Portfolio.Application.Services
 
                 await _userManager.AddToRoleAsync(user, role.Name);
 
-                var portfolioUsuario = new DadosPortfolio(user.UserName, "", new byte[] { }, "", "", "", "", "", "", "", user.Id);
+                var portfolioUsuario = new DadosPortfolio(user.UserName, "", null, "http://url.aqui", "http://url.aqui", "http://url.aqui", "http://url.aqui", "http://url.aqui", "(99) 999999999", "admin@email.com", user.Id);
 
                 _dadosPortfolioRepository.Adicionar(portfolioUsuario);
 
@@ -105,7 +105,7 @@ namespace Portfolio.Application.Services
 
         public async Task<UserDto> ObterUsuarioAsync(string nomeUsuario)
         {
-            var user = await _userManager.FindByEmailAsync(nomeUsuario);
+            var user = await _userManager.FindByNameAsync(nomeUsuario);
 
             return Mapper.Map<UserDto>(user);
         }
