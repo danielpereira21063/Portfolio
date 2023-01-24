@@ -66,43 +66,6 @@ namespace Portfolio.Application.Services
             return result.Succeeded;
         }
 
-        public async Task<UserDto> CriarUsuarioAdminAsync()
-        {
-            try
-            {
-                //se existir algum usuário, não poderá criar outros. Apenas o admin!!!
-                if (_userManager.Users.Any()) throw new Exception("Já existe um usuário administrador cadastrado");
-
-                var role = new Role { Name = "admin" };
-                var roleResult = await _roleManager.CreateAsync(role);
-
-                if (!roleResult.Succeeded) throw new Exception("Ocorreu um erro desconhecido ao tentar criar o perfil de administrador");
-
-                var novoUsuario = new User
-                {
-                    UserName = "admin",
-                    Email = "admin"
-                };
-
-                await _userManager.CreateAsync(novoUsuario, "admin1234");
-
-                var user = await _userManager.FindByNameAsync(novoUsuario.UserName);
-
-                await _userManager.AddToRoleAsync(user, role.Name);
-
-                var portfolioUsuario = new DadosPortfolio(user.UserName, "", null, "http://url.aqui", "http://url.aqui", "http://url.aqui", "http://url.aqui", "http://url.aqui", "(99) 999999999", "admin@email.com", user.Id);
-
-                _dadosPortfolioRepository.Adicionar(portfolioUsuario);
-
-                return Mapper.Map<UserDto>(user);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception(ex.Message);
-            }
-
-        }
-
         public async Task<UserDto> ObterUsuarioAsync(string nomeUsuario)
         {
             var user = await _userManager.FindByNameAsync(nomeUsuario);
@@ -115,9 +78,9 @@ namespace Portfolio.Application.Services
             return _userManager.Users.Any(x => x.UserName == nomeUsuario);
         }
 
-        public async Task<SignInResult> VerificarSenhaAsync(string nomeUsuario, string senha)
+        public async Task<SignInResult> VerificarSenhaAsync(string? nomeUsuario, string senha)
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == nomeUsuario);
+            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == (nomeUsuario ?? ""));
 
             return await _signInManager.CheckPasswordSignInAsync(user, senha, false);
         }

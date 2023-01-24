@@ -9,95 +9,71 @@ using Portfolio.Domain.Identity;
 
 namespace Portfolio.API.Controllers
 {
-    [Authorize]
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AccountController : ControllerBase
-    {
-        private readonly IAccountService _accountService;
-        private readonly ITokenService _tokenService;
+	[Authorize]
+	[ApiController]
+	[Route("api/[controller]")]
+	public class AccountController : ControllerBase
+	{
+		private readonly IAccountService _accountService;
+		private readonly ITokenService _tokenService;
 
-        public AccountController(IAccountService accountService, ITokenService tokenService)
-        {
-            _accountService = accountService;
-            _tokenService = tokenService;
-        }
-
-
-        [HttpGet]
-        public async Task<IActionResult> ObterUsuario()
-        {
-            var user = await _accountService.ObterUsuarioAsync(User.ObterNomeUsuario());
-
-            if (user == null) return Unauthorized();
-
-            user.Token = HttpContext.ObterTokenUsuario();
-            return Ok(user);
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> EditarUsuario(UserInputModel model)
-        {
-            try
-            {
-                if (model.UserName != User.ObterNomeUsuario()) return Unauthorized("Usuário inválido");
-
-                var usuarioExiste = _accountService.UsuarioExite(model.UserName);
-
-                if (!usuarioExiste) throw new Exception("Usuário não encontrado");
-
-                var usuario = await _accountService.AlterarDadosDaContaAsync(model);
-
-                if (usuario == null) throw new Exception("Erro ao alterar dados da conta do usuário");
-
-                return Ok(new
-                {
-                    usuario = usuario.UserName,
-                    token = await _tokenService.GerarTokenAsync(usuario)
-                });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
+		public AccountController(IAccountService accountService, ITokenService tokenService)
+		{
+			_accountService = accountService;
+			_tokenService = tokenService;
+		}
 
 
-        [AllowAnonymous]
-        [HttpPost("Login")]
-        public async Task<IActionResult> Login(UserLoginInputModel model)
-        {
-            var usuario = await _accountService.ObterUsuarioAsync(model.Usuario);
+		[HttpGet]
+		public async Task<IActionResult> ObterUsuario()
+		{
+			var user = await _accountService.ObterUsuarioAsync(User.ObterNomeUsuario());
 
-            if (usuario == null) return Unauthorized("Usuário ou senha incorretos");
+			if (user == null) return Unauthorized();
 
-            var result = await _accountService.VerificarSenhaAsync(model.Usuario, model.Senha);
+			user.Token = HttpContext.ObterTokenUsuario();
+			return Ok(user);
+		}
 
-            if (!result.Succeeded) return Unauthorized("Usuário ou senha incorretos");
+		[HttpPut]
+		public async Task<IActionResult> EditarUsuario(UserInputModel model)
+		{
+			try
+			{
+				var usuarioExiste = _accountService.UsuarioExite(model.UserName);
 
-            return Ok(new
-            {
-                usuario = usuario.UserName,
-                token = await _tokenService.GerarTokenAsync(usuario)
-            });
-        }
+				if (!usuarioExiste) throw new Exception("Usuário não encontrado");
 
-        [AllowAnonymous]
-        [HttpPost]
-        public async Task<IActionResult> CriarUsuarioAdmin()
-        {
-            try
-            {
-                var usuario = await _accountService.CriarUsuarioAdminAsync();
+				var usuario = await _accountService.AlterarDadosDaContaAsync(model);
 
-                if (usuario == null) throw new Exception("Ocorreu um erro desconhecido ao tentar criar o usuário administrador");
+				if (usuario == null) throw new Exception("Erro ao alterar dados da conta do usuário");
 
-                return Ok(usuario);
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(ex.Message);
-            }
-        }
-    }
+				usuario.Token = await _tokenService.GerarTokenAsync(usuario);
+
+				return Ok(usuario);
+			}
+			catch (Exception ex)
+			{
+				return BadRequest(ex.Message);
+			}
+		}
+
+
+		[AllowAnonymous]
+		[HttpPost("Login")]
+		public async Task<IActionResult> Login(UserLoginInputModel model)
+		{
+			var usuario = await _accountService.ObterUsuarioAsync(model.Usuario);
+
+			if (usuario == null) return Unauthorized("Usuário ou senha incorretos");
+
+			var result = await _accountService.VerificarSenhaAsync(model.Usuario, model.Senha);
+
+			if (!result.Succeeded) return Unauthorized("Usuário ou senha incorretos");
+
+			usuario.Token = await _tokenService.GerarTokenAsync(usuario);
+
+			return Ok(usuario);
+		}
+	}
 }

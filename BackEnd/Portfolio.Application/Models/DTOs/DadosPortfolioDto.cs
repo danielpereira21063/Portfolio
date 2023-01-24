@@ -5,7 +5,7 @@ namespace Portfolio.Application.Models.DTOs
     public class DadosPortfolioDto : AsbtractDto
     {
         public string NomeCompleto { get; set; }
-        public string Apresentacao { get; set; }
+        public string MensagemApresentacao { get; set; }
         public string LinkedinURL { get; set; }
         public string FacebookURL { get; set; }
         public string TwitterURL { get; set; }

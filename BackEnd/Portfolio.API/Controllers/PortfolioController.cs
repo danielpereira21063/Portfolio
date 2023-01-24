@@ -1,42 +1,35 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Portfolio.API.Extensions;
 using Portfolio.Application.DTOs.InputModels;
 using Portfolio.Application.Services.Interfaces;
 
 namespace Portfolio.API.Controllers
 {
-    //[Authorize]
-    [ApiController]
-    [Route("api/[controller]")]
-    public class PortfolioController : ControllerBase
-    {
-        private readonly IDadosPortfolioService _dadosPortfolioService;
+	[Authorize]
+	[ApiController]
+	[Route("api/[controller]")]
+	public class PortfolioController : ControllerBase
+	{
+		private readonly IDadosPortfolioService _dadosPortfolioService;
 
-        public PortfolioController(IDadosPortfolioService dadosPortfolioService)
-        {
-            _dadosPortfolioService = dadosPortfolioService;
-        }
+		public PortfolioController(IDadosPortfolioService dadosPortfolioService)
+		{
+			_dadosPortfolioService = dadosPortfolioService;
+		}
 
-        [HttpGet]
-        public IActionResult Get()
-        {
-            return Ok();
-        }
+		[HttpGet]
+		public IActionResult Get()
+		{
+			var dadosPortfolio = _dadosPortfolioService.ObterDadosPortfolio(User.ObterIdDoUsuario());
+			return Ok(dadosPortfolio);
+		}
 
-        [HttpPost]
-        public IActionResult Post(DadosPortfolioInputModel model)
-        {
-            //validar se já existe um portfólio para o usuário.
-            //Caso exista, retornar uma mensagem de erro informando que não é possível criar pois já existe.
-
-            var response = _dadosPortfolioService.Salvar(1, model);
-            return Ok(response);
-
-        }
-
-        [HttpPut]
-        public IActionResult Put(DadosPortfolioInputModel model)
-        {
-            return Ok(model);
-        }
-    }
+		[HttpPut]
+		public IActionResult Put(DadosPortfolioInputModel model)
+		{
+			var response = _dadosPortfolioService.Salvar(User.ObterIdDoUsuario(), model);
+			return Ok(response);
+		}
+	}
 }
