@@ -343,6 +343,8 @@ ASALocalRun/
 ##################################################################
 #FRONTEND
 
+.env.production
+
 .DS_STORE
 node_modules
 scripts/flow/*/.flowconfig

@@ -25,16 +25,16 @@ namespace Portfolio.API.Controllers
         {
             var projeto = _projetoService.ObterPeloId(projetoId);
 
-            if (projeto == null) return Ok("Projeto não encontrado");
+            if (projeto == null) return BadRequest("Projeto não encontrado");
 
             return Ok(projeto);
         }
 
         [AllowAnonymous]
-        [HttpGet("portfolio/{dadosPortfolioId}")]
-        public IActionResult GetByDadosPortfolioId(int dadosPortfolioId)
+        [HttpGet("portfolio/{portfolioId}")]
+        public IActionResult ObterLista(int portfolioId)
         {
-            var projetos = _projetoService.ObterLista(dadosPortfolioId);
+            var projetos = _projetoService.ObterLista(portfolioId);
 
             return Ok(projetos);
         }
@@ -53,7 +53,7 @@ namespace Portfolio.API.Controllers
             }
         }
 
-        [HttpPost("alterarStatus/{id}")]
+        [HttpPut("alterarStatus/{id}")]
         public IActionResult AlterarStatus(int id)
         {
             try

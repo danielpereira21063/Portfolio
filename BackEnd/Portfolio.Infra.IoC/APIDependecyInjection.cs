@@ -34,6 +34,20 @@ namespace Portfolio.Infra.IoC
 
             services.ConfigureAuthentication(configuration);
 
+
+            string[] allowedHosts = new string[] { "http://localhost:3000", "https://danielsanchesdev.com.br" };
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("Default", builder =>
+                {
+                    builder
+                        .WithOrigins(allowedHosts)
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             return services;
         }
     }

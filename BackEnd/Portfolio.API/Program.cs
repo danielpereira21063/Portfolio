@@ -30,6 +30,8 @@ else
     app.Urls.Add("https://127.0.0.1:7179");
 }
 
+app.UseCors("Default");
+
 app.UseHttpsRedirection();
 
 app.UseAuthentication();

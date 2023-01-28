@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
+import { AuthContext } from '../../../context/AuthContext';
 import { LockOutlined } from '@mui/icons-material';
 import { makeStyles } from "@mui/styles";
-import { Button, colors, Grid, Hidden, Link, TextField, Typography } from '@mui/material';
+import { Alert, Button, colors, Grid, Hidden, Link, TextField, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import { Box } from '@mui/system';
+import { useContext } from 'react';
+import UserLogin from '../../../models/UserLogin';
+import { LoadingButton } from '@mui/lab';
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -23,7 +28,7 @@ const useStyles = makeStyles(() => ({
         marginTop: '8px !important'
     },
     form: {
-        margin: '16px 32px !important'
+        margin: '16px !important'
     }
 }));
 
@@ -45,12 +50,43 @@ const Copyright = () => {
 
 const Login = () => {
     const classes = useStyles();
+    const navigate = useNavigate();
 
     const [usuario, setUsuario] = useState("");
     const [senha, setSenha] = useState("");
 
-    const handleLogin = () => {
+    const [usuarioError, setUsuarioError] = useState("");
+    const [senhaError, setSenhaError] = useState("");
 
+    const { authenticated, loading, login, loginError } = useContext(AuthContext);
+
+    if (authenticated) navigate("/admin");
+
+    async function handleLogin(e: any) {
+        e.preventDefault();
+
+        setUsuarioError("");
+        setSenhaError("");
+
+        if (usuario.length == 0) {
+            setUsuarioError("Informe um nome de usuário válido");
+        }
+
+        if (senha.length == 0) {
+            setSenhaError("Informe uma senha válida");
+        }
+
+        const temErro = usuario.length == 0 || senha.length == 0;
+        if (temErro) return;
+
+        const data: UserLogin = {
+            usuario: usuario,
+            senha: senha
+        }
+
+        const user = await login(data);
+
+        if (user) navigate("/admin");
     }
 
     return (
@@ -83,11 +119,19 @@ const Login = () => {
                         Acesso
                     </Typography>
 
+                    {loginError && (
+                        <Alert severity="error">
+                            {loginError}
+                        </Alert>
+                    )}
+
                     <form className={classes.form}>
                         <TextField
+                            error={usuarioError.length > 0}
+                            helperText={usuarioError}
                             variant={'outlined'}
                             margin={'normal'}
-                            required
+                            required={true}
                             fullWidth
                             id={'usuario'}
                             label={'Usuário'}
@@ -96,6 +140,8 @@ const Login = () => {
                             onChange={(e) => setUsuario(e.target.value)} />
 
                         <TextField
+                            error={senhaError.length > 0}
+                            helperText={senhaError}
                             variant="outlined"
                             margin="normal"
                             required
@@ -107,11 +153,16 @@ const Login = () => {
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)} />
 
-                        <Button onClick={handleLogin} fullWidth variant="contained" color="primary" className={classes.button}>
-                            Entrar
-                        </Button>
+
+                        {!loading && (
+                            <LoadingButton onClick={handleLogin} loading={loading} fullWidth color="primary" variant="contained" className={classes.button}>
+                                Entrar
+                            </LoadingButton>
+                        )}
+
+
                         <Grid item marginTop={2}>
-                            <Link href='/reset-password'>Esqueceu sua senha?</Link>
+                            <Link href='/admin/reset-password'>Esqueceu sua senha?</Link>
                         </Grid>
                     </form>
 

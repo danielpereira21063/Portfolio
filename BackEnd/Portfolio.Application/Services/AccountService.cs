@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Portfolio.Application.Models.DTOs;
 using Portfolio.Application.Models.InputModels;
 using Portfolio.Application.Services.Interfaces;
-using Portfolio.Domain.Entities;
 using Portfolio.Domain.Identity;
 using Portfolio.Domain.Interfaces.Repositories;
 
