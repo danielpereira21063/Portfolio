@@ -18,10 +18,12 @@ namespace Portfolio.API.Controllers
 			_dadosPortfolioService = dadosPortfolioService;
 		}
 
+		[AllowAnonymous]
 		[HttpGet]
 		public IActionResult Get()
 		{
-			var dadosPortfolio = _dadosPortfolioService.ObterDadosPortfolio(User.ObterIdDoUsuario());
+			//Como só existe um usuário, busco apenas o portfólio com id 1
+			var dadosPortfolio = _dadosPortfolioService.ObterDadosPortfolio(1);
 			return Ok(dadosPortfolio);
 		}
 

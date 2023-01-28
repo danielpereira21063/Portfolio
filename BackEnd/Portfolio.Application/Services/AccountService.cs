@@ -80,9 +80,9 @@ namespace Portfolio.Application.Services
 
         public async Task<SignInResult> VerificarSenhaAsync(string? nomeUsuario, string senha)
         {
-            var user = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == (nomeUsuario ?? ""));
+            var usuario = await _userManager.Users.FirstOrDefaultAsync(x => x.UserName == (nomeUsuario ?? ""));
 
-            return await _signInManager.CheckPasswordSignInAsync(user, senha, false);
+            return await _signInManager.CheckPasswordSignInAsync(usuario, senha, false);
         }
     }
 }

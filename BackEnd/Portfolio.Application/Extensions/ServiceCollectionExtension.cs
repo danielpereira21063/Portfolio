@@ -11,6 +11,7 @@ namespace Portfolio.Application.Extensions
             services.AddScoped<IAccountService, AccountService>();
             services.AddScoped<ITokenService, TokenService>();
             services.AddScoped<IDadosPortfolioService, DadosPortfolioService>();
+            services.AddScoped<IProjetoService, ProjetoService>();
         }
     }
 }

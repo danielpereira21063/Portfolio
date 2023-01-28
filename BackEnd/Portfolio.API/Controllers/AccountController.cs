@@ -4,8 +4,6 @@ using Portfolio.API.Extensions;
 using Portfolio.Application.Models.DTOs;
 using Portfolio.Application.Models.InputModels;
 using Portfolio.Application.Services.Interfaces;
-using Portfolio.Domain.Entities;
-using Portfolio.Domain.Identity;
 
 namespace Portfolio.API.Controllers
 {

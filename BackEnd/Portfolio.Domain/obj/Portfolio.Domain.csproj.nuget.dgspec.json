@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {}
+    "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
+    "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
+        "projectUniqueName": "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
         "projectName": "Portfolio.Domain",
-        "projectPath": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
+        "projectPath": "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Documents\\Estudos\\Portfolio\\BackEnd\\Portfolio.Domain\\obj\\",
+        "outputPath": "D:\\Estudos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -69,6 +62,11 @@
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "linux-x64": {
+          "#import": []
         }
       }
     }

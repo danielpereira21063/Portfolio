@@ -1,4 +1,6 @@
 ﻿using Portfolio.Domain.Entities;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Portfolio.Domain.Interfaces.Repositories
 {

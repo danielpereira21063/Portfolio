@@ -1,9 +1,13 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using FluentValidation.AspNetCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Portfolio.Application.Extensions;
+using Portfolio.Application.FluentValidation;
 using Portfolio.Application.Mapping;
 using Portfolio.Infra.Data.Extensions;
 using Portfolio.Infra.IoC.Extensions;
+using System.Globalization;
+using System.Reflection;
 
 namespace Portfolio.Infra.IoC
 {
@@ -17,6 +21,16 @@ namespace Portfolio.Infra.IoC
             services.AddPersistence(configuration);
             services.AddAplicationServices();
             services.AddRepositories();
+
+            services.AddControllers().AddFluentValidation(conf =>
+            {
+                conf?.RegisterValidatorsFromAssembly(Assembly.GetEntryAssembly());
+                conf?.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+                conf.ValidatorOptions.LanguageManager.Culture = new CultureInfo("pt-BR");
+                conf.ImplicitlyValidateChildProperties = true;
+            });
+
+            services.AdicionarValidadores();
 
             services.ConfigureAuthentication(configuration);
 
