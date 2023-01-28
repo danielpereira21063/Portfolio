@@ -60,8 +60,6 @@ const Login = () => {
 
     const { authenticated, loading, login, loginError } = useContext(AuthContext);
 
-    if (authenticated) navigate("/admin");
-
     async function handleLogin(e: any) {
         e.preventDefault();
 
@@ -153,12 +151,9 @@ const Login = () => {
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)} />
 
-
-                        {!loading && (
-                            <LoadingButton onClick={handleLogin} loading={loading} fullWidth color="primary" variant="contained" className={classes.button}>
-                                Entrar
-                            </LoadingButton>
-                        )}
+                        <LoadingButton onClick={handleLogin} loading={loading} fullWidth color="primary" variant="contained" className={classes.button}>
+                            Entrar
+                        </LoadingButton>
 
 
                         <Grid item marginTop={2}>
