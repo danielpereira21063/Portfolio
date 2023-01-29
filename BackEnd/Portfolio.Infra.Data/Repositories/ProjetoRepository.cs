@@ -12,9 +12,10 @@ namespace Portfolio.Infra.Data.Repositories
         {
         }
 
-        public ICollection<Projeto> ObterLista(int dadosPortfolioId)
+        public ICollection<Projeto> ObterLista(int dadosPortfolioId, bool obterInativos = false)
         {
-            return Context.Projetos.Where(x => x.DadosPortfolioId == dadosPortfolioId && !x.Inativo).ToList();
+            return Context.Projetos
+                .Where(x => x.DadosPortfolioId == dadosPortfolioId && obterInativos ? true : !x.Inativo).ToList();
         }
     }
 }

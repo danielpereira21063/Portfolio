@@ -32,9 +32,9 @@ namespace Portfolio.API.Controllers
 
         [AllowAnonymous]
         [HttpGet("portfolio/{portfolioId}")]
-        public IActionResult ObterLista(int portfolioId)
+        public IActionResult ObterLista(int portfolioId, [FromQuery] bool obterInativos = false)
         {
-            var projetos = _projetoService.ObterLista(portfolioId);
+            var projetos = _projetoService.ObterLista(portfolioId, obterInativos);
 
             return Ok(projetos);
         }

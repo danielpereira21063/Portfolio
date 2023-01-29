@@ -6,6 +6,6 @@ namespace Portfolio.Domain.Interfaces.Repositories
 {
     public interface IProjetoRepository : IRepository<Projeto>
     {
-        ICollection<Projeto> ObterLista(int dadosPortfolioId);
+        ICollection<Projeto> ObterLista(int dadosPortfolioId, bool obterInativos = false);
     }
 }
