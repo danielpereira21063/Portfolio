@@ -1,4 +1,4 @@
-import { Button } from '@mui/material';
+import { Button, Container } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import Projeto from '../../models/Projeto';
 import { ApiException } from '../../services/api/ApiException';
@@ -17,7 +17,7 @@ const Home = () => {
       });
   }, []);
   return (
-    <div>
+    <Container maxWidth={'lg'}>
       <h1>Lista de projetos || Página do portfólio aqui</h1>
       {projetos.map(projeto => (
         <div style={{ background: '#ccc' }}>
@@ -25,7 +25,7 @@ const Home = () => {
           <p>{projeto.descricao}</p>
         </div>
       ))}
-    </div>
+    </Container>
   )
 }
 

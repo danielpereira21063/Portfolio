@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Alert, Badge, Button, Chip, Menu, MenuItem, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
+import { Alert, Badge, Button, Chip, Container, Menu, MenuItem, Stack, Toolbar, Tooltip, Typography } from '@mui/material';
 import { Box } from '@mui/system';
 import { ProjetoService } from '../../services/ProjetoService';
 import Projeto from '../../models/Projeto';
@@ -56,57 +56,59 @@ export default function Admin() {
   }
 
   return (
-    <Box>
-      <br />
-      <TableContainer component={Paper}>
-        <Toolbar>
-          <Typography
-            sx={{ flex: '1 1 100%' }}
-            variant="h6"
-            id="tableTitle"
-            component="div"
-          >
-            Projetos
-          </Typography>
+    <Container maxWidth={'lg'}>
+      <Box>
+        <br />
+        <TableContainer component={Paper}>
+          <Toolbar>
+            <Typography
+              sx={{ flex: '1 1 100%' }}
+              variant="h6"
+              id="tableTitle"
+              component="div"
+            >
+              Projetos
+            </Typography>
 
-        </Toolbar>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
-          <TableHead>
-            <TableRow>
-              <TableCell><strong>Título</strong></TableCell>
-              <TableCell><strong>Descrição</strong></TableCell>
-              <TableCell><strong>URL GitHub</strong></TableCell>
-              <TableCell><strong>URL</strong></TableCell>
-              <TableCell><strong>Status</strong></TableCell>
-              <TableCell><strong>Ações</strong></TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {projetos.map((projeto) => (
-              <TableRow
-                key={projeto.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell> {projeto.titulo}  </TableCell>
-                <TableCell>{projeto.descricao}</TableCell>
-                <TableCell><Link target={'_blank'} to={projeto.urlGitHub}>{projeto.urlGitHub}</Link></TableCell>
-                <TableCell><Link target={'_blank'} to={projeto.url}>{projeto.url}</Link></TableCell>
-                <TableCell style={{ 'textAlign': 'center' }} onClick={() => handleAlterarStatus(projeto)}>
-                  <Stack direction="row" spacing={2}>
-                    {/* <Circle ></Circle> */}
-                    <Chip label={projeto.inativo ? 'Inativo' : 'Ativo'} color={projeto.inativo ? 'error' : 'success'} />
-                  </Stack>
-                </TableCell>
-                <TableCell>
-                  <Link to={`/admin/projeto/${projeto.id}`} color='info'>
-                    Detalhes
-                  </Link>
-                </TableCell>
+          </Toolbar>
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell><strong>Título</strong></TableCell>
+                <TableCell><strong>Descrição</strong></TableCell>
+                <TableCell><strong>URL GitHub</strong></TableCell>
+                <TableCell><strong>URL</strong></TableCell>
+                <TableCell><strong>Status</strong></TableCell>
+                <TableCell><strong>Ações</strong></TableCell>
               </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-    </Box>
+            </TableHead>
+            <TableBody>
+              {projetos.map((projeto) => (
+                <TableRow
+                  key={projeto.id}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell> {projeto.titulo}  </TableCell>
+                  <TableCell>{projeto.descricao}</TableCell>
+                  <TableCell><Link target={'_blank'} to={projeto.urlGitHub}>{projeto.urlGitHub}</Link></TableCell>
+                  <TableCell><Link target={'_blank'} to={projeto.url}>{projeto.url}</Link></TableCell>
+                  <TableCell style={{ 'textAlign': 'center' }} onClick={() => handleAlterarStatus(projeto)}>
+                    <Stack direction="row" spacing={2}>
+                      {/* <Circle ></Circle> */}
+                      <Chip label={projeto.inativo ? 'Inativo' : 'Ativo'} color={projeto.inativo ? 'error' : 'success'} />
+                    </Stack>
+                  </TableCell>
+                  <TableCell>
+                    <Link to={`/admin/projeto/${projeto.id}`} color='info'>
+                      Detalhes
+                    </Link>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </Box>
+    </Container>
   );
 }
