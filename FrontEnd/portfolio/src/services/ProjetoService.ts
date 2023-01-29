@@ -3,9 +3,9 @@ import Projeto from "../models/Projeto";
 
 const baseUrl = "/projeto";
 
-const obterTodos = async (portfolioId: number, search = ""): Promise<Projeto[] | void> => {
+const obterTodos = async (portfolioId: number, obterInativos = false, search = ""): Promise<Projeto[] | void> => {
     try {
-        const { data } = await api.get(`/projeto/portfolio/${portfolioId}?obterInativos=true`);
+        const { data } = await api.get(`/projeto/portfolio/${portfolioId}?obterInativos=${obterInativos}`);
         return data;
     } catch (error: any) {
         // TOAS aqui

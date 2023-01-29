@@ -28,7 +28,7 @@ export default function Admin() {
 
 
   useEffect(() => {
-    ProjetoService.obterTodos(1, search)
+    ProjetoService.obterTodos(1, true, search)
       .then((result) => {
         if (result) {
           setProjetos(result);
@@ -46,7 +46,7 @@ export default function Admin() {
         return;
       }
 
-      ProjetoService.obterTodos(1, search)
+      ProjetoService.obterTodos(1, true, search)
         .then((result) => {
           if (result) {
             setProjetos(result);

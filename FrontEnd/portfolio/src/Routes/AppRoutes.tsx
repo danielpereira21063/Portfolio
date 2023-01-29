@@ -24,7 +24,7 @@ function AppRoutes() {
         
 
         {/* 404 */}
-        <Route path='*' element={<h1 style={{ textAlign: 'center' }}>404 NOT FOUND!</h1>}></Route>
+        <Route path='*' element={<><NavBar /> <h1 style={{ textAlign: 'center' }}>404 NOT FOUND!</h1></>}></Route>
       </Routes>
     </BrowserRouter>
   )

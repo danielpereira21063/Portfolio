@@ -9,7 +9,7 @@ const Home = () => {
   const [projetos, setProjetos] = useState<Projeto[]>([]);
 
   useEffect(() => {
-    ProjetoService.obterTodos(1, search)
+    ProjetoService.obterTodos(1, false, search)
       .then((result) => {
         if (result) {
           setProjetos(result);
