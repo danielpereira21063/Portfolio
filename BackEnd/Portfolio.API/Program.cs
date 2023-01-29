@@ -21,6 +21,8 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    app.Urls.Add("https://127.0.0.1:7178");
 }
 else
 {
