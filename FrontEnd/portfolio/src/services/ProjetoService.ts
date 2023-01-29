@@ -2,39 +2,43 @@ import api from "./api/index";
 import Projeto from "../models/Projeto";
 import { ApiException } from "./api/ApiException";
 
-const obterTodos = async (portfolioId: number, search = "", inativos = false): Promise<Projeto[] | ApiException> => {
+const baseUrl = "/projeto";
+
+const obterTodos = async (portfolioId: number, search = ""): Promise<Projeto[] | void> => {
     try {
-        const { data } = await api.get(`/projeto/portfolio/${portfolioId}`);
+        const { data } = await api.get(`/projeto/portfolio/${portfolioId}?obterInativos=true`);
         return data;
     } catch (error: any) {
-        return new ApiException(error.message || "Erro ao consultar dados da api");
+        // TOAS aqui
     }
 }
 
-const obterPeloId = async (id: number): Promise<Projeto | ApiException> => {
+const obterPeloId = async (id: number): Promise<Projeto | void> => {
     try {
-        const { data } = await api.get(`/projeto/${id}`);
+        const { data } = await api.get(`${baseUrl}/${id}`);
         return data;
     } catch (error: any) {
-        return new ApiException(error.message || "Erro ao consultar dados da api");
+        // TOAS aqui
     }
 }
 
 const salvar = async (projeto: Projeto) => {
     try {
-        const { data } = await api.post("/projeto", projeto);
+        const { data } = await api.post(baseUrl, projeto);
         return data;
     } catch (error: any) {
-        return new ApiException(error.message || "Erro ao atualizar dados da api");
+        // throw new ApiException(error?.message);
+        // TOAS aqui
     }
 }
 
-const inativar = async (id: number) => {
+const alterarStatus = async (id: number): Promise<Projeto | void> => {
     try {
-        const { data } = await api.post(`/projeto/alterarStatus/${id}`);
+        const { data } = await api.put(`${baseUrl}/alterarStatus/${id}`);
         return data;
     } catch (error: any) {
-        return new ApiException(error.message || "Erro ao atualizar dados da api");
+        console.log(error)
+        // TOAST aqui
     }
 }
 
@@ -43,5 +47,5 @@ export const ProjetoService = {
     obterTodos,
     salvar,
     obterPeloId,
-    inativar
+    alterarStatus
 }

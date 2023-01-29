@@ -51,6 +51,8 @@ function AuthProvider({ children }: any) {
         localStorage.removeItem("usuario");
         RemoveAuthorizationHeader();
         setAuthenticated(false);
+
+        location.href = "/admin/login";
     }
 
     function salvarUsuario(usuario: User): void {

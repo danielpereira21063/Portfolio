@@ -3,7 +3,7 @@ interface Projeto {
     titulo: string;
     descricao: string;
     url: string;
-    urlGithub: string;
+    urlGitHub: string;
     inativo: boolean;
     dataCadastro: Date;
 }

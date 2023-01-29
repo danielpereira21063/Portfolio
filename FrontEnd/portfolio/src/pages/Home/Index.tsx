@@ -10,9 +10,7 @@ const Home = () => {
   useEffect(() => {
     ProjetoService.obterTodos(1, search)
       .then((result) => {
-        if (result instanceof ApiException) {
-          alert(result.message);
-        } else {
+        if (result) {
           setProjetos(result);
         }
       });
@@ -21,7 +19,7 @@ const Home = () => {
     <div>
       <h1>Lista de projetos || Página do portfólio aqui</h1>
       {projetos.map(projeto => (
-        <div style={{background: '#ccc'}}>
+        <div style={{ background: '#ccc' }}>
           <h2>{projeto.titulo}</h2>
           <p>{projeto.descricao}</p>
         </div>
