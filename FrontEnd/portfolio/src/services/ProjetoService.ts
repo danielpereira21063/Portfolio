@@ -1,6 +1,5 @@
 import api from "./api/index";
 import Projeto from "../models/Projeto";
-import { ApiException } from "./api/ApiException";
 
 const baseUrl = "/projeto";
 
@@ -28,7 +27,7 @@ const salvar = async (projeto: Projeto) => {
         return data;
     } catch (error: any) {
         // throw new ApiException(error?.message);
-        // TOAS aqui
+
     }
 }
 

@@ -11,6 +11,7 @@ import 'dotenv/config'
 
 // console.log(process.env.API_URL, path);
 
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
