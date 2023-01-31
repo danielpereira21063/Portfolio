@@ -1,34 +1,26 @@
-import { AxiosResponse } from "axios";
 import User from "../models/User";
 import UserLogin from "../models/UserLogin";
 import api from "./api";
 
 const baseUrl = "/account";
 
-const login = async (data: UserLogin) => {
+const login = async (userLogin: UserLogin): Promise<User | String> => {
     try {
-        const response: AxiosResponse = await api.post(`${baseUrl}/login`, data);
+        const { data } = await api.post(`${baseUrl}/login`, userLogin);
 
-        const user: User = response.data;
+        salvarUsuarioLocalStorage(data);
+        addAuthorizationHeader(data);
+        // setAuthenticated(true);
 
-        if (user) {
-            salvarUsuarioLocalStorage(user);
-            AddAuthorizationHeader(user.token);
-            // setAuthenticated(true);
-
-            return user;
-        }
-
-        // setLoading(false);
+        return data;
     } catch (error: any) {
-        // setLoginError(error.response.data);
-        // setLoading(false);
+        return error.response.data;
     }
 }
 
 const logout = async () => {
     localStorage.removeItem("usuario");
-    RemoveAuthorizationHeader();
+    removeAuthorizationHeader();
     // setAuthenticated(false);
 
     location.href = "/admin/login";
@@ -46,11 +38,11 @@ function obterUsuarioLocalStorage(): User | null {
     return JSON.parse(usuario);
 }
 
-function AddAuthorizationHeader(token: string): void {
+function addAuthorizationHeader(token: string): void {
     api.defaults.headers.Authorization = `Bearer ${token}`;
 }
 
-function RemoveAuthorizationHeader(): void {
+function removeAuthorizationHeader(): void {
     api.defaults.headers.Authorization = null;
 }
 
@@ -59,6 +51,6 @@ export const AccountService = {
     logout,
     salvarUsuarioLocalStorage,
     obterUsuarioLocalStorage,
-    AddAuthorizationHeader,
-    RemoveAuthorizationHeader
+    addAuthorizationHeader,
+    removeAuthorizationHeader
 }

@@ -1,4 +1,6 @@
 import axios from "axios";
+import User from "../../models/User";
+import { AccountService } from "../AccountService";
 
 const env = process.env.NODE_ENV || 'development';
 
@@ -9,6 +11,16 @@ if (env == "development") {
     API_URL = "https://portfolio-api.dev.danielsanchesdev.com.br/api";
 }
 
+const usuario = AccountService.obterUsuarioLocalStorage();
+let token = "Bearer ";
+
+if (usuario) {
+    token += usuario.token
+}
+
 export default axios.create({
-    baseURL: API_URL
+    baseURL: API_URL,
+    headers: {
+        "Authorization": token
+    }
 });

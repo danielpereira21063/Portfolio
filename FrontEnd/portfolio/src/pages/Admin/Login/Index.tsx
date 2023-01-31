@@ -9,6 +9,8 @@ import { useContext } from 'react';
 import UserLogin from '../../../models/UserLogin';
 import { LoadingButton } from '@mui/lab';
 import { useNavigate } from "react-router-dom";
+import { AccountService } from '../../../services/AccountService';
+import { User } from '@auth0/auth0-react';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -58,11 +60,14 @@ const Login = () => {
     const [usuarioError, setUsuarioError] = useState("");
     const [senhaError, setSenhaError] = useState("");
 
-    const { authenticated, loading, login, loginError } = useContext(AuthContext);
+    const [loginError, setLoginError] = useState("");
+
+    const [requesting, setRequesting] = useState(false);
+
+    // const { authenticated, loading, login, loginError } = useContext(AuthContext);
 
     async function handleLogin(e: any) {
-        e.preventDefault();
-
+        setLoginError("");
         setUsuarioError("");
         setSenhaError("");
 
@@ -77,14 +82,19 @@ const Login = () => {
         const temErro = usuario.length == 0 || senha.length == 0;
         if (temErro) return;
 
-        const data: UserLogin = {
-            usuario: usuario,
-            senha: senha
-        }
 
-        const user = await login(data);
+        setRequesting(true);
 
-        if (user) navigate("/admin");
+        AccountService
+            .login({ usuario: usuario, senha: senha })
+            .then(res => {
+                if (typeof res == "string") {
+                    setLoginError(res);
+                    setRequesting(false);
+                } else {
+                    location.href = "/admin";
+                }
+            })
     }
 
     return (
@@ -151,7 +161,7 @@ const Login = () => {
                             value={senha}
                             onChange={(e) => setSenha(e.target.value)} />
 
-                        <LoadingButton onClick={handleLogin} loading={loading} fullWidth color="primary" variant="contained" className={classes.button}>
+                        <LoadingButton onClick={handleLogin} loading={requesting} fullWidth color="primary" variant="contained" className={classes.button}>
                             Entrar
                         </LoadingButton>
 
