@@ -1,11 +1,14 @@
 import api from "./api/index";
 import Projeto from "../models/Projeto";
+import PageList from "../models/PageList";
 
 const baseUrl = "/projeto";
 
-const obterTodos = async (portfolioId: number, obterInativos = false, search = ""): Promise<Projeto[] | void> => {
+const obterTodos = async (portfolioId: number, obterInativos = false, search = "", numeroPagina = 1): Promise<PageList<Projeto> | void> => {
     try {
-        const { data } = await api.get(`/projeto/portfolio/${portfolioId}?obterInativos=${obterInativos}`);
+        let queryParams = `obterInativos=${obterInativos}&numeroPagina=${numeroPagina}`;
+        search != "" ? queryParams += `&termoBusca=${search}` : "";
+        const { data } = await api.get(`/projeto/portfolio/${portfolioId}?${queryParams}`);
         return data;
     } catch (error: any) {
         // TOAS aqui

@@ -12,10 +12,15 @@ namespace Portfolio.Infra.Data.Repositories
         {
         }
 
-        public ICollection<Projeto> ObterLista(int dadosPortfolioId, bool obterInativos = false)
+        public ICollection<Projeto> ObterLista(int dadosPortfolioId, bool obterInativos = false, string termoBusca = "")
         {
-            return Context.Projetos
-                .Where(x => x.DadosPortfolioId == dadosPortfolioId && obterInativos ? true : !x.Inativo).ToList();
+            var query = Context.Projetos
+                .OrderBy(x => x.Titulo)
+                .Where(x => x.DadosPortfolioId == dadosPortfolioId && (x.Titulo.Contains(termoBusca) || x.Descricao.Contains(termoBusca)));
+
+            if (!obterInativos) query = query.Where(x => !x.Inativo);
+
+            return query.ToList();
         }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.API.Extensions;
+using Portfolio.Application.Models;
+using Portfolio.Application.Models.DTOs;
 using Portfolio.Application.Models.InputModels;
 using Portfolio.Application.Services.Interfaces;
 
@@ -32,11 +34,13 @@ namespace Portfolio.API.Controllers
 
         [AllowAnonymous]
         [HttpGet("portfolio/{portfolioId}")]
-        public IActionResult ObterLista(int portfolioId, [FromQuery] bool obterInativos = false)
+        public IActionResult ObterLista(int portfolioId, [FromQuery] PageParams parametros, [FromQuery] bool obterInativos = false)
         {
-            var projetos = _projetoService.ObterLista(portfolioId, obterInativos);
+            var projetos = _projetoService.ObterLista(portfolioId, obterInativos, parametros.termoBusca);
 
-            return Ok(projetos);
+            var pageList = PageList<ProjetoDto>.Create(projetos, parametros.NumeroPagina, parametros.tamanhoPagina);
+
+            return Ok(pageList);
         }
 
         [HttpPost]

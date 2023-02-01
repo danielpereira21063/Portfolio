@@ -18,7 +18,7 @@ const login = async (userLogin: UserLogin): Promise<User | String> => {
     }
 }
 
-const logout = async () => {
+const logout = () => {
     localStorage.removeItem("usuario");
     removeAuthorizationHeader();
     // setAuthenticated(false);
@@ -32,7 +32,6 @@ function salvarUsuarioLocalStorage(usuario: User): void {
 
 function obterUsuarioLocalStorage(): User | null {
     const usuario = localStorage.getItem("usuario") || null;
-
     if (!usuario) return null;
 
     return JSON.parse(usuario);

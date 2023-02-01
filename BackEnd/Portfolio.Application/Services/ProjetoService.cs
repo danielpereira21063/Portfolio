@@ -51,9 +51,9 @@ namespace Portfolio.Application.Services
             }
         }
 
-        public ICollection<ProjetoDto> ObterLista(int dadosPortfolioId, bool obterInativos)
+        public ICollection<ProjetoDto> ObterLista(int dadosPortfolioId, bool obterInativos, string termoBusca = "")
         {
-            var projetos = _projetoRepository.ObterLista(dadosPortfolioId, obterInativos);
+            var projetos = _projetoRepository.ObterLista(dadosPortfolioId, obterInativos, termoBusca);
 
             return Mapper.Map<ICollection<ProjetoDto>>(projetos);
         }

@@ -1,16 +1,12 @@
 import React, { useState } from 'react';
-import { AuthContext } from '../../../context/AuthContext';
 import { LockOutlined } from '@mui/icons-material';
 import { makeStyles } from "@mui/styles";
 import { Alert, Button, colors, Grid, Hidden, Link, TextField, Typography } from '@mui/material';
 import Avatar from '@mui/material/Avatar';
 import { Box } from '@mui/system';
-import { useContext } from 'react';
-import UserLogin from '../../../models/UserLogin';
 import { LoadingButton } from '@mui/lab';
 import { useNavigate } from "react-router-dom";
 import { AccountService } from '../../../services/AccountService';
-import { User } from '@auth0/auth0-react';
 
 const useStyles = makeStyles(() => ({
     root: {

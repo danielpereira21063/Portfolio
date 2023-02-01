@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 import { Menu, MenuItem, Tooltip } from '@mui/material';
 import { AccountCircle } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../../../context/AuthContext';
+import { AccountService } from '../../../../services/AccountService';
 
 interface Props {
   /**
@@ -43,7 +43,6 @@ export default function NavBar(props: Props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const navigate = useNavigate();
-  const { logout } = useContext(AuthContext);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -132,7 +131,7 @@ export default function NavBar(props: Props) {
             onClose={handleClose}
           >
             <MenuItem onClick={() => navigate("/admin/perfil")}>Perfil</MenuItem>
-            <MenuItem onClick={() => { handleClose; logout() }}>Sair</MenuItem>
+            <MenuItem onClick={() => { handleClose; AccountService.logout() }}>Sair</MenuItem>
           </Menu>
         </Toolbar>
       </AppBar>

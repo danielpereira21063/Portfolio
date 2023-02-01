@@ -1,4 +1,5 @@
 import axios from "axios";
+import { json } from "stream/consumers";
 import User from "../../models/User";
 import { AccountService } from "../AccountService";
 
@@ -11,11 +12,13 @@ if (env == "development") {
     API_URL = "https://portfolio-api.dev.danielsanchesdev.com.br/api";
 }
 
-const usuario = AccountService.obterUsuarioLocalStorage();
+const usuarioString = localStorage.getItem("usuario") ? localStorage.getItem("usuario") : null;
+
 let token = "Bearer ";
 
-if (usuario) {
-    token += usuario.token
+if (usuarioString) {
+    const usuario = JSON.parse(usuarioString);
+    token += usuario.token;
 }
 
 export default axios.create({

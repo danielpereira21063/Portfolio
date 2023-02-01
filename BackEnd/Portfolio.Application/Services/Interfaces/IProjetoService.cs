@@ -5,7 +5,7 @@ namespace Portfolio.Application.Services.Interfaces
 {
     public interface IProjetoService
     {
-        ICollection<ProjetoDto> ObterLista(int dadosPortfolioId, bool obterInativos = false);
+        ICollection<ProjetoDto> ObterLista(int dadosPortfolioId, bool obterInativos = false, string termoBusca = "");
         ProjetoDto ObterPeloId(int projetoId);
         ProjetoDto Salvar(int usuarioId, ProjetoInputModel model);
         ProjetoDto AlterarStatus(int usuarioId, int projetoId);
