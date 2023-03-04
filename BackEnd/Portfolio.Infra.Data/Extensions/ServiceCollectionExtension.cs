@@ -20,7 +20,7 @@ namespace Portfolio.Infra.Data.Extensions
 
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("Portfolio");
+            var connectionString = configuration.GetConnectionString("PortfolioDev");
 
             services.AddDbContext<PortfolioContext>(options =>
             {
