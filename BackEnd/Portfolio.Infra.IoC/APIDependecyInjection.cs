@@ -42,7 +42,8 @@ namespace Portfolio.Infra.IoC
                 options.AddPolicy("Default", builder =>
                 {
                     builder
-                        .WithOrigins(allowedHosts)
+                        .AllowAnyOrigin()
+                        //.WithOrigins(allowedHosts)
                         .AllowAnyHeader()
                         .AllowAnyMethod();
                 });

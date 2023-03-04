@@ -4,7 +4,6 @@ import NavBar from "../pages/admin/components/navBar/Index";
 import Admin from "../pages/admin/Index";
 import Login from "../pages/admin/login/Index";
 import Perfil from "../pages/admin/perfil/Index";
-import Home from "../pages/home/Index";
 
 function AppRoutes() {
   const usuarioAutenticado = localStorage.getItem("usuario") != null;
@@ -13,7 +12,6 @@ function AppRoutes() {
     <BrowserRouter>
       <Routes>
         {/* ROTAS PÚBLICAS */}
-        <Route path='/' element={<Home />}></Route>
         <Route path="/admin/login" element={<Login />}></Route>
 
 
