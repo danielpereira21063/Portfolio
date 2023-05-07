@@ -48,6 +48,7 @@ namespace Portfolio.Domain.Entities
         public User User { get; private set; }
         public int UserId { get; private set; }
         public ICollection<Projeto> Projetos { get; private set; }
+        public ICollection<Habilidade> Habilidades { get; private set; }
 
         public DadosPortfolio()
         {

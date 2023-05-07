@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PFFRldc/dJuBUrcQoyHiaaThfPRz88jD47uczE1micg3BrvmuiR2ONGDZPsLsoe60ZOGu1l+KhfqvxvJWn/oiw==",
+  "dgSpecHash": "WW033uEP87pK/7rdcsoa3CXj25s8xBYC1V4Fp23s1RosGisko9Dvx08588t34LqdSTf3HA7ZSTdwnnAA4UAlbQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain.Test\\Portfolio.Domain.Test.csproj",
+  "projectFilePath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain.Test\\Portfolio.Domain.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\coverlet.collector\\3.1.2\\coverlet.collector.3.1.2.nupkg.sha512",

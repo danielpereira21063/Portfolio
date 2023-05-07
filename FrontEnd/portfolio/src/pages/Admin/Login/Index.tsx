@@ -1,177 +1,78 @@
 import React, { useState } from 'react';
-import { LockOutlined } from '@mui/icons-material';
-import { makeStyles } from "@mui/styles";
-import { Alert, Button, colors, Grid, Hidden, Link, TextField, Typography } from '@mui/material';
-import Avatar from '@mui/material/Avatar';
-import { Box } from '@mui/system';
-import { LoadingButton } from '@mui/lab';
-import { useNavigate } from "react-router-dom";
 import { AccountService } from '../../../services/AccountService';
-
-const useStyles = makeStyles(() => ({
-    root: {
-        height: '100vh'
-    },
-    image: {
-        background: 'url(/images/login-page-bg.jpg)',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        padding: '16px !important'
-    },
-    avatar: {
-        background: colors.blue.A400 + ' !important',
-        marginBottom: '8px !important'
-    },
-    button: {
-        marginTop: '8px !important'
-    },
-    form: {
-        margin: '16px !important'
-    }
-}));
+import "./style.css";
+import UserLogin from './../../../models/UserLogin';
 
 const Copyright = () => {
     return (
-        <Typography variant="body2" align="center">
-            {'Copyright © '}
-            <a
-                color="inherit"
-                href="https://danielsanchesdev.com.br"
-                target={'_blank'}
-            >
-                Daniel Sanches
-            </a>{' '}
-            {new Date().getFullYear()}
-        </Typography>
+        <div className='text-center'>
+            <a target='_blank' href="https://github.com/danielpereira21063">&copy; Daniel Pereira Sanches</a>
+        </div>
     );
 }
 
 const Login = () => {
-    const classes = useStyles();
-    const navigate = useNavigate();
+    const autenticado = AccountService.obterUsuarioLocalStorage();
+
+    if (autenticado) location.href = "/";
 
     const [usuario, setUsuario] = useState("");
     const [senha, setSenha] = useState("");
+    const [error, setError] = useState("");
 
-    const [usuarioError, setUsuarioError] = useState("");
-    const [senhaError, setSenhaError] = useState("");
+    const autenticar = (e: any) => {
+        e.preventDefault();
 
-    const [loginError, setLoginError] = useState("");
+        setError("");
 
-    const [requesting, setRequesting] = useState(false);
+        const login = {
+            usuario: usuario,
+            senha: senha
+        } as UserLogin;
 
-    // const { authenticated, loading, login, loginError } = useContext(AuthContext);
-
-    async function handleLogin(e: any) {
-        setLoginError("");
-        setUsuarioError("");
-        setSenhaError("");
-
-        if (usuario.length == 0) {
-            setUsuarioError("Informe um nome de usuário válido");
-        }
-
-        if (senha.length == 0) {
-            setSenhaError("Informe uma senha válida");
-        }
-
-        const temErro = usuario.length == 0 || senha.length == 0;
-        if (temErro) return;
-
-
-        setRequesting(true);
-
-        AccountService
-            .login({ usuario: usuario, senha: senha })
-            .then(res => {
-                if (typeof res == "string") {
-                    setLoginError(res);
-                    setRequesting(false);
-                } else {
-                    location.href = "/admin";
-                }
-            })
+        AccountService.login(login).then((response) => {
+            if (typeof response == 'string') {
+                setError(response);
+            } else {
+                location.href = "/";
+            }
+        });
     }
 
     return (
-        <Grid container className={classes.root}>
-            <Hidden mdDown>
-                <Grid
-                    item
-                    container
-                    direction={'column'}
-                    justifyContent={'center'}
-                    alignContent={'center'}
-                    md={7}
-                    className={classes.image}>
+        <div className='vh-100 d-flex justify-content-center align-items-center login text-light' data-bs-theme="dark">
+            <div className='col-12 col-sm-8 col-md-6 col-lg-4 bg-dark rounded-3'>
+                <div className='p-3 px-md-5 py-lg-3 mx-2 mx-md-0'>
+                    <div className='d-flex align-items-center'>
+                        <img className='rounded-circle mx-auto' width={'50px'} src='https://avatars.githubusercontent.com/u/67229104?s=400&u=908e61a470f452d94f1620d8b5378dc80f962457&v=4'></img>
+                    </div>
+                    <div className='text-center my-1'>
+                        <h5>Bem vindo, Daniel.</h5>
+                        <small>Faça login para administar seu portfólio.</small>
+                    </div>
 
-                    <Typography style={{ color: '#fff', fontSize: 35, lineHeight: '45px', textAlign: 'center' }}>
-                        <strong>Bem vindo, Daniel!</strong>
-                    </Typography>
-                    <Typography variant="body2" style={{ color: 'rgb(255,255,255,0.7)', textAlign: 'center', marginTop: 30, fontSize: 15, lineHeight: '30px' }}>
-                        Faça login para gerenciar seu portfólio.
-                    </Typography>
-                </Grid>
-            </Hidden>
+                    {error.length > 0 && <div className='alert alert-danger mt-2 text-center'>{error}</div>}
 
-            <Grid item md={5} sm={12}>
-                <Box display={'flex'} flexDirection={'column'} alignItems={'center'} mt={8}>
-                    <Avatar className={classes.avatar}>
-                        <LockOutlined></LockOutlined>
-                    </Avatar>
-                    <Typography>
-                        Acesso
-                    </Typography>
+                    <form className='mt-3'>
+                        <div className="form-outline mb-4">
+                            <label className="form-label">Usuário</label>
+                            <input onChange={(e) => setUsuario(e.target.value)} required type="text" placeholder='Usuário' className="form-control" />
+                        </div>
 
-                    {loginError && (
-                        <Alert severity="error">
-                            {loginError}
-                        </Alert>
-                    )}
+                        <div className="form-outline mb-4">
+                            <label className="form-label">Senha</label>
+                            <input onChange={(e) => setSenha(e.target.value)} required type="password" placeholder='********' className="form-control" />
+                        </div>
 
-                    <form className={classes.form}>
-                        <TextField
-                            error={usuarioError.length > 0}
-                            helperText={usuarioError}
-                            variant={'outlined'}
-                            margin={'normal'}
-                            required={true}
-                            fullWidth
-                            id={'usuario'}
-                            label={'Usuário'}
-                            name={'usuário'}
-                            value={usuario}
-                            onChange={(e) => setUsuario(e.target.value)} />
+                        <button type="submit" className="btn btn-primary btn-block mb-4 w-100" onClick={autenticar}>Entrar</button>
 
-                        <TextField
-                            error={senhaError.length > 0}
-                            helperText={senhaError}
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            fullWidth
-                            id="password"
-                            label="Senha"
-                            name="senha"
-                            autoComplete="current-password"
-                            value={senha}
-                            onChange={(e) => setSenha(e.target.value)} />
-
-                        <LoadingButton onClick={handleLogin} loading={requesting} fullWidth color="primary" variant="contained" className={classes.button}>
-                            Entrar
-                        </LoadingButton>
-
-
-                        <Grid item marginTop={2}>
-                            <Link href='/admin/reset-password'>Esqueceu sua senha?</Link>
-                        </Grid>
+                        {Copyright()}
                     </form>
+                </div>
+            </div>
 
-                    <Copyright />
-                </Box>
-            </Grid>
-        </Grid>
-    )
+        </div>
+    );
 }
 
 export default Login;

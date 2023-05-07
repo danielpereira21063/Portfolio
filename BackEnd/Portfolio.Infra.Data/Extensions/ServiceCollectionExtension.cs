@@ -16,11 +16,12 @@ namespace Portfolio.Infra.Data.Extensions
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IDadosPortfolioRepository, DadosPortfolioRepository>();
             services.AddScoped<IProjetoRepository, ProjetoRepository>();
+            services.AddScoped<IHabilidadeRepository, HabilidadeRepository>();
         }
 
         public static void AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
-            var connectionString = configuration.GetConnectionString("PortfolioDev");
+            var connectionString = configuration.GetConnectionString("Portfolio");
 
             services.AddDbContext<PortfolioContext>(options =>
             {

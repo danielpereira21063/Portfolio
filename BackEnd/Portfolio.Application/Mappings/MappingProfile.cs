@@ -13,6 +13,7 @@ namespace Portfolio.Application.Mapping
             CreateMap<DadosPortfolio, DadosPortfolioDto>().ReverseMap();
             CreateMap<Projeto, ProjetoDto>().ReverseMap();
             CreateMap<ImagemProjeto, ImagemProjetoDto>().ReverseMap();
+            CreateMap<Habilidade, HabilidadeDto>().ReverseMap();
         }
     }
 }

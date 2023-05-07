@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ihf2NMeHz+jCq87CcJoE8ZcUsVwIjxwHhIzdCXSwwSPB/7gsuPKvC02pO9ID9I7TJ1dHbAmmQopzLfTKmAWDIA==",
+  "dgSpecHash": "GvSSmtau4kOMILoyLu9Ip/366xwaNjcnrzdvgqx0hCSBYXMdE09dhk7deBqCnDqeSn1eB+toN2zH3kX+EGx1Bw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
+  "projectFilePath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",

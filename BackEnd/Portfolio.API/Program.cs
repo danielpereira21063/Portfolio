@@ -17,6 +17,7 @@ app.Use(async (context, next) =>
     await unitOfWork.CommitAsync();
 });
 
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

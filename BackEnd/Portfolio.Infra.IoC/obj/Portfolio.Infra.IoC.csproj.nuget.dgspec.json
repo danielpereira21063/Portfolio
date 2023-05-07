@@ -1,33 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj": {}
+    "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj": {
+    "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
+        "projectUniqueName": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
         "projectName": "Portfolio.Application",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
+        "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\obj\\",
+        "outputPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -35,11 +28,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
               },
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj"
               }
             }
           }
@@ -95,34 +88,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
+    "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
+        "projectUniqueName": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
         "projectName": "Portfolio.Domain",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
+        "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\obj\\",
+        "outputPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -163,34 +149,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
+    "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj",
+        "projectUniqueName": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj",
         "projectName": "Portfolio.Infra.Data",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj",
+        "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\obj\\",
+        "outputPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -198,8 +177,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
               }
             }
           }
@@ -247,34 +226,27 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj": {
+    "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
+        "projectUniqueName": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
         "projectName": "Portfolio.Infra.IoC",
-        "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
+        "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\Portfolio.Infra.IoC.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\obj\\",
+        "outputPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.IoC\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 19.2.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\DevExpress 19.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -282,14 +254,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Application\\Portfolio.Application.csproj"
               },
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Domain\\Portfolio.Domain.csproj"
               },
-              "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
-                "projectPath": "C:\\Users\\Daniel\\Desktop\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj"
+              "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj": {
+                "projectPath": "D:\\Projetos\\ProjetosPessoais\\Portfolio\\BackEnd\\Portfolio.Infra.Data\\Portfolio.Infra.Data.csproj"
               }
             }
           }
@@ -341,7 +313,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

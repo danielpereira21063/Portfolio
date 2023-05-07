@@ -1,7 +1,9 @@
+import Habilidade from "./Habilidade";
+
 interface DadosPortfolio {
     id: number,
     nomeCompleto: string,
-    mensagemApresentacao:string,
+    mensagemApresentacao: string,
     linkedinURL: string,
     facebookURL: string,
     twitterURL: string,
@@ -10,7 +12,8 @@ interface DadosPortfolio {
     whatsApp: string,
     email: string,
     userId: string,
-    dataCadastro: string
+    dataCadastro: string,
+    Habilidade: Habilidade[]
 }
 
-export default  DadosPortfolio;
+export default DadosPortfolio;

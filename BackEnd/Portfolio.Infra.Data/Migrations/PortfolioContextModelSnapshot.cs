@@ -171,6 +171,34 @@ namespace Portfolio.Infra.Data.Migrations
                     b.ToTable("DadosPortfolios");
                 });
 
+            modelBuilder.Entity("Portfolio.Domain.Entities.Habilidade", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<int>("DadosPortfolioId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("longtext");
+
+                    b.Property<byte[]>("Logo")
+                        .HasColumnType("MEDIUMBLOB");
+
+                    b.Property<string>("Nome")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DadosPortfolioId");
+
+                    b.ToTable("Habilidades");
+                });
+
             modelBuilder.Entity("Portfolio.Domain.Entities.ImagemProjeto", b =>
                 {
                     b.Property<int>("Id")
@@ -378,6 +406,15 @@ namespace Portfolio.Infra.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Portfolio.Domain.Entities.Habilidade", b =>
+                {
+                    b.HasOne("Portfolio.Domain.Entities.DadosPortfolio", null)
+                        .WithMany("Habilidades")
+                        .HasForeignKey("DadosPortfolioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Portfolio.Domain.Entities.ImagemProjeto", b =>
                 {
                     b.HasOne("Portfolio.Domain.Entities.Projeto", "Projeto")
@@ -421,6 +458,8 @@ namespace Portfolio.Infra.Data.Migrations
 
             modelBuilder.Entity("Portfolio.Domain.Entities.DadosPortfolio", b =>
                 {
+                    b.Navigation("Habilidades");
+
                     b.Navigation("Projetos");
                 });
 

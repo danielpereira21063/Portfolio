@@ -15,6 +15,7 @@ namespace Portfolio.Infra.Data.Context
         public DbSet<DadosPortfolio> DadosPortfolios { get; set; }
         public DbSet<Projeto> Projetos { get; set; }
         public DbSet<ImagemProjeto> ImagensProjeto { get; set; }
+        public DbSet<Habilidade> Habilidades { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

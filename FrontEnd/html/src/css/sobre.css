@@ -11,12 +11,12 @@
 }
 
 .sobre-mim .imagem-sobre-mim img {
-    border: 10px solid transparent;
+    /* border: 10px solid transparent; */
     border-radius: 5px;
 }
 
 .sobre-mim .informacoes-sobre-mim {
-    /* max-width: 50%; */
+    max-width: 50%;
     padding: 0 25px;
 }
 
@@ -92,6 +92,7 @@
 .sobre-mim .informacoes-sobre-mim p {
     font-size: 1.8rem;
     margin-bottom: 20px;
+    color: #000000;
 }
 
 @media(max-width: 980px) {

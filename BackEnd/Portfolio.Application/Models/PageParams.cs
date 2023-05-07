@@ -1,6 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace Portfolio.Application.Models
+﻿namespace Portfolio.Application.Models
 {
     public class PageParams
     {

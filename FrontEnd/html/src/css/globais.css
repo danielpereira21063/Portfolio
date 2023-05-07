@@ -97,7 +97,7 @@ body {
   visibility: hidden;
 
   transform: translateY(100%);
-  transition: 200ms;
+  transition: 100ms;
 }
 #backToTopButton svg circle {
   fill:var(--cor-secundaria)
@@ -107,4 +107,19 @@ body {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+.botao-primario{
+  display: flex;
+}
+
+.botao-primario a {
+  color: #fff;
+  background: var(--cor-secundaria);
+  margin: auto;
+  font-size: 15px;
+}
+
+.botao-primario a:hover {
+  transform: scale(1.05);
 }

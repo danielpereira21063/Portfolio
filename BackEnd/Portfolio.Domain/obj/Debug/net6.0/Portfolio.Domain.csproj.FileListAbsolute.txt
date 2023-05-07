@@ -34,3 +34,15 @@ C:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Port
 C:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\refint\Portfolio.Domain.dll
 C:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.pdb
 C:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\ref\Portfolio.Domain.dll
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\bin\Debug\net6.0\Portfolio.Domain.deps.json
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\bin\Debug\net6.0\Portfolio.Domain.dll
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\bin\Debug\net6.0\Portfolio.Domain.pdb
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.csproj.AssemblyReference.cache
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.AssemblyInfoInputs.cache
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.AssemblyInfo.cs
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.csproj.CoreCompileInputs.cache
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.dll
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\refint\Portfolio.Domain.dll
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\Portfolio.Domain.pdb
+D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.Domain\obj\Debug\net6.0\ref\Portfolio.Domain.dll

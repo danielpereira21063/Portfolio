@@ -13,6 +13,8 @@ namespace Portfolio.Application.Models.DTOs
         public string YoutubeURL { get; set; }
         public string WhatsApp { get; set; }
         public string Email { get; set; }
+        public ICollection<HabilidadeDto> Habilidades { get; set; }
+
         public int UserId { get; set; }
     }
 }

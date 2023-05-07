@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Portfolio.Application.Models
+﻿namespace Portfolio.Application.Models
 {
     public class PageList<T>
     {
