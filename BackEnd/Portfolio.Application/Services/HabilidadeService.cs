@@ -16,12 +16,12 @@ namespace Portfolio.Application.Services
         public void Salvar(HabilidadeDto habilidade)
         {
             var habilidadeBanco = _habildidadeRepository.ObterPeloId(habilidade.Id) ?? new Domain.Entities.Habilidade("","",null, habilidade.DadosPortfolioId);
-
+            
             if (!string.IsNullOrEmpty(habilidade.ImagemBase64))
             {
                 var logo = Convert.FromBase64String(habilidade.ImagemBase64);
                 habilidadeBanco.AlterarLogo(logo);
-            }
+        }
 
             habilidadeBanco.AlterarDescricao(habilidade.Descricao);
             habilidadeBanco.AlterarNome(habilidade.Nome);
@@ -31,7 +31,7 @@ namespace Portfolio.Application.Services
                 _habildidadeRepository.Adicionar(habilidadeBanco);
             }
             else
-            {
+        {
                 _habildidadeRepository.Atualizar(habilidadeBanco);
             }
         }
