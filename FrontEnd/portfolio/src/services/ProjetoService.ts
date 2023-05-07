@@ -26,11 +26,10 @@ const obterPeloId = async (id: number): Promise<Projeto | void> => {
 
 const salvar = async (projeto: Projeto) => {
     try {
-        const { data } = await api.post(baseUrl, projeto);
-        return data;
+        const response = await api.post(baseUrl, projeto);
+        return response.data;
     } catch (error: any) {
-        // throw new ApiException(error?.message);
-
+        return error.response.data;
     }
 }
 

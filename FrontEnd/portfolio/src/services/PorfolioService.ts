@@ -17,7 +17,7 @@ const atualizarPortfolio = async (dadosPortfolio: DadosPortfolio): Promise<Dados
         const { data } = await api.put(baseUrl, dadosPortfolio);
         return data;
     } catch (error: any) {
-        console.log(error.message)
+        console.log(error.message);
     }
 }
 

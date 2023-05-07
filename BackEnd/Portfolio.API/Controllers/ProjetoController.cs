@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Portfolio.API.Extensions;
+using Portfolio.Application.FluentValidation;
 using Portfolio.Application.Models;
 using Portfolio.Application.Models.DTOs;
 using Portfolio.Application.Models.InputModels;
@@ -44,10 +45,14 @@ namespace Portfolio.API.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(ProjetoInputModel model)
+        public IActionResult Post([FromBody] ProjetoInputModel model)
         {
             try
             {
+                //var validacao = new ProjetoInputModelValidator().Validate(model);
+
+                //if (validacao.Errors.Count > 0) return Ok(validacao.Errors);
+
                 var projeto = _projetoService.Salvar(User.ObterIdDoUsuario(), model);
                 return Ok(projeto);
             }

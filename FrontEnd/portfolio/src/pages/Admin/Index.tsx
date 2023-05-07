@@ -48,7 +48,7 @@ export default function Admin() {
   return (
     <div className='mt-2 mt-lg-3'>
       <h2 className='text-center'>Projetos</h2>
-      <table className="table">
+      <table className="table table-striped-columns">
         <thead>
           <tr>
             <th scope="col">Título</th>
@@ -62,13 +62,14 @@ export default function Admin() {
         <tbody>
           {
             projetos.map(p => (
-              <>
+              <tr onClick={() => location.href = '/admin/projeto/' + p.id}>
                 <td>{p.titulo}</td>
                 <td>{p.descricao}</td>
                 <td>{p.url}</td>
+                <td>{p.urlGitHub}</td>
                 <td>{p.inativo ? 'Inativo' : 'Ativo'}</td>
-                <td>{p.dataCadastro.toDateString()}</td>
-              </>
+                <td>{p.dataCadastro.toString()}</td>
+              </tr>
             ))
           }
         </tbody>

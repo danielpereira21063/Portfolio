@@ -248,7 +248,6 @@ D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Po
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.AssemblyInfoInputs.cache
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.AssemblyInfo.cs
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.csproj.CoreCompileInputs.cache
-D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.MvcApplicationPartsAssemblyInfo.cs
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\Portfolio.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\staticwebassets\msbuild.Portfolio.API.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\obj\Debug\net6.0\staticwebassets\msbuild.build.Portfolio.API.props

@@ -8,8 +8,6 @@ namespace Portfolio.Domain.Entities
 
         public string Nome { get; private set; }
         public string Descricao { get; private set; }
-        public byte[] Imagem { get; private set; }
-        public int DadosPortfolioId { get; private set; }
 
         [Column(TypeName = "MEDIUMBLOB")]
         public byte[] Logo { get; private set; }
