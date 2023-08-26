@@ -113,8 +113,54 @@
 
 .habilidades .container-habilidades .habilidade .git,
 .devicon-git-plain {
-    color: #e53a2d;
+    color: #E84D31;
 }
+
+.habilidades .container-habilidades .habilidade .bootstrap,
+.devicon-bootstrap-plain {
+    color: #8512FB;
+}
+
+.habilidades .container-habilidades .habilidade .csharp,
+.devicon-csharp-plain-wordmark {
+    color: #3A0094;
+}
+
+.habilidades .container-habilidades .habilidade .efcore,
+.devicon-dotnetcore-plain {
+    color: #3A0094;
+}
+
+.habilidades .container-habilidades .habilidade .sql,
+.devicon-mysql-plain {
+    color: #0988A8;
+}
+
+.habilidades .container-habilidades .habilidade .php,
+.devicon-php-plain {
+    color: #4D588E;
+}
+
+.habilidades .container-habilidades .habilidade .linux,
+.devicon-linux-plain {
+    color: #303030;
+}
+
+.habilidades .container-habilidades .habilidade .vuejs,
+.devicon-vuejs-line {
+    color: #3FB27F;
+}
+
+.habilidades .container-habilidades .habilidade .oracle,
+.devicon-oracle-original {
+    color: #CA4A38;
+}
+
+.habilidades .container-habilidades .habilidade .jira,
+.devicon-jira-plain {
+    color: #2684FF;
+}
+
 
 .habilidades .container-habilidades .habilidade p {
   font-size: 1.8rem;

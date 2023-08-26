@@ -23,14 +23,14 @@ buttonTop.addEventListener('click', () => {
 
 
 sr.reveal('.texto-home', {
-    duration: 3000,
+    duration: 1500,
     origin: 'top',
     distance: '150px',
 });
 
 
 sr.reveal('.img-box', {
-    duration: 2000,
+    duration: 1200,
     origin: 'left',
     distance: '150px',
 });
@@ -38,35 +38,39 @@ sr.reveal('.img-box', {
 sr.reveal('.imagem-sobre-mim', {
     origin: 'bottom',
     distance: '150px',
-    duration: 2000
+    duration: 1200
 });
 
 sr.reveal('.informacoes-sobre-mim', {
     origin: 'bottom',
     distance: '150px',
-    duration: 2000
+    duration: 1200
 });
 
 sr.reveal('.section-title', {
     origin: 'top',
     distance: '150px',
-    duration: 2000
+    duration: 1200
 });
 
 sr.reveal('.container-habilidades', {
     origin: 'bottom',
     distance: '150px',
-    duration: 2000
+    duration: 1200
 });
 
 sr.reveal('.container-projetos', {
     origin: 'bottom',
     distance: '100px',
-    duration: 2000
+    duration: 1200
 });
 
 sr.reveal('.cards-wrapper', {
     origin: 'top',
     distance: '150px',
-    duration: 2000
+    duration: 0
 });
+
+const irPara = (url) =>{
+    window.open("https://" + url, '_blank');
+}

@@ -71,7 +71,6 @@
 
 .card .tags .tag {
   font-size: 0.75em;
-  background: var(--cor-secundaria);
   border-radius: 0.3rem;
   padding: 0 0.5em;
   margin-right: 0.5em;
@@ -80,8 +79,15 @@
 }
 
 .card:hover .tags .tag {
-  background: var(--cor-secundaria);
   color: white;
+}
+
+.card .tags .tag button {
+  color: white;
+  background-color: var(--cor-secundaria);
+  padding: 5px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .card .date {

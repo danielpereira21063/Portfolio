@@ -124,3 +124,19 @@ body {
 .botao-primario a:hover {
   transform: scale(1.05);
 }
+
+strong {
+  color: #454545 !important;
+}
+
+.fa-linkedin-in {
+  color: #0A66C2;
+}
+
+.fa-whatsapp {
+  color: #128C7E;
+}
+
+.fa-instagram {
+  color: #c2408c;
+}

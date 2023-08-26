@@ -10,15 +10,12 @@
   <link rel="stylesheet" href="src/css/font-awesome.css" />
   <link rel="stylesheet" href="src/css/reset.css" />
 
-  <!-- Biblis -->
   <script src="https://unpkg.com/scrollreveal"></script>
 
   <link rel="stylesheet" href="src/css/variaveis.css">
 
-  <!-- Global -->
   <link rel="stylesheet" href="src/css/globais.css" />
 
-  <!-- Seções -->
   <link rel="stylesheet" href="src/css/header.css">
   <link rel="stylesheet" href="src/css/home.css">
   <link rel="stylesheet" href="src/css/sobre.css">
@@ -35,11 +32,11 @@
     <div class="container">
       <div class="row justify-content-between alinhar-itens-no-centro">
         <a href="#">
-          <h1 class="logo">LZ</h1>
+          <h1 class="logo">D</h1>
         </a>
 
         <nav>
-          <input id="menu-hamburguer" type="checkbox"/>
+          <input id="menu-hamburguer" type="checkbox" />
 
           <label for="menu-hamburguer">
             <div class="menu">
@@ -64,20 +61,21 @@
         <div class="texto-home">
           <p>Olá,</p>
           <h1>Meu nome é</h1>
-          <span id="nomeCompleto"></span>
-          <h2>Desenvolvedor FullStack.</h2>
+          <span>Daniel Pereira Sanches</span>
+          <h2>Sou um Desenvolvedor FullStack</h2>
 
           <div class="redes-sociais">
-            <a class="outer-shadow" target="_blank">
+            <a class="outer-shadow" target="_blank"
+              href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a  class="outer-shadow" target="_blank">
+            <a class="outer-shadow" target="_blank" href="https://wa.me/5522999668032">
               <i class="fab fa-whatsapp"></i>
             </a>
-            <a class="outer-shadow" target="_blank">
+            <a class="outer-shadow" target="_blank" href="https://github.com/danielpereira21063">
               <i class="fab fa-github"></i>
             </a>
-            <a class="outer-shadow" target="_blank">
+            <a class="outer-shadow" target="_blank" href="https://www.instagram.com/danielpereira21063/">
               <i class="fab fa-instagram"></i>
             </a>
           </div>
@@ -107,12 +105,29 @@
           </div>
         </div>
         <div class="informacoes-sobre-mim">
-          <span id="msgApresentacao"></span>
+          <span id="msgApresentacao">
+            <p>
+              Sou apaixonado por tecnologia e desenvolvimento de software. Desde muito novo sempre tive curiosidade natural em saber como softwares eram criados.
+              Atualmente, trabalho como desenvolvedor Full-Stack pleno e possuo experiência em diversas linguagens de
+              programação, incluindo <strong>C#</strong>, <strong>, Typescript</strong>, <strong>PHP</strong> e
+              <strong>Python</strong>.
+              Além disso, possuo conhecimentos sólidos
+              em <strong>HTML</strong> e <strong>CSS</strong>, e já trabalhei com frameworks como
+              <strong>Vue.js</strong>, <strong>Angular</strong> e <strong>React.js</strong>.
+            </p>
+            <p>
+              Sempre busco aprender coisas novas e aprimorar meus conhecimentos. Além do meu trabalho como
+              desenvolvedor, tenho interesse em ethical hacking e estou constantemente buscando aprender mais sobre segurança da
+              informação.<br><br>
+              Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Universidade Estácio de
+              Sá (previsão de conclusão para dezembro de 2023) e tenho me dedicado a aprender cada vez mais sobre computação em nuvem (inclusive este site que você está acessando agora está hospedado em uma das minhas instâncias na <strong>Oracle Cloud</strong>).
+              Também possuo um <strong>nível intermediário de inglês</strong> a qual tenho buscado aperfeiçoá-lo cada vez mais, o que me permite ler e compreender documentos técnicos
+              e participar de algumas conversas.
+            </p>
+          </span>
 
           <div class="botao-primario">
-            <a target="_blank"
-              href="https://www.canva.com/design/DAE7Fpt-JqY/PNl1HFZ3lTmhVGBUYRVDFg/view?utm_content=DAE7Fpt-JqY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
-              class="botao outter-shadow">Baixe meu CV</a>
+            <a target="_blank" href="./src/arquivos/cv.pdf" class="botao outter-shadow">Baixe meu CV</a>
           </div>
         </div>
       </div>
@@ -126,64 +141,155 @@
           <h2>Habilidades</h2>
         </div>
       </div>
-    
 
-    <div class="container-habilidades row">
-    
-      <div class="habilidade html">
-        <div class="logo">
-          <i class="devicon devicon-html5-plain-wordmark"></i>
+
+      <div class="container-habilidades row">
+
+        <div class="habilidade html">
+          <div class="logo">
+            <i class="devicon devicon-html5-plain-wordmark"></i>
+          </div>
+          <h3 class="html">HTML5</h3>
+          <p>Já tenho familiaridade com a semântica, meta tags, importação de fonts entre outros.</p>
         </div>
-        <h3 class="html">HTML5</h3>
-        <p>Já tenho familiaridade com Tags semanticas, meta tags, divs, importação de fonts externas.</p>
-      </div>
 
-      <div class="habilidade css">
-        <div class="logo">
-          <i class="devicon devicon-css3-plain-wordmark"></i>
+        <div class="habilidade css">
+          <div class="logo">
+            <i class="devicon devicon-css3-plain-wordmark"></i>
+          </div>
+          <h3 class="css">CSS3</h3>
+          <p>Estou familiarizado com os princípios de flexbox, disposição de grade, adaptabilidade, definição de variáveis, CSS semântico, entre outras técnicas.</p>
         </div>
-        <h3 class="css">CSS3</h3>
-        <p>Conheço bem os conceitos de flexbox, Grid Layout, responsividade, criação de variáveis, CSS semantico, dentre
-          outras.</p>
-      </div>
 
-      <div class="habilidade javascript">
-        <span class="html card-border"></span>
-        <div class="logo">
-          <i class="devicon devicon-javascript-plain"></i>
+        <div class="habilidade ">
+          <div class="logo">
+            <i class="devicon devicon-bootstrap-plain"></i>
+          </div>
+          <h3 class="bootstrap">Bootstrap</h3>
+          <p>Estou bem familiarizado com o Bootstrap, uma das principais bibliotecas CSS que utilizo.
+            Com ele, tenho a facilidade de desenvolver interfaces web adaptáveis e elegantes,
+            aproveitando seus componentes prontos para garantir uma experiência otimizada em diversos dispositivos.</p>
         </div>
-        <h3 class="javascript">JavaScript</h3>
-        <p>Tenho uma boa base do JS. Já entendo bem conceitos como callbacks, promisses, async/await, consumo de APIs,
-          destructuring, spread operators, dentre outros.</p>
-      </div>
 
-      <div class="habilidade github">
-        <div class="logo">
-          <i class="devicon devicon-github-original"></i>
+        <div class="habilidade javascript">
+          <div class="logo">
+            <i class="devicon devicon-javascript-plain"></i>
+          </div>
+          <h3 class="javascript">JavaScript</h3>
+          <p>
+            Tenho proficiência em JS. Domino aspectos como callbacks, promises, async/await, interação com APIs, entre outros conceitos.</p>
         </div>
-        <h3 class="github">GitHub</h3>
-        <p>Tenho familiaridade com criação do README, hospedagem no github pages.</p>
-      </div>
 
-      <div class="habilidade react">
-        <div class="logo">
-          <i class="devicon devicon-react-original"></i>
+
+        <div class="habilidade vuejs">
+          <div class="logo">
+            <i class="devicon devicon-vuejs-line"></i>
+          </div>
+          <h3 class="vuejs">Vuejs</h3>
+          <p>
+            Tenho uma boa experiência com o Vue.js.
+            No meu dia a dia, utilizo suas características reativas e componentes modulares para criar soluções ágeis e interativas, buscando sempre otimizar a experiência do usuário.</p>
         </div>
-        <h3 class="react">React</h3>
-        <p>Tenho familiaridade com components, styled-components, hooks.</p>
-      </div>
 
 
-      <div class="habilidade git">
-        <div class="logo">
-          <i class="devicon devicon-git-plain"></i>
+        <div class="habilidade react">
+          <div class="logo">
+            <i class="devicon devicon-react-original"></i>
+          </div>
+          <h3 class="react">React</h3>
+          <p>
+            Tenho bons conhecimentos em React, uma biblioteca que emprego frequentemente para construir interfaces de usuário dinâmicas.
+            No cotidiano, desenvolvo e otimizo componentes para oferecer experiências interativas e eficientes.</p>
         </div>
-        <h3 class="git">Git</h3>
-        <p>Conheço os conceitos de versionamento de código , estado dos arquivos, e configuração do SSH no Git, além de
-          conhecimento sobre commits semânticos, clone de repósitório, dentre outros, comandos de uso geral.</p>
+
+
+        <div class="habilidade csharp">
+          <div class="logo">
+            <i class="devicon devicon-csharp-plain-wordmark"></i>
+          </div>
+          <h3 class="csharp">C# .Net Core/Framework</h3>
+          <p>
+            Essa é a esfera onde concentro grande parte da minha experiência.
+            Dentro dela, me especializei no desenvolvimento de aplicações que adotam um modelo de domínio rico e na criação de APIs robustas,
+            com foco específico usando o padrão MVC e DDD (Domain Driven Design).</p>
+        </div>
+
+        <div class="habilidade efcore">
+          <div class="logo">
+            <i class="devicon devicon-dotnetcore-plain"></i>
+          </div>
+          <h3 class="efcore">Entity Framework Core</h3>
+          <p>
+            Tenho uma profunda afinidade com o EF Core da plataforma .Net.
+            No dia a dia, foco no mapeamento eficaz, otimização de consultas e na gestão de migrações, buscando sempre a eficiência na interação com bancos de dados.</p>
+        </div>
+
+
+        <div class="habilidade sql">
+          <div class="logo">
+            <i class="devicon devicon-mysql-plain"></i>
+          </div>
+          <h3 class="sql">SQL</h3>
+          <p>
+            Tenho sólidos conhecimentos em SQL, a linguagem que uso para consultar e manipular bancos de dados.
+            Meu dia a dia envolve criar, otimizar e analisar consultas para extrair e modificar informações de forma eficiente.</p>
+        </div>
+
+        <div class="habilidade php">
+          <div class="logo">
+            <i class="devicon devicon-php-plain"></i>
+          </div>
+          <h3 class="php">PHP</h3>
+          <p>Embora não utilize mais no dia a dia, já contruí muitos projetos em PHP, o que me permitiu adiquirir um conhecimento sólido na linguagem.</p>
+        </div>
+
+
+        <div class="habilidade linux">
+          <div class="logo">
+            <i class="devicon devicon-linux-plain"></i>
+          </div>
+          <h3 class="linux">Linux</h3>
+          <p>Estou bem familiarizado com a administração do Linux. Uso regularmente seus sistemas e comandos, e atualmente tenho duas máquinas em nuvem rodando na Oracle.
+            Independentemente do meu conhecimento atual, sempre tenho o desejo de aprender mais e aprofundá-lo cada vez mais.</p>
+        </div>
+
+        <div class="habilidade oracle">
+          <div class="logo">
+            <i class="devicon devicon-oracle-original"></i>
+          </div>
+          <h3 class="oracle">Oracle Cloud</h3>
+          <p>Tenho familiaridade com a Oracle Cloud.
+            O site que você está visitando atualmente está hospedado nesta plataforma.
+            A computação em nuvem é uma área que sempre despertou minha curiosidade,
+            e utilizo a Oracle Cloud para garantir hospedar meus projetos que desenvolvo,
+            enquanto continuo a explorar e aprender mais sobre essa tecnologia.</p>
+        </div>
+
+        <div class="habilidade jira">
+          <div class="logo">
+            <i class="devicon devicon-jira-plain"></i>
+          </div>
+          <h3 class="jira">Jira Software</h3>
+          <p>Tenho familiaridade com o Jira Software, usando-o para gerenciar projetos via Kanban e Scrum. Esta ferramenta me permite organizar e monitorar tarefas, garantindo entregas ágeis e eficientes.</p>
+        </div>
+        
+        <div class="habilidade git">
+          <div class="logo">
+            <i class="devicon devicon-git-plain"></i>
+          </div>
+          <h3 class="git">Git</h3>
+          <p>Estou familiarizado com as práticas de controle de versão no Git, o status dos arquivos, e a implementação do SSH. Também tenho experiência em clonagem de repositórios e outros comandos comuns.</p>
+        </div>
+
+        <div class="habilidade github">
+          <div class="logo">
+            <i class="devicon devicon-github-original"></i>
+          </div>
+          <h3 class="github">Git/GitHub</h3>
+          <p>Tenho familiaridade com o uso do github para gerenciar repositórios e trabalhar em equipe.</p>
+        </div>
       </div>
     </div>
-  </div>
   </section>
 
 
@@ -198,114 +304,69 @@
 
       <div class="cards-wrapper" id="projetos">
         <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/desafio-js-avancado-devquest/" target="_blank"
-            style="--bg-img: url('../imagens/projeto-1.jpg')">
+          <a class="card" target="_blank"
+            style="background-image: url('./src/imagens/projeto-socialnetwork.png')">
             <div>
-              <h1>Consumindo API do Github</h1>
-              <p>Projeto realizado utilizando javaScript purom com intuito de realizar busca de usuários do github…
+              <h1>Social Network</h1>
+              <p>Uma simples rede social criada utilizando Asp.Net Core MVC Web App.
               </p>
-              <div class="date">31 maio 2022</div>
               <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
+                <div class="tag">
+                  <button onclick="irPara('social-network.danielsanchesdev.com.br')">Vizualizar Projeto</button>
+                  <button onclick="irPara('github.com/danielpereira21063/MySocialNetworkWeb')">Github</button>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      <div class="cards-wrapper" id="projetos">
+        <div class="card-grid-space">
+          <a class="card" target="_blank"
+            style="background-image: url('./src/imagens/projeto-miniblog.png')">
+            <div>
+              <h1>Miniblog</h1>
+              <p>Projeto realizado utilizando reactjs integrado com um banco de dados em MongoDB.
+              </p>
+              <div class="tags">
+                <div class="tag">
+                  <button onclick="irPara('miniblog.danielsanchesdev.com.br')">Vizualizar Projeto</button>
+                  <button onclick="irPara('github.com/danielpereira21063/Aprendizado-React/tree/master/10_MINIBLOG/miniblog')">Github</button>
+                </div>
               </div>
             </div>
           </a>
         </div>
 
         <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/doctorcare-nlw-2022/"
-            style="--bg-img: url('../imagens/projeto-2.jpg')" target="_blank">
+          <a class="card" target="_blank"
+            style="background-image: url('./src/imagens/projeto-proeventos.png')">
             <div>
-              <h1>Doctor Care</h1>
-              <p>Projeto realizado na NLW Return 2022 da Rocketseat trilha discovery…</p>
-              <div class="date">08 maio 2022</div>
+              <h1>Pro Eventos</h1>
+              <p>Organizador de eventos desenvolvido em C# .Net. + Angular.
+              </p>
               <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
+                <div class="tag">
+                  <button onclick="irPara('pro-eventos.danielsanchesdev.com.br')">Vizualizar Projeto</button>
+                  <button onclick="irPara('github.com/danielpereira21063/ProEventos')">Github</button>
+                </div>
               </div>
             </div>
           </a>
         </div>
 
         <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/projeto-landing-page/"
-            style="--bg-img: url('../imagens/projeto-3.jpg')" target="_blank">
+          <a class="card" target="_blank"
+            style="background-image: url('./src/imagens/projeto-secretword.png')">
             <div>
-              <h1>Landing Page Agência WEBGO</h1>
-              <p>Projeto realizado no evento Mapa Dev Week do curso de desenvolvimento front-end Devquest…</p>
-              <div class="date">23 janeiro 2022</div>
+              <h1>Secret Word</h1>
+              <p>Caça palavras desenvolvido em React.
+              </p>
               <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/layout-game/"
-            style="--bg-img: url('../imagens/projeto-4.jpg')" target="_blank">
-            <div>
-              <h1>Layout Street Fighter</h1>
-              <p>Projeto foi inspirado no layout do Character Select do game Street Fighter…</p>
-              <div class="date">20 de Junho 2022</div>
-              <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/nina-atelie/"
-            style="--bg-img: url('../imagens/projeto-5.jpg')" target="_blank">
-            <div>
-              <h1>Nina Ateliê das Doçuras</h1>
-              <p>Projeto freelancer de uma landing page para uma doceria…</p>
-              <div class="date">28 de Julho 2022</div>
-              <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid-space">
-          <a class="card" href="https://ignite-lab-react-fgtabvt67-lucaszanin.vercel.app/"
-            style="--bg-img: url('../imagens/projeto-6.jpg')" target="_blank">
-            <div>
-              <h1>Plataforma de Videos com React</h1>
-              <p>Projeto realizado no evento da Rockeseat Ignite Lab feito com React, consumindo uma API Graphql com
-                Graphcms…</p>
-              <div class="date">25 de Junho 2022</div>
-              <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/pokeagenda/"
-            style="--bg-img: url('../imagens/projeto-7.jpg')" target="_blank">
-            <div>
-              <h1>Pokeagenda</h1>
-              <p>Projeto de uma pokeageand com Javascript puro e layout responsivo…</p>
-              <div class="date">17 de Março 2022</div>
-              <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="card-grid-space">
-          <a class="card" href="https://lucaszanin.github.io/project-landing-page-gridlayout/"
-            style="--bg-img: url('../imagens/projeto-8.jpg')" target="_blank">
-            <div>
-              <h1>Landing Page Code Café</h1>
-              <p>Projeto landing page criado com HTML e CSS utilizando Grid Layout…</p>
-              <div class="date">19 de Fevereiro 2022</div>
-              <div class="tags">
-                <div class="tag">Vizualizar Projeto</div>
+                <div class="tag">
+                  <button onclick="irPara('secret-word.danielsanchesdev.com.br')">Vizualizar Projeto</button>
+                  <button onclick="irPara('github.com/danielpereira21063/Aprendizado-React')">Github</button>
+                </div>
               </div>
             </div>
           </a>
@@ -316,18 +377,18 @@
 
   <footer class="footer">
     <div class="container">
-      <h2>Me envie uma mensagem!</h2>
+      <h2>Entre em contato comigo!</h2>
       <div class="redes-sociais">
-        <a id="urlLinkedin2" class="outer-shadow" target="_blank">
+        <a href="https://www.linkedin.com/in/daniel-pereira-sanches-0a1ba0210/" class="outer-shadow" target="_blank">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a id="numeroWhatsapp2" class="outer-shadow" target="_blank">
+        <a href="https://wa.me/5522999668032" class="outer-shadow" target="_blank">
           <i class="fab fa-whatsapp"></i>
         </a>
-        <a id="urlGithub2" class="outer-shadow" target="_blank">
+        <a href="https://github.com/danielpereira21063" class="outer-shadow" target="_blank">
           <i class="fab fa-github"></i>
         </a>
-        <a id="urlInstagram2" class="outer-shadow" target="_blank">
+        <a href="https://www.instagram.com/danielpereira21063/" sclass="outer-shadow" target="_blank">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
