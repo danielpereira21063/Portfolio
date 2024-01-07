@@ -62,7 +62,7 @@ export default function Admin() {
         <tbody>
           {
             projetos.map(p => (
-              <tr onClick={() => location.href = '/admin/projeto/' + p.id}>
+              <tr onClick={() => location.href = '/admin/projeto/novo/' + p.id}>
                 <td>{p.titulo}</td>
                 <td>{p.descricao}</td>
                 <td>{p.url}</td>

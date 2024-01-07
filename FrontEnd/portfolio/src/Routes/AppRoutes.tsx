@@ -11,7 +11,7 @@ function AppRoutes() {
   const usuarioAutenticado = localStorage.getItem("usuario") != null;
 
   return (
-    <BrowserRouter>
+    
       <Routes>
         {/* ROTAS PÚBLICAS */}
         <Route path="/admin/login" element={<Login />}></Route>
@@ -21,14 +21,12 @@ function AppRoutes() {
         <Route path='/' element={usuarioAutenticado ? <><Admin /></> : <Navigate to={"/admin/login"} />}></Route>
         <Route path='/admin' element={usuarioAutenticado ? <><Admin /></> : <Navigate to={"/admin/login"} />}></Route>
         <Route path="/admin/perfil" element={usuarioAutenticado ? <><Perfil /></> : <Navigate to={"/admin/login"} />}></Route>
-        <Route path="/admin/projeto/{id}" element={usuarioAutenticado ? <><NovoProjeto /></> : <Navigate to={"/admin/login"} />}></Route>
-        <Route path="/admin/projeto/novo" element={usuarioAutenticado ? <NovoProjeto /> : <Navigate to={"/admin/login"} />}></Route>
+        <Route path="/admin/projeto/novo/:id" element={usuarioAutenticado ? <NovoProjeto /> : <Navigate to={"/admin/login"} />}></Route>
 
 
         {/* 404 */}
         <Route path='*' element={<> <h1 style={{ textAlign: 'center' }}>404 NOT FOUND!</h1></>}></Route>
       </Routes>
-    </BrowserRouter>
   )
 }
 

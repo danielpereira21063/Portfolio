@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { ProjetoService } from '../../../services/ProjetoService';
 import Projeto from '../../../models/Projeto';
-import { error } from 'console';
+import { useParams } from 'react-router-dom';
 
 export default function NovoProjeto() {
     const [id, setId] = React.useState(0);
@@ -11,7 +11,35 @@ export default function NovoProjeto() {
     const [urlGithub, setUrlGithub] = React.useState("");
     const [inativo, setInativo] = React.useState(false);
 
-    const [erros, setErros] = React.useState(Array);
+    const [erros, setErros] = React.useState({} as any);
+
+    const parametros = useParams();
+
+    const projetoId = parseInt(parametros.id as string);
+
+    var projeto = {
+
+    } as Projeto
+
+    if (projetoId > 0) {
+        ProjetoService.obterPeloId(projetoId).then(data =>{
+            projeto = data as Projeto;
+            setTitulo(projeto.titulo);
+            setDescricao(projeto.descricao);
+            setInativo(projeto.inativo);
+            setUrl(projeto.url);
+            setUrlGithub(projeto.urlGitHub);
+        });
+    } else {
+        projeto = {
+            id: 0,
+            descricao: descricao,
+            inativo: inativo,
+            titulo: titulo,
+            url: url,
+            urlGitHub: urlGithub,
+        } as Projeto
+    }
 
     var projeto = {
         id: 0,
@@ -27,9 +55,17 @@ export default function NovoProjeto() {
 
         try {
             ProjetoService.salvar(projeto).then(data => {
+
+                if (data['status'] == 400) {
+                    console.log(data)
+                    setErros(data.errors);
+                    return;
+                }
+
                 location.href = "/";
             });
         } catch (error: any) {
+            console.log(error)
             setErros(error.errors);
         }
     }
@@ -38,7 +74,10 @@ export default function NovoProjeto() {
         <div className='mt-2 mt-lg-3'>
             <h2 className='text-center'>Novo projeto</h2>
 
-            {(erros.map(e => <div className='alert alert-danger'>{e as string}</div>))}
+            {erros.Titulo && <div className='alert alert-danger'>{erros.Titulo[0]}</div>}
+            {erros.Descricao && <div className='alert alert-danger'>{erros.Descricao[0]}</div>}
+            {erros.Url && <div className='alert alert-danger'>{erros.Url[0]}</div>}
+            {erros.UrlGitHub && <div className='alert alert-danger'>{erros.UrlGitHub[0]}</div>}
 
             <form>
                 <div className="row">
