@@ -1,7 +1,7 @@
-/* .home .full-screen {
+.home .full-screen {
     min-height: 86vh;
     padding: 50px 0;
-} */
+}
 
 .home .texto-home {
     visibility: hidden;
@@ -65,5 +65,5 @@
 }
 
 p {
-    font-weight: 400;
+    font-weight: 400
 }

@@ -90,6 +90,15 @@
   cursor: pointer;
 }
 
+.btn-github {
+  background-color: #1a1f27 !important;
+}
+
+.card .tags .tag button:hover{
+  transition: .3s;
+  scale: 1.1;
+}
+
 .card .date {
   position: absolute;
   top: 0;
