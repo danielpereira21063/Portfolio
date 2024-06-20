@@ -83,7 +83,7 @@
   color: var(--cor-branca);
   font-size: var(--fonte-extra-grande);
   font-weight: 500;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .habilidades .container-habilidades .habilidade .html,
@@ -168,5 +168,5 @@
 }
 
 .habilidades .container-habilidades .habilidade i {
-  font-size: 9rem;
+  font-size: 4.5rem;
 }

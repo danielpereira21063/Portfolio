@@ -10,10 +10,10 @@
 :root {
     --fonte-primaria: 'Poppins', sans-serif;
     --fonte-secundaria: 'Raleway', sans-serif;
-    --fonte-gigante: 4.5rem;
-    --fonte-extra-grande: 3rem;
-    --fonte-grande: 2.4rem;
-    --fonte-normal: 1.6rem;
+    --fonte-gigante: 4rem;
+    --fonte-extra-grande: 2.5rem;
+    --fonte-grande: 2rem;
+    --fonte-normal: 1.5rem;
 }
 
 
