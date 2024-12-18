@@ -14,13 +14,9 @@
 
   <link rel="stylesheet" href="src/css/font-awesome.css" />
   <link rel="stylesheet" href="src/css/reset.css" />
-
   <script src="https://unpkg.com/scrollreveal"></script>
-
   <link rel="stylesheet" href="src/css/variaveis.css">
-
   <link rel="stylesheet" href="src/css/globais.css" />
-
   <link rel="stylesheet" href="src/css/header.css">
   <link rel="stylesheet" href="src/css/home.css">
   <link rel="stylesheet" href="src/css/sobre.css">
@@ -28,9 +24,7 @@
   <link rel="stylesheet" href="src/css/habilidades.css">
   <link rel="stylesheet" href="src/css/projetos.css">
   <link rel="stylesheet" href="src/css/footer.css">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
-
   <link rel="shortcut icon" type="image/jpg" href="./favico.png" />
 </head>
 
@@ -39,12 +33,21 @@
     <div class="container">
       <div class="row justify-content-between alinhar-itens-no-centro">
         <a href="#">
-          <h1 class="logo">D</h1>
+          <h1 class="logo"><img src="src/imagens/logo.png" /></h1>
         </a>
+        <!--<div class="row justify-content-between">
+           <div class="language-switch d-md-none" onclick="() => changeLanguage()">
+            <i class="fa fa-globe" style="font-size: 32px; margin-right: 5px;"></i>
+            <label class="switch">
+              <input type="checkbox" id="languageToggle" onchange="changeLanguage()">
+              <span class="slider round"></span>
+            </label>
+            <span id="langText">PT</span>
+          </div> 
+        </div>-->
 
         <nav>
           <input id="menu-hamburguer" type="checkbox" />
-
           <label for="menu-hamburguer">
             <div class="menu">
               <span class="hamburguer"></span>
@@ -52,12 +55,20 @@
           </label>
 
           <ul>
-            <li><a href="#sobre-mim">Sobre mim</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projects">Meus projetos</a></li>
+            <li><a href="#sobre-mim"><i class="fa fa-user"></i> <span id="sobre-mim">Sobre mim</span></a></li>
+            <li><a href="#habilidades"><i class="fa fa-code"></i> <span id="habilidades">Habilidades</span></a></li>
+            <li><a href="#projects"><i class="fab fa-github"></i> <span id="meus-projetos">Meus projetos</span></a></li>
           </ul>
         </nav>
 
+        <div class="language-switch" onclick="() => changeLanguage()">
+          <i class="fa fa-globe" style="font-size: 32px; margin-right: 5px;"></i>
+          <label class="switch">
+            <input type="checkbox" id="languageToggle" onchange="changeLanguage()">
+            <span class="slider round"></span>
+          </label>
+          <span id="langText">PT</span>
+        </div>
       </div>
     </div>
   </header>
@@ -90,7 +101,7 @@
 
         <div class="img-home">
           <div class="img-box">
-            <img src="src/imagens/developer.png"
+            <img src="src/imagens/developer_02.png"
               alt="Daniel Pereira Sanches como desenvolvedor FullStack C# .NET e JavaScript, Itaocara-RJ">
           </div>
         </div>
@@ -108,8 +119,8 @@
 
       <div class="row">
         <div class="imagem-sobre-mim">
-          <div class="img-box inner-shadow">
-            <img src="src/imagens/foto-perfil.jpg" alt="foto do perfil" class="outer-shadow">
+          <div class="img-box">
+            <img src="src/imagens/foto-perfil_02.png" alt="foto do perfil" class="outer-shadow">
           </div>
         </div>
         <div class="informacoes-sobre-mim">
@@ -159,7 +170,6 @@
           <h2>Habilidades</h2>
         </div>
       </div>
-
 
       <div class="container-habilidades row">
 
@@ -363,7 +373,8 @@
                     <button onclick="irPara('miniblog.danielsanchesdev.com.br')"><i class="fa fa-eye"></i> Vizualizar
                       Projeto</button>
                     <button class="btn-github"
-                      onclick="irPara('github.com/danielpereira21063/Aprendizado-React/tree/master/10_MINIBLOG/miniblog')"><i class="fab fa-github"></i> Github</button>
+                      onclick="irPara('github.com/danielpereira21063/Aprendizado-React/tree/master/10_MINIBLOG/miniblog')"><i
+                        class="fab fa-github"></i> Github</button>
                   </div>
                 </div>
               </div>
@@ -380,8 +391,8 @@
                   <div class="tag">
                     <button onclick="irPara('pro-eventos.danielsanchesdev.com.br')"><i class="fa fa-eye"></i> Vizualizar
                       Projeto</button>
-                    <button onclick="irPara('github.com/danielpereira21063/ProEventos')"
-                      class="btn-github"><i class="fab fa-github"></i> Github</button>
+                    <button onclick="irPara('github.com/danielpereira21063/ProEventos')" class="btn-github"><i
+                        class="fab fa-github"></i> Github</button>
                   </div>
                 </div>
               </div>

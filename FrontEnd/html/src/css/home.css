@@ -64,6 +64,11 @@
     }
 }
 
+
 p {
     font-weight: 400;
+}
+
+.d-none {
+    display: none;
 }
