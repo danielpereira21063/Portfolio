@@ -79,7 +79,8 @@ const texts = {
     pt: {
         home: {
             greeting: "Olá,",
-            name: "Meu nome é Daniel Pereira Sanches",
+            introName: "Meu nome é",
+            name: "Daniel Pereira Sanches",
             profession: "Sou um Desenvolvedor FullStack",
         },
         sobre: {
@@ -126,7 +127,8 @@ const texts = {
     en: {
         home: {
             greeting: "Hello,",
-            name: "My name is Daniel Pereira Sanches",
+            introName: "My name is",
+            name: "Daniel Pereira Sanches",
             profession: "I am a FullStack Developer",
         },
         sobre: {
@@ -192,7 +194,8 @@ const changeLanguage = (onLoad = false) => {
     const selectedTexts = texts[lang];
 
     document.querySelector('.home .texto-home p').textContent = selectedTexts.home.greeting;
-    document.querySelector('.home .texto-home h1').textContent = selectedTexts.home.name;
+    document.querySelector('.home .texto-home span').innerHTML = selectedTexts.home.name;
+    document.querySelector('.home .texto-home h1').innerHTML = selectedTexts.home.introName;
     document.querySelector('.home .texto-home h2').textContent = selectedTexts.home.profession;
 
     const menus = document.querySelectorAll('nav ul li a span');
