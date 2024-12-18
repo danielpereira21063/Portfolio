@@ -94,11 +94,11 @@ const texts = {
   </p>
 
   <p>
-    Além do meu papel como desenvolvedor, tenho um interesse particular em ethical hacking, buscando
-    constantemente ampliar meus conhecimentos em segurança da informação. Concluí minha graduação em
-    <strong>Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá</strong> em dezembro de 2023
-    e iniciei minha <strong>Pós-Graduação em Engenharia de Software na Unyleya</strong> em janeiro de 2024,
-    aprofundando ainda mais meu conhecimento e aprimorando minhas habilidades na área.
+     Além do meu papel como desenvolvedor, tenho um interesse particular em ethical hacking, buscando
+  ampliar meus conhecimentos em segurança da informação. Concluí minha graduação em
+  <strong>Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá</strong> em dezembro de 2023
+  e iniciei minha <strong>Pós-Graduação em Engenharia de Software na Unyleya</strong> em janeiro de 2024 e concluí em setembro de 2024,
+  aprofundando ainda mais meu conhecimento e aprimorando minhas habilidades na área.
   </p>
 
   <p>Possuo um sólido conhecimento em inglês (B2 Independente) e consigo me comunicar no idioma sem grandes problemas. <a
@@ -144,7 +144,7 @@ const texts = {
     In addition to my role as a developer, I have a particular interest in ethical hacking, constantly seeking
     to expand my knowledge in information security. I completed my undergraduate degree in
     <strong>Systems Analysis and Development at Universidade Estácio de Sá</strong> in December 2023
-    and started my <strong>Postgraduate in Software Engineering at Unyleya</strong> in January 2024,
+    and started my <strong>Postgraduate in Software Engineering at Unyleya</strong> in January 2024 and finished in September 2024,
     further deepening my knowledge and improving my skills in the field.
   </p>
 
