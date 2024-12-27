@@ -173,6 +173,8 @@ const texts = {
 };
 
 const changeLanguage = (onLoad = false) => {
+    const btnDownloadCv = document.querySelector("#btn_download_cv");
+
     const currentLanguage = localStorage.getItem("lang") || 'pt';
     let lang = null;
 
@@ -185,6 +187,8 @@ const changeLanguage = (onLoad = false) => {
             lang = 'pt';
         }
     }
+
+    btnDownloadCv.setAttribute("href", `./src/arquivos/Daniel-Pereira-Sanches_${lang}_2025.pdf`)
 
     document.querySelector("#languageToggle").checked = lang == 'en';
 
