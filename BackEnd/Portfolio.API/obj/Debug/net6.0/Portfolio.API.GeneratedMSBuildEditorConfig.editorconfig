@@ -9,9 +9,19 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Portfolio.API
 build_property.RootNamespace = Portfolio.API
+<<<<<<< HEAD
 build_property.ProjectDir = d:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = d:\Projetos\ProjetosPessoais\Portfolio\BackEnd\Portfolio.API
+=======
+build_property.ProjectDir = c:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.API\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = c:\Users\Daniel\Desktop\Portfolio\BackEnd\Portfolio.API
+>>>>>>> 1a5e2a3758d0fe93e459cf1e9bc98888748ccdae
 build_property._RazorSourceGeneratorDebug = 

@@ -5,17 +5,18 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daniel Pereira Sanches</title>
+  <title>Daniel Pereira Sanches - Desenvolvedor FullStack e Especialista em C# .NET, JavaScript, React, Vue.js, Vuejs,
+    Desenvolvimento Web, Desenvolvimento Desktop... (Daniel, Daniel Sanches, Daniel Itaocara-RJ, Daniel Sanches Itaocara
+    RJ, Daniel Sanches Campo de Sementes)</title>
+
+  <meta name="description"
+    content="Daniel Pereira Sanches, desenvolvedor FullStack especializado em .NET, Vue.js e React. Confira meu portfólio e habilidades em desenvolvimento web e desktop." />
 
   <link rel="stylesheet" href="src/css/font-awesome.css" />
   <link rel="stylesheet" href="src/css/reset.css" />
-
   <script src="https://unpkg.com/scrollreveal"></script>
-
   <link rel="stylesheet" href="src/css/variaveis.css">
-
   <link rel="stylesheet" href="src/css/globais.css" />
-
   <link rel="stylesheet" href="src/css/header.css">
   <link rel="stylesheet" href="src/css/home.css">
   <link rel="stylesheet" href="src/css/sobre.css">
@@ -23,8 +24,8 @@
   <link rel="stylesheet" href="src/css/habilidades.css">
   <link rel="stylesheet" href="src/css/projetos.css">
   <link rel="stylesheet" href="src/css/footer.css">
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+  <link rel="shortcut icon" type="image/jpg" href="./favico.png" />
 </head>
 
 <body>
@@ -32,12 +33,21 @@
     <div class="container">
       <div class="row justify-content-between alinhar-itens-no-centro">
         <a href="#">
-          <h1 class="logo">D</h1>
+          <h1 class="logo"><img src="src/imagens/logo.png" /></h1>
         </a>
+        <!--<div class="row justify-content-between">
+           <div class="language-switch d-md-none" onclick="() => changeLanguage()">
+            <i class="fa fa-globe" style="font-size: 32px; margin-right: 5px;"></i>
+            <label class="switch">
+              <input type="checkbox" id="languageToggle" onchange="changeLanguage()">
+              <span class="slider round"></span>
+            </label>
+            <span id="langText">PT</span>
+          </div> 
+        </div>-->
 
         <nav>
           <input id="menu-hamburguer" type="checkbox" />
-
           <label for="menu-hamburguer">
             <div class="menu">
               <span class="hamburguer"></span>
@@ -45,12 +55,20 @@
           </label>
 
           <ul>
-            <li><a href="#sobre-mim">Sobre mim</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-            <li><a href="#projects">Meus projetos</a></li>
+            <li><a href="#sobre-mim"><i class="fa fa-user"></i> <span id="sobre-mim">Sobre mim</span></a></li>
+            <li><a href="#habilidades"><i class="fa fa-code"></i> <span id="habilidades">Habilidades</span></a></li>
+            <li><a href="#projects"><i class="fab fa-github"></i> <span id="meus-projetos">Meus projetos</span></a></li>
           </ul>
         </nav>
 
+        <div class="language-switch" onclick="() => changeLanguage()">
+          <i class="fa fa-globe" style="font-size: 32px; margin-right: 5px;"></i>
+          <label class="switch">
+            <input type="checkbox" id="languageToggle" onchange="changeLanguage()">
+            <span class="slider round"></span>
+          </label>
+          <span id="langText">PT</span>
+        </div>
       </div>
     </div>
   </header>
@@ -83,7 +101,8 @@
 
         <div class="img-home">
           <div class="img-box">
-            <img src="src/imagens/developer.png" alt="foto do perfil">
+            <img src="src/imagens/developer_02.png"
+              alt="Daniel Pereira Sanches como desenvolvedor FullStack C# .NET e JavaScript, Itaocara-RJ">
           </div>
         </div>
       </div>
@@ -100,36 +119,48 @@
 
       <div class="row">
         <div class="imagem-sobre-mim">
-          <div class="img-box inner-shadow">
-            <img src="src/imagens/foto-perfil.jpg" alt="foto do perfil" class="outer-shadow">
+          <div class="img-box">
+            <img src="src/imagens/foto-perfil_02.png" alt="foto do perfil" class="outer-shadow">
           </div>
         </div>
         <div class="informacoes-sobre-mim">
           <span id="msgApresentacao">
             <p>
-              Olá,
-          
-              Meu nome é Daniel, e atualmente atuo como desenvolvedor full-stack, trazendo meu conhecimento em linguagens como <strong>C# (.NET)</strong>, além de <strong>JavaScript</strong>. Minhas habilidades incluem também <strong>HTML</strong> e <strong>CSS</strong>, com experiência em frameworks renomados como <strong>Vue.js</strong> e <strong>React.js</strong>.
-          </p>
-          
-          <p>
-              Além do meu papel como desenvolvedor, tenho um interesse particular em ethical hacking, buscando constantemente ampliar meus conhecimentos em segurança da informação. Concluí minha graduação em <strong>Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá</strong> em dezembro de 2023
-          
-              e iniciei minha <strong>Pós-Graduação em Engenharia de Software na Unyleya</strong> em janeiro de 2024, aprofundando ainda mais meu conhecimento e aprimorando minhas habilidades na área.
-          </p>
+              Olá, meu nome é Daniel, e atualmente atuo como desenvolvedor full-stack, trazendo meu conhecimento em
+              linguagens como <strong>C# (.NET)</strong>, além de <strong>JavaScript</strong>. Minhas habilidades
+              incluem também <strong>HTML</strong> e <strong>CSS</strong>, com experiência em frameworks renomados como
+              <strong>Vue.js</strong> e <strong>React.js</strong>.
+            </p>
 
-          <p>Possuo proficiência intermediária em inglês, utilizada para leitura e compreensão de documentos técnicos, bem como em interações na área de tecnologia.</p>
-          
-          <p>
+            <p>
+              Além do meu papel como desenvolvedor, tenho um interesse particular em ethical hacking, buscando
+              constantemente ampliar meus conhecimentos em segurança da informação. Concluí minha graduação em
+              <strong>Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá</strong> em dezembro de 2023
+
+              e iniciei minha <strong>Pós-Graduação em Engenharia de Software na Unyleya</strong> em janeiro de 2024,
+              aprofundando ainda mais meu conhecimento e aprimorando minhas habilidades na área.
+            </p>
+
+            <p>Possuo conhecimento intermediário em inglês e consigo me comunicar no idioma sem grandes problemas. <a
+                style="text-decoration: underline;" target="_blank" href="https://cert.efset.org/hthhpg">Clicando
+                aqui</a> você pode consultar meu certificado do teste feito no <a style="text-decoration: underline;"
+                target="_blank" href="https://www.efset.org">EFSET</a>.</p>
+
+            <p>
               Estou aberto a oportunidades e colaborações na área de tecnologia.
 
               Agradeço pela atenção dedicada!!!
-          </p>
+            </p>
 
           </span>
 
           <div class="botao-primario">
+<<<<<<< HEAD
             <a target="_blank" id="download_cv" href="./src/arquivos/Daniel-Pereira-Sanches.pdf" class="botao outter-shadow">Baixe meu CV</a>
+=======
+            <a target="_blank" href="./src/arquivos/Daniel-Pereira-Sanches.pdf" class="botao outter-shadow">Baixe meu
+              CV</a>
+>>>>>>> 1a5e2a3758d0fe93e459cf1e9bc98888748ccdae
           </div>
         </div>
       </div>
@@ -144,7 +175,6 @@
         </div>
       </div>
 
-
       <div class="container-habilidades row">
 
         <div class="habilidade html">
@@ -152,7 +182,7 @@
             <i class="devicon devicon-html5-plain-wordmark"></i>
           </div>
           <h3 class="html">HTML5</h3>
-          <p>Já tenho familiaridade com a semântica, meta tags, importação de fonts entre outros.</p>
+          <!-- <p>Já tenho familiaridade com a semântica, meta tags, importação de fonts entre outros.</p> -->
         </div>
 
         <div class="habilidade css">
@@ -160,8 +190,8 @@
             <i class="devicon devicon-css3-plain-wordmark"></i>
           </div>
           <h3 class="css">CSS3</h3>
-          <p>Estou familiarizado com os princípios de flexbox, disposição de grade, adaptabilidade, definição de
-            variáveis, CSS semântico, entre outras técnicas.</p>
+          <!-- <p>Estou familiarizado com os princípios de flexbox, disposição de grade, adaptabilidade, definição de
+            variáveis, CSS semântico, entre outras técnicas.</p> -->
         </div>
 
         <div class="habilidade ">
@@ -169,9 +199,9 @@
             <i class="devicon devicon-bootstrap-plain"></i>
           </div>
           <h3 class="bootstrap">Bootstrap</h3>
-          <p>Estou bem familiarizado com o Bootstrap, uma das principais bibliotecas CSS que utilizo.
+          <!-- <p>Estou bem familiarizado com o Bootstrap, uma das principais bibliotecas CSS que utilizo.
             Com ele, tenho a facilidade de desenvolver interfaces web adaptáveis e elegantes,
-            aproveitando seus componentes prontos para garantir uma experiência otimizada em diversos dispositivos.</p>
+            aproveitando seus componentes prontos para garantir uma experiência otimizada em diversos dispositivos.</p> -->
         </div>
 
         <div class="habilidade javascript">
@@ -179,9 +209,9 @@
             <i class="devicon devicon-javascript-plain"></i>
           </div>
           <h3 class="javascript">JavaScript</h3>
-          <p>
-            Tenho proficiência em JS. Domino aspectos como callbacks, promises, async/await, interação com APIs, entre
-            outros conceitos.</p>
+          <!-- <p>
+            Tenho conhecimento em JS. Domino aspectos como callbacks, promises, async/await, interação com APIs, entre
+            outros conceitos.</p> -->
         </div>
 
 
@@ -190,10 +220,10 @@
             <i class="devicon devicon-vuejs-line"></i>
           </div>
           <h3 class="vuejs">Vuejs</h3>
-          <p>
+          <!-- <p>
             Tenho uma boa experiência com o Vue.js.
             No meu dia a dia, utilizo suas características reativas e componentes modulares para criar soluções ágeis e
-            interativas, buscando sempre otimizar a experiência do usuário.</p>
+            interativas, buscando sempre otimizar a experiência do usuário.</p> -->
         </div>
 
 
@@ -202,10 +232,10 @@
             <i class="devicon devicon-react-original"></i>
           </div>
           <h3 class="react">React</h3>
-          <p>
+          <!-- <p>
             Tenho bons conhecimentos em React, uma biblioteca que emprego frequentemente para construir interfaces de
             usuário dinâmicas.
-            No cotidiano, desenvolvo e otimizo componentes para oferecer experiências interativas e eficientes.</p>
+            No cotidiano, desenvolvo e otimizo componentes para oferecer experiências interativas e eficientes.</p> -->
         </div>
 
 
@@ -213,23 +243,23 @@
           <div class="logo">
             <i class="devicon devicon-csharp-plain-wordmark"></i>
           </div>
-          <h3 class="csharp">C# .Net Core/Framework</h3>
-          <p>
+          <h3 class="csharp">.Net</h3>
+          <!-- <p>
             Essa é a esfera onde concentro grande parte da minha experiência.
             Dentro dela, me especializei no desenvolvimento de aplicações que adotam um modelo de domínio rico e na
             criação de APIs robustas,
-            com foco específico usando o padrão MVC e DDD (Domain Driven Design).</p>
+            com foco específico usando o padrão MVC e DDD (Domain Driven Design).</p> -->
         </div>
 
         <div class="habilidade efcore">
           <div class="logo">
             <i class="devicon devicon-dotnetcore-plain"></i>
           </div>
-          <h3 class="efcore">Entity Framework Core</h3>
-          <p>
+          <h3 class="efcore">Entity Framework</h3>
+          <!-- <p>
             Tenho uma profunda afinidade com o EF Core da plataforma .Net.
             No dia a dia, foco no mapeamento eficaz, otimização de consultas e na gestão de migrações, buscando sempre a
-            eficiência na interação com bancos de dados.</p>
+            eficiência na interação com bancos de dados.</p> -->
         </div>
 
 
@@ -238,10 +268,10 @@
             <i class="devicon devicon-mysql-plain"></i>
           </div>
           <h3 class="sql">SQL</h3>
-          <p>
+          <!-- <p>
             Tenho sólidos conhecimentos em SQL, a linguagem que uso para consultar e manipular bancos de dados.
             Meu dia a dia envolve criar, otimizar e analisar consultas para extrair e modificar informações de forma
-            eficiente.</p>
+            eficiente.</p> -->
         </div>
 
         <div class="habilidade php">
@@ -249,8 +279,8 @@
             <i class="devicon devicon-php-plain"></i>
           </div>
           <h3 class="php">PHP</h3>
-          <p>Embora não utilize mais no dia a dia, já contruí muitos projetos em PHP, o que me permitiu adiquirir um
-            conhecimento sólido na linguagem.</p>
+          <!-- <p>Embora não utilize mais no dia a dia, já contruí muitos projetos em PHP, o que me permitiu adiquirir um
+            conhecimento sólido na linguagem.</p> -->
         </div>
 
 
@@ -259,10 +289,10 @@
             <i class="devicon devicon-linux-plain"></i>
           </div>
           <h3 class="linux">Linux</h3>
-          <p>Estou bem familiarizado com a administração do Linux. Uso regularmente seus sistemas e comandos, e
+          <!-- <p>Estou bem familiarizado com a administração do Linux. Uso regularmente seus sistemas e comandos, e
             atualmente tenho duas máquinas em nuvem rodando na Oracle.
             Independentemente do meu conhecimento atual, sempre tenho o desejo de aprender mais e aprofundá-lo cada vez
-            mais.</p>
+            mais.</p> -->
         </div>
 
         <div class="habilidade oracle">
@@ -270,11 +300,11 @@
             <i class="devicon devicon-oracle-original"></i>
           </div>
           <h3 class="oracle">Oracle Cloud</h3>
-          <p>Tenho familiaridade com a Oracle Cloud.
+          <!-- <p>Tenho familiaridade com a Oracle Cloud.
             O site que você está visitando atualmente está hospedado nesta plataforma.
             A computação em nuvem é uma área que sempre despertou minha curiosidade,
             e utilizo a Oracle Cloud para garantir hospedar meus projetos que desenvolvo,
-            enquanto continuo a explorar e aprender mais sobre essa tecnologia.</p>
+            enquanto continuo a explorar e aprender mais sobre essa tecnologia.</p> -->
         </div>
 
         <div class="habilidade jira">
@@ -282,8 +312,8 @@
             <i class="devicon devicon-jira-plain"></i>
           </div>
           <h3 class="jira">Jira Software</h3>
-          <p>Tenho familiaridade com o Jira Software, usando-o para gerenciar projetos via Kanban e Scrum. Esta
-            ferramenta me permite organizar e monitorar tarefas, garantindo entregas ágeis e eficientes.</p>
+          <!-- <p>Tenho familiaridade com o Jira Software, usando-o para gerenciar projetos via Kanban e Scrum. Esta
+            ferramenta me permite organizar e monitorar tarefas, garantindo entregas ágeis e eficientes.</p> -->
         </div>
 
         <div class="habilidade git">
@@ -291,8 +321,8 @@
             <i class="devicon devicon-git-plain"></i>
           </div>
           <h3 class="git">Git</h3>
-          <p>Estou familiarizado com as práticas de controle de versão no Git, o status dos arquivos, e a implementação
-            do SSH. Também tenho experiência em clonagem de repositórios e outros comandos comuns.</p>
+          <!-- <p>Estou familiarizado com as práticas de controle de versão no Git, o status dos arquivos, e a implementação
+            do SSH. Também tenho experiência em clonagem de repositórios e outros comandos comuns.</p> -->
         </div>
 
         <div class="habilidade github">
@@ -300,7 +330,7 @@
             <i class="devicon devicon-github-original"></i>
           </div>
           <h3 class="github">Git/GitHub</h3>
-          <p>Tenho familiaridade com o uso do github para gerenciar repositórios e trabalhar em equipe.</p>
+          <!-- <p>Tenho familiaridade com o uso do github para gerenciar repositórios e trabalhar em equipe.</p> -->
         </div>
       </div>
     </div>
@@ -325,8 +355,10 @@
               </p>
               <div class="tags">
                 <div class="tag">
-                  <button onclick="irPara('social-network.danielsanchesdev.com.br')">Vizualizar Projeto</button>
-                  <button onclick="irPara('github.com/danielpereira21063/MySocialNetworkWeb')">Github</button>
+                  <button onclick="irPara('social-network.danielsanchesdev.com.br')"><i class="fa fa-eye"></i>
+                    Vizualizar Projeto</button>
+                  <button class="btn-github" onclick="irPara('github.com/danielpereira21063/MySocialNetworkWeb')">
+                    <i class="fab fa-github"></i> Github</button>
                 </div>
               </div>
             </div>
@@ -342,9 +374,11 @@
                 </p>
                 <div class="tags">
                   <div class="tag">
-                    <button onclick="irPara('miniblog.danielsanchesdev.com.br')">Vizualizar Projeto</button>
-                    <button
-                      onclick="irPara('github.com/danielpereira21063/Aprendizado-React/tree/master/10_MINIBLOG/miniblog')">Github</button>
+                    <button onclick="irPara('miniblog.danielsanchesdev.com.br')"><i class="fa fa-eye"></i> Vizualizar
+                      Projeto</button>
+                    <button class="btn-github"
+                      onclick="irPara('github.com/danielpereira21063/Aprendizado-React/tree/master/10_MINIBLOG/miniblog')"><i
+                        class="fab fa-github"></i> Github</button>
                   </div>
                 </div>
               </div>
@@ -359,8 +393,10 @@
                 </p>
                 <div class="tags">
                   <div class="tag">
-                    <button onclick="irPara('pro-eventos.danielsanchesdev.com.br')">Vizualizar Projeto</button>
-                    <button onclick="irPara('github.com/danielpereira21063/ProEventos')">Github</button>
+                    <button onclick="irPara('pro-eventos.danielsanchesdev.com.br')"><i class="fa fa-eye"></i> Vizualizar
+                      Projeto</button>
+                    <button onclick="irPara('github.com/danielpereira21063/ProEventos')" class="btn-github"><i
+                        class="fab fa-github"></i> Github</button>
                   </div>
                 </div>
               </div>
@@ -375,8 +411,10 @@
                 </p>
                 <div class="tags">
                   <div class="tag">
-                    <button onclick="irPara('secret-word.danielsanchesdev.com.br')">Vizualizar Projeto</button>
-                    <button onclick="irPara('github.com/danielpereira21063/Aprendizado-React')">Github</button>
+                    <button onclick="irPara('secret-word.danielsanchesdev.com.br')"><i class="fa fa-eye"></i> Vizualizar
+                      Projeto</button>
+                    <button onclick="irPara('github.com/danielpereira21063/Aprendizado-React')" class="btn-github">
+                      <i class="fab fa-github"></i> Github</button>
                   </div>
                 </div>
               </div>

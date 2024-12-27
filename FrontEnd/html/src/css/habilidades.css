@@ -1,13 +1,13 @@
 .habilidades .container-habilidades {
   text-align: center;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
 .habilidades .container-habilidades .habilidade {
   max-width: 300px;
-  padding: 40px 20px;
+  padding: 20px 20px;
   border-radius: 10px;
   background-color: var(--cor-fundo-cinza-claro);
 }
@@ -83,7 +83,7 @@
   color: var(--cor-branca);
   font-size: var(--fonte-extra-grande);
   font-weight: 500;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .habilidades .container-habilidades .habilidade .html,
@@ -168,5 +168,5 @@
 }
 
 .habilidades .container-habilidades .habilidade i {
-  font-size: 9rem;
+  font-size: 4.5rem;
 }
