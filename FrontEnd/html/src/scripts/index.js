@@ -86,32 +86,35 @@ const texts = {
         sobre: {
             title: "Sobre mim",
             textHtml: `
-  <p>
-    Olá, meu nome é Daniel, e atualmente atuo como desenvolvedor full-stack, trazendo meu conhecimento em
-    linguagens como <strong>C# (.NET)</strong>, além de <strong>JavaScript</strong>. Minhas habilidades
-    incluem também <strong>HTML</strong> e <strong>CSS</strong>, com experiência em frameworks renomados como
-    <strong>Vue.js</strong> e <strong>React.js</strong>.
-  </p>
-
-  <p>
-     Além do meu papel como desenvolvedor, tenho um interesse particular em ethical hacking, buscando
-  ampliar meus conhecimentos em segurança da informação. Concluí minha graduação em
-  <strong>Análise e Desenvolvimento de Sistemas na Universidade Estácio de Sá</strong> em dezembro de 2023
-  e iniciei minha <strong>Pós-Graduação em Engenharia de Software na Unyleya</strong> em janeiro de 2024 e concluí em setembro de 2024,
-  aprofundando ainda mais meu conhecimento e aprimorando minhas habilidades na área.
-  </p>
-
-  <p>Possuo um sólido conhecimento em inglês (B2 Independente) e consigo me comunicar no idioma sem grandes problemas. <a
-      style="text-decoration: underline;" target="_blank" href="https://cert.efset.org/hthhpg">Clicando
-      aqui</a> você pode consultar meu certificado do teste feito no <a style="text-decoration: underline;"
-      target="_blank" href="https://www.efset.org">EFSET</a>.</p>
-
-  <p>
-    Estou aberto a oportunidades e colaborações na área de tecnologia.
-
-    Agradeço pela atenção dedicada!!!
-  </p>
-`,
+            <p>
+                Olá. Meu nome é Daniel, um desenvolvedor Full Stack, com experiência em tecnologias que incluem, mas não se limitam a: 
+                <strong>C# .NET</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Vue.js</strong> e 
+                <strong>React.js Frameworks</strong>.
+            </p>
+            <p>
+                Comecei a minha carreira como um programador de forma autodidata. Quando iniciei meus estudos, não tinha acesso à internet 
+                em casa, mas essa limitação nunca foi um obstáculo para mim. Pelo contrário, ela fortaleceu minha determinação em buscar 
+                alternativas e alcançar meus objetivos. Com muito esforço e dedicação, consegui proporcionar acesso à internet em minha 
+                casa, o que me permitiu evoluir ainda mais minhas possibilidades de aprendizado. Hoje, continuo firme nos estudos, sempre 
+                buscando crescer e superar novos desafios.
+            </p>
+            <p>
+                Além disso, tenho muito interesse em aprofundar meus conhecimentos sobre os processos de desenvolvimento de software. Meu 
+                nível de inglês é <strong>B2</strong>, e estou me esforçando para em breve alcançar o nível <strong>C1</strong>. Tenho um 
+                profundo conhecimento da <strong>arquitetura DDD</strong>, dos <strong>padrões de código de qualidade</strong>, como injeções 
+                de dependências, e do uso de <strong>interfaces</strong> para a criação de aplicações com um modelo de domínio rico.
+            </p>
+            <p>
+                Minhas formações incluem uma graduação em <strong>Análise e Desenvolvimento de Sistemas</strong> e uma 
+                <strong>pós-graduação em Engenharia de Software</strong>; portanto, tenho uma formação teórica e prática substancialmente 
+                fortalecida na disciplina.
+            </p>
+            <p>
+                Sei lidar bem com pessoas, o que facilita meu trabalho em equipe e me torna eficaz na comunicação com diferentes perfis 
+                profissionais, contribuindo para o sucesso dos projetos em que estou envolvido. Sou uma pessoa extremamente paciente, 
+                muito esforçada e resiliente que sabe tomar boas decisões.
+            </p>
+            `,
             cvLink: "Baixe meu CV"
         },
         habilidades: {
@@ -133,31 +136,35 @@ const texts = {
         },
         sobre: {
             title: "About me",
-            textHtml: `<p>
-    Hello, I am Daniel, and I currently work as a full-stack developer, bringing my knowledge of
-    languages like <strong>C# (.NET)</strong>, as well as <strong>JavaScript</strong>. My skills also include
-    <strong>HTML</strong> and <strong>CSS</strong>, with experience in well-known frameworks such as
-    <strong>Vue.js</strong> and <strong>React.js</strong>.
-  </p>
-
-  <p>
-    In addition to my role as a developer, I have a particular interest in ethical hacking, constantly seeking
-    to expand my knowledge in information security. I completed my undergraduate degree in
-    <strong>Systems Analysis and Development at Universidade Estácio de Sá</strong> in December 2023
-    and started my <strong>Postgraduate in Software Engineering at Unyleya</strong> in January 2024 and finished in September 2024,
-    further deepening my knowledge and improving my skills in the field.
-  </p>
-
-  <p>I have a solid knowledge of English (B2 Upper intermediate) and can communicate in the language without major issues. <a
-      style="text-decoration: underline;" target="_blank" href="https://cert.efset.org/hthhpg">Clicking here</a>
-      you can check my certificate from the test taken at <a style="text-decoration: underline;" target="_blank"
-      href="https://www.efset.org">EFSET</a>.</p>
-
-  <p>
-    I am open to opportunities and collaborations in the technology field.
-
-    Thank you for your attention!!!
-  </p>`,
+            textHtml: `
+                <p>
+                    Hello. My name is Daniel, a Full Stack Developer with experience in technologies that include, but are not limited to: 
+                    <strong>C# .NET</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Vue.js</strong>, and 
+                    <strong>React.js Frameworks</strong>.
+                </p>
+                <p>
+                    I started my career as a self-taught programmer. When I started my studies, I did not have internet access at home, but this limitation 
+                    was never an obstacle for me. On the contrary, it strengthened my determination to seek alternatives and achieve my goals. With a lot 
+                    of effort and dedication, I managed to provide internet access at home, which helped me to further develop my learning possibilities. 
+                    Today, we continue to study hard, always seeking to grow and overcome new challenges.
+                </p>
+                <p>
+                    In addition, I am very interested in deepening my knowledge of software development processes. My English level is <strong>B2</strong>, 
+                    and I am working hard to reach level <strong>C1</strong> soon. I have a deep knowledge of <strong>DDD architecture</strong>, 
+                    <strong>quality code standards</strong> such as dependency injections, and the use of <strong>interfaces</strong> to create applications 
+                    with a rich domain model.
+                </p>
+                <p>
+                    My background includes a degree in <strong>Systems Analysis and Development</strong> and a 
+                    <strong>postgraduate degree in Software Engineering</strong>, so I have a theoretical and practical background that is advantageous for the subject.
+                </p>
+                <p>
+                    I am good at dealing with people, which facilitates my teamwork and makes me effective in communicating with different professional profiles, 
+                    contributing to the success of the projects I am involved in. I am an extremely patient, hard-working, and resilient person who knows how to 
+                    make good decisions. If I am considered the ideal candidate for the position, I will be deeply grateful and honored to be part of your team. 
+                    I see this opportunity as a chance not only to apply my skills but also to learn, grow, and collaborate for the success of the company.
+                </p>
+                `,
             cvLink: "Download my CV"
         },
         habilidades: {
