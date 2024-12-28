@@ -89,7 +89,7 @@ const texts = {
             <p>
                 Olá. Meu nome é Daniel, um desenvolvedor Full Stack, com experiência em tecnologias que incluem, mas não se limitam a: 
                 <strong>C# .NET</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Vue.js</strong> e 
-                <strong>React.js Frameworks</strong>.
+                <strong>React.js</strong>.
             </p>
             <p>
                 Comecei a minha carreira como um programador de forma autodidata. Quando iniciei meus estudos, não tinha acesso à internet 
@@ -140,7 +140,7 @@ const texts = {
                 <p>
                     Hello. My name is Daniel, a Full Stack Developer with experience in technologies that include, but are not limited to: 
                     <strong>C# .NET</strong>, <strong>JavaScript</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>Vue.js</strong>, and 
-                    <strong>React.js Frameworks</strong>.
+                    <strong>React.js</strong>.
                 </p>
                 <p>
                     I started my career as a self-taught programmer. When I started my studies, I did not have internet access at home, but this limitation 
