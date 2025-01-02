@@ -3,7 +3,6 @@ const menuMobile = document.querySelector('#menu-hamburguer')
 
 window.sr = ScrollReveal({ reset: true });
 
-
 window.addEventListener('scroll', () => {
     buttonTop.classList.add('show')
     if (scrollY < 350) {
@@ -25,37 +24,37 @@ buttonTop.addEventListener('click', () => {
 sr.reveal('.texto-home', {
     duration: 1500,
     origin: 'top',
-    distance: '150px',
+    distance: '100px',
 });
 
 
 sr.reveal('.img-box', {
     duration: 1200,
     origin: 'left',
-    distance: '150px',
+    distance: '100px',
 });
 
 sr.reveal('.imagem-sobre-mim', {
     origin: 'bottom',
-    distance: '150px',
+    distance: '100px',
     duration: 1200
 });
 
 sr.reveal('.informacoes-sobre-mim', {
     origin: 'bottom',
-    distance: '150px',
+    distance: '100px',
     duration: 1200
 });
 
 sr.reveal('.section-title', {
     origin: 'top',
-    distance: '150px',
+    distance: '100px',
     duration: 1200
 });
 
 sr.reveal('.container-habilidades', {
     origin: 'bottom',
-    distance: '150px',
+    distance: '100px',
     duration: 1200
 });
 
@@ -67,7 +66,7 @@ sr.reveal('.container-projetos', {
 
 sr.reveal('.cards-wrapper', {
     origin: 'top',
-    distance: '150px',
+    distance: '100px',
     duration: 0
 });
 
