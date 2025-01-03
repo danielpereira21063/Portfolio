@@ -103,7 +103,7 @@ const texts = {
             </p>
             <p>
                 Além disso, tenho muito interesse em aprofundar meus conhecimentos sobre os processos de desenvolvimento de software. Meu 
-                nível de inglês é <strong>B2</strong>, e estou me esforçando para em breve alcançar o nível <strong>C1</strong>. Tenho um 
+                nível de inglês é <strong>B2 Upper Intermediate</strong> (<a style="text-decoration: underline" target='_blank' href='https://cert.efset.org/hthhpg'>clique aqui para ver meu certificado EF SET</a>), e estou me esforçando para em breve alcançar o nível <strong>C1</strong>. Tenho um 
                 profundo conhecimento da <strong>arquitetura DDD</strong>, dos <strong>padrões de código de qualidade</strong>, como injeções 
                 de dependências, e do uso de <strong>interfaces</strong> para a criação de aplicações com um modelo de domínio rico.
             </p>
@@ -149,10 +149,10 @@ const texts = {
                     I started my career as a self-taught programmer. When I started my studies, I did not have internet access at home, but this limitation 
                     was never an obstacle for me. On the contrary, it strengthened my determination to seek alternatives and achieve my goals. With a lot 
                     of effort and dedication, I managed to provide internet access at home, which helped me to further develop my learning possibilities. 
-                    Today, we continue to study hard, always seeking to grow and overcome new challenges.
+                    Today, I continue to study hard, always seeking to grow and overcome new challenges.
                 </p>
                 <p>
-                    In addition, I am very interested in deepening my knowledge of software development processes. My English level is <strong>B2</strong>, 
+                    In addition, I am very interested in deepening my knowledge of software development processes. My English level is <strong>B2 Upper Intermediate</strong> (<a style="text-decoration: underline" target='_blank' href='https://cert.efset.org/hthhpg'>click here to see my EF SET certificate</a>), 
                     and I am working hard to reach level <strong>C1</strong> soon. I have a deep knowledge of <strong>DDD architecture</strong>, 
                     <strong>quality code standards</strong> such as dependency injections, and the use of <strong>interfaces</strong> to create applications 
                     with a rich domain model.
