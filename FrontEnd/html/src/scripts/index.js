@@ -164,8 +164,7 @@ const texts = {
                 <p>
                     I am good at dealing with people, which facilitates my teamwork and makes me effective in communicating with different professional profiles, 
                     contributing to the success of the projects I am involved in. I am an extremely patient, hard-working, and resilient person who knows how to 
-                    make good decisions. If I am considered the ideal candidate for the position, I will be deeply grateful and honored to be part of your team. 
-                    I see this opportunity as a chance not only to apply my skills but also to learn, grow, and collaborate for the success of the company.
+                    make good decisions.
                 </p>
                 `,
             cvLink: "Download my CV"
