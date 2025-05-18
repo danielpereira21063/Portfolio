@@ -228,7 +228,7 @@ const changeLanguage = (onLoad = false) => {
 };
 
 const track = () =>{
-    const host = "track.danielsanchesdev.com.br";
+    const host = "https://track.danielsanchesdev.com.br";
     
     fetch(host + '/track', {
     method: 'POST',
