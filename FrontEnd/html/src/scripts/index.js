@@ -227,8 +227,20 @@ const changeLanguage = (onLoad = false) => {
     document.querySelector('.footer h2').textContent = selectedTexts.footer.contact;
 };
 
+const track = () =>{
+    fetch('/track', {
+    method: 'POST',
+    keepalive: true,
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      referer: document.referrer
+    })
+  }).catch(console.error);
+}
+
 window.onload = () => {
     changeLanguage(true);
+    track();
 }
 const checkInput = (lang) => {
     document.querySelector("#languageToggle").checked = lang == 'en';
