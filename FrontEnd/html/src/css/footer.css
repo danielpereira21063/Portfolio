@@ -1,8 +1,20 @@
 .footer{
     margin-top: 4rem;
     text-align: center;
-    background-color: var(--cor-fundo-cinza-claro);
+    background: linear-gradient(135deg, var(--cor-fundo-cinza-claro) 0%, #ffffff 100%);
     padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--cor-secundaria), var(--cor-primaria), transparent);
 }
 
 .footer h2{
@@ -11,4 +23,6 @@
     font-weight: 700;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    color: var(--cor-secundaria);
+    animation: fadeInUp 1s ease-out;
 }

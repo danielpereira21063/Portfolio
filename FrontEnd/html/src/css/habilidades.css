@@ -8,8 +8,32 @@
 .habilidades .container-habilidades .habilidade {
   max-width: 300px;
   padding: 20px 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   background-color: var(--cor-fundo-cinza-claro);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.habilidades .container-habilidades .habilidade::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--cor-secundaria), transparent);
+  transition: 0.5s;
+}
+
+.habilidades .container-habilidades .habilidade:hover::before {
+  left: 100%;
+}
+
+.habilidades .container-habilidades .habilidade:hover {
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 15px 35px rgba(204, 95, 49, 0.3);
 }
 /* 
 .habilidades .container-habilidades .habilidade.html {
@@ -169,4 +193,46 @@
 
 .habilidades .container-habilidades .habilidade i {
   font-size: 4.5rem;
+}
+
+/* Categorias de Habilidades */
+.skills-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 3rem;
+}
+
+.skill-category {
+  width: 100%;
+}
+
+.skill-category > h3 {
+  font-size: 2.5rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-category > h3 i {
+  font-size: 3rem;
+}
+
+.skill-category .container-habilidades {
+  justify-content: center;
+}
+
+@media(max-width: 768px) {
+  .skill-category > h3 {
+    font-size: 2rem;
+  }
+  
+  .skill-category > h3 i {
+    font-size: 2.5rem;
+  }
 }

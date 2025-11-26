@@ -116,4 +116,121 @@
     .sobre-mim .informacoes-sobre-mim {
         max-width: 100%;
     }
+    
+    .stats-cards {
+        flex-direction: column;
+    }
+    
+    .experience-timeline {
+        padding-left: 0;
+    }
+    
+    .timeline-item::before {
+        left: 20px;
+    }
+}
+
+/* Cards de Estatísticas */
+.stats-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--cor-secundaria), var(--cor-primaria));
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    flex: 1;
+    min-width: 120px;
+    color: white;
+    box-shadow: 0 5px 15px rgba(204, 95, 49, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.9;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Timeline de Experiência */
+.experience-timeline {
+    margin: 3rem 0;
+    padding-left: 3rem;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 1.5rem 0 1.5rem 4rem;
+    margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: -2rem;
+    width: 2px;
+    background: linear-gradient(180deg, var(--cor-secundaria), var(--cor-primaria));
+}
+
+.timeline-item:last-child::before {
+    display: none;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: -10px;
+    top: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--cor-secundaria);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    box-shadow: 0 0 0 4px var(--cor-fundo-cinza-escuro), 0 0 0 6px var(--cor-secundaria);
+}
+
+.timeline-content h4 {
+    font-size: 1.8rem;
+    color: var(--cor-secundaria);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.timeline-content p {
+    font-size: 1.6rem;
+    line-height: 1.6;
 }
